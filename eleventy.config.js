@@ -10,7 +10,7 @@ module.exports = function (eleventyConfigure) {
         markdownTemplateEngine: "njk",
         dir: {
             input: "src",
-            output: "public"
+            output: "docs"
         }
     };
 };
