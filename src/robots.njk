@@ -6,10 +6,12 @@ eleventyExcludeFromCollections: true
 User-agent: *
 Allow: /
 
-# Exclude Secure Member Portal Nodes from Public Indexing
+# Exclude Secure Member and Admin Panels from Public Search Engine Spiders
 Disallow: /connect/login/
 Disallow: /connect/dashboard/
 Disallow: /connect/profile/
+Disallow: /admin/
+Disallow: /admin/login/
 
 # Core Sitemap Matrix Location Anchor
 Sitemap: https://netlify.app

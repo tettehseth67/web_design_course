@@ -105,13 +105,15 @@
                     </ul>
                 </li>
             </ul>
-            <!-- 2. RIGHT LIST: Administrative Console button remains pushed to the right side -->
+            <!-- Locate this button container element near the bottom of src/_includes/navigation.html -->
             <ul class="navbar-nav ms-auto align-items-center">
                 <li class="nav-item px-2 py-2 py-lg-0">
-                    <a class="btn btn-outline-charcoal btn-sm px-3 fw-bold tracking-wider rounded-pill {% if page.url == '/admin/' %}active{% endif %}"
-                        href="/admin/" aria-label="Open Secure Isolated System Admin Console">ADMIN CONSOLE</a>
+                    <!-- FIXED PERMALINK PATH: Routes visitors safely to your admin login wall -->
+                    <a class="btn btn-outline-charcoal btn-sm px-3 fw-bold tracking-wider {% if page.url == '/admin/login/' %}active{% endif %}"
+                        href="/admin/login/" aria-label="Open Secure Isolated System Admin Console Gate">ADMIN CONSOLE</a>
                 </li>
             </ul>
+
         </div>
     </div>
 </nav>

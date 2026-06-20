@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Console Access Authentication | SDTWC Management Console</title>
+
+    <!-- Typography Pre-connections -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Core Bootstrap Framework and Custom Style Tokens -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <!-- Premium Isolated Administrative Header Bar (No Public Links) -->
+    <nav class="navbar navbar-dark bg-dark sticky-top shadow-sm py-2">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold text-uppercase tracking-wider small d-flex align-items-center gap-2"
+                href="/admin/">
+                <span class="border-start border-3 border-warning ps-2">SDTWC Console</span>
+                <span class="badge bg-secondary text-uppercase admin-metric-label">System Control</span>
+            </a>
+            <div class="d-flex align-items-center gap-3">
+                <button type="button" class="btn btn-primary position-relative rounded-pill">
+                    Inbox
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        99+
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </button>
+                <a href="/" class="btn btn-outline-light btn-sm rounded-0 fw-semibold rounded-pill">Exit Console</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Core Main Content Workspace Viewport Injection Mount -->
+    <main>
+        
+<!-- Admin Security Gateway Section -->
+<section class="py-5 bg-white d-flex align-items-center flex-grow-1 error-viewport-height">
+    <div class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-5">
+
+                <!-- Branding & Header Section -->
+                <div class="text-center mb-4">
+                    <span class="text-uppercase fw-bold text-danger small d-block mb-1 admin-metric-label">Security
+                        Protocol Node</span>
+                    <h1 class="fw-bold text-charcoal h3 mb-2">Console Authentication</h1>
+                    <p class="text-muted small max-w-sm mx-auto">Authorized personnel must negotiate token authorization
+                        credentials to initialize a secure control panel session.</p>
+                </div>
+
+                <!-- Clean Traditional HTML Form Panel -->
+                <div class="p-4 border shadow-sm bg-light">
+                    <form action="/admin/" method="GET">
+
+                        <div class="mb-3">
+                            <label class="form-label small fw-semibold text-muted">Administrative Token ID</label>
+                            <input type="text" class="form-control rounded-0 font-monospace"
+                                placeholder="e.g., exec_admin_01" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label small fw-semibold text-muted">Secure Security Key</label>
+                            <input type="password" class="form-control rounded-0" autocomplete="new-password" placeholder="••••••••••••" required>
+                        </div>
+
+                        <!-- Form submission routes verified traffic straight into your main admin index -->
+                        <button type="submit" class="btn btn-charcoal w-100 fw-semibold rounded-0 py-2.5">Verify &amp;
+                            Establish Session</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <!-- Framework Execution Pipeline (Completely Free of Public Footers) -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

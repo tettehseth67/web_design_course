@@ -1,0 +1,48 @@
+---
+layout: "admin-base.html"
+title: "Console Access Authentication"
+permalink: "/admin/login/"
+description: "Secure gateway node for authorized system administrators of the Seventh-Day Theocratic World
+Congregation."
+---
+
+<!-- Admin Security Gateway Section -->
+<section class="py-5 bg-white d-flex align-items-center flex-grow-1 error-viewport-height">
+    <div class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-5">
+
+                <!-- Branding & Header Section -->
+                <div class="text-center mb-4">
+                    <span class="text-uppercase fw-bold text-danger small d-block mb-1 admin-metric-label">Security
+                        Protocol Node</span>
+                    <h1 class="fw-bold text-charcoal h3 mb-2">Console Authentication</h1>
+                    <p class="text-muted small max-w-sm mx-auto">Authorized personnel must negotiate token authorization
+                        credentials to initialize a secure control panel session.</p>
+                </div>
+
+                <!-- Clean Traditional HTML Form Panel -->
+                <div class="p-4 border shadow-sm bg-light">
+                    <form action="/admin/" method="GET">
+
+                        <div class="mb-3">
+                            <label class="form-label small fw-semibold text-muted">Administrative Token ID</label>
+                            <input type="text" class="form-control rounded-0 font-monospace"
+                                placeholder="e.g., exec_admin_01" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label small fw-semibold text-muted">Secure Security Key</label>
+                            <input type="password" class="form-control rounded-0" autocomplete="new-password" placeholder="••••••••••••" required>
+                        </div>
+
+                        <!-- Form submission routes verified traffic straight into your main admin index -->
+                        <button type="submit" class="btn btn-charcoal w-100 fw-semibold rounded-0 py-2.5">Verify &amp;
+                            Establish Session</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
