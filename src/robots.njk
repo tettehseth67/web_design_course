@@ -1,0 +1,15 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
+# Global Crawl Rules for Search Engine Spiders
+User-agent: *
+Allow: /
+
+# Exclude Secure Member Portal Nodes from Public Indexing
+Disallow: /connect/login/
+Disallow: /connect/dashboard/
+Disallow: /connect/profile/
+
+# Core Sitemap Matrix Location Anchor
+Sitemap: https://seventhdaytheocraticworld.org
