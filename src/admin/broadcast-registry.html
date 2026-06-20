@@ -66,8 +66,20 @@ media branch."
                         <p class="text-muted small mb-0">System reference repository tracking all global network audio
                             scripts.</p>
                     </div>
-                    <button type="button" class="btn btn-charcoal btn-sm fw-semibold rounded-0 px-3">Log New Stream
-                        Node</button>
+                    <!-- Inside src/admin/broadcast-registry.html card header tracking area -->
+                    <div
+                        class="card-header bg-white py-3 border-bottom d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
+                        <div>
+                            <h2 class="fw-bold text-charcoal h5 mb-1">Logged Convocation Audio &amp; Video Feeds</h2>
+                            <p class="text-muted small mb-0">System reference repository tracking all global network audio scripts.</p>
+                        </div>
+                        <!-- FIXED: Data targets launch the stream modal block cleanly -->
+                        <button type="button" class="btn btn-charcoal btn-sm fw-semibold rounded-0 px-3" data-bs-toggle="modal"
+                            data-bs-target="#createStreamModal">
+                            Log New Stream Node
+                        </button>
+                    </div>
+
                 </div>
 
                 <div class="table-responsive">
@@ -103,5 +115,71 @@ media branch."
             </div>
 
         </main>
+    </div>
+</div>
+
+<!-- Native Bootstrap 5 Pure HTML Broadcast Stream Matrix Modal Node -->
+<div class="modal fade" id="createStreamModal" tabindex="-1" aria-labelledby="createStreamModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content rounded-0 border">
+
+            <!-- Modal Header Overlay -->
+            <div class="modal-header bg-dark text-white rounded-0 py-3">
+                <div class="tracking-wide">
+                    <span class="text-uppercase fw-bold text-warning small d-block mb-1 admin-metric-label">Media
+                        Directorate Entry</span>
+                    <h5 class="modal-title fw-bold h6" id="createStreamModalLabel">Log Convocation Media Feed</h5>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+
+            <!-- Modal Form Body Container -->
+            <div class="modal-body p-4 bg-light">
+                <form action="/admin/broadcast-registry/" method="GET">
+
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label small fw-semibold text-muted">Assembly Event Designation</label>
+                            <input type="text" class="form-control rounded-0"
+                                placeholder="e.g., Weekly Sabbath morning convocation" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label small fw-semibold text-muted">Calculated Schedule Target
+                                Frame</label>
+                            <input type="text" class="form-control rounded-0"
+                                placeholder="e.g., Saturday Morning precisely at 09:00 UTC" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label small fw-semibold text-muted">Liturgical Script URL Target
+                            Pathway</label>
+                        <input type="text" class="form-control rounded-0 font-monospace"
+                            placeholder="/live/sabbath-stream-endpoint" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label small fw-semibold text-muted">Initial Broadcast Status Target</label>
+                        <select class="form-select rounded-0" required>
+                            <option value="" disabled selected>Select starting status feed...</option>
+                            <option value="ready">Ready to Broadcast (Active Window)</option>
+                            <option value="pending">Pending Configuration Check</option>
+                            <option value="archived">Archived / Concluded Document</option>
+                        </select>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-outline-charcoal w-50 rounded-0 fw-semibold"
+                            data-bs-dismiss="modal">Cancel Entry</button>
+                        <button type="submit" class="btn btn-charcoal w-50 rounded-0 fw-semibold">Save Stream
+                            Node</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
     </div>
 </div>
