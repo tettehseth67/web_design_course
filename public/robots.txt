@@ -8,6 +8,7 @@ Disallow: /connect/dashboard/
 Disallow: /connect/profile/
 Disallow: /admin/
 Disallow: /admin/login/
+Disallow: /admin/access-denied/
 
 # Core Sitemap Matrix Location Anchor
 Sitemap: https://netlify.app
