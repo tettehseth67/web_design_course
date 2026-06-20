@@ -1,4 +1,7 @@
-# Update this line inside your wrangler.toml file
+# 1. CORE WORKER PARAMETERS (MUST SIT AT THE TOP)
+name = "web-design-course"
+compatibility_date = "2026-06-20"
+
+# 2. STATIC ASSETS OVERRIDE CONFIGURATION
 [assets]
 directory = "docs"
-compatibility_date = "2026-06-20"
