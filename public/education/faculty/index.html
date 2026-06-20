@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Dynamic SEO Title Strategy -->
-    <title>Member Dashboard | SDTWC</title>
+    <title>Faculty &amp; Administration Directory | SDTWC</title>
 
     <!-- Dynamic Search Engine Meta Descriptions -->
     <meta name="description"
-        content="Secure workspace portal for active members of the Seventh-Day Theocratic World Congregation.">
+        content="Meet the academic leadership, primary school instructors, and administrative registrar staff at the SDTWC Education Complex.">
 
     <!-- Open Graph / Facebook Social Previews -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Member Dashboard | SDTWC">
+    <meta property="og:title" content="Faculty &amp; Administration Directory | SDTWC">
     <meta property="og:description"
-        content="Secure workspace portal for active members of the Seventh-Day Theocratic World Congregation.">
-    <meta property="og:url" content="https://seventhdaytheocraticworld.org/connect/dashboard/">
+        content="Meet the academic leadership, primary school instructors, and administrative registrar staff at the SDTWC Education Complex.">
+    <meta property="og:url" content="https://seventhdaytheocraticworld.org/education/faculty/">
 
     <!-- Typography Asset Pre-connections -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -91,7 +91,7 @@
 
                 <!-- Education Complex Dropdown -->
                 <li class="nav-item dropdown px-2">
-                    <a class="nav-link dropdown-toggle text-muted"
+                    <a class="nav-link dropdown-toggle text-gold fw-bold"
                         href="/education/" role="button" data-bs-toggle="dropdown">Education Complex</a>
                     <ul class="dropdown-menu dropdown-menu-end shadow border-0">
                         <li><a class="dropdown-item "
@@ -100,7 +100,7 @@
                                 href="/education/basic-school/">Basic School</a></li>
                         <li><a class="dropdown-item "
                                 href="/education/term-schedule/">Term Schedules</a></li>
-                        <li><a class="dropdown-item "
+                        <li><a class="dropdown-item active bg-light text-charcoal fw-bold"
                                 href="/education/faculty/">Faculty Directory</a></li>
                         <li><a class="dropdown-item "
                                 href="/education/admissions-policy/">Admissions Portal</a></li>
@@ -109,7 +109,7 @@
 
                 <!-- Connect & Support Dropdown Link Structure (Pure Static Server-Rendered Layout) -->
                 <li class="nav-item dropdown px-2">
-                    <a class="nav-link dropdown-toggle text-gold fw-bold"
+                    <a class="nav-link dropdown-toggle text-muted"
                         href="/connect/" role="button" data-bs-toggle="dropdown">Connect &amp; Support</a>
                     <ul class="dropdown-menu dropdown-menu-end shadow border-0">
                         <li><a class="dropdown-item "
@@ -117,7 +117,7 @@
                         <!-- Portal Authentication Gateway Paths -->
                         <li><a class="dropdown-item "
                                 href="/connect/login/">Member Login</a></li>
-                        <li><a class="dropdown-item active bg-light text-charcoal fw-bold"
+                        <li><a class="dropdown-item "
                                 href="/connect/dashboard/">Member Dashboard</a></li>
                         <!-- New: Static Profile and Exit Nodes -->
                         <li>
@@ -153,59 +153,116 @@
     <!-- Injects your page-specific text content modules -->
     <main class="flex-grow-1">
         
-<!-- Public Static Dashboard Component (No-JS Enabled) -->
-<section id="dashboard-view" class="py-5 bg-white">
+<!-- Faculty Directory Structural Section -->
+<section class="py-5 bg-white">
     <div class="container py-4">
+        <div class="row g-5">
 
-        <!-- Welcome Header Segment -->
-        <div class="row align-items-center mb-5 g-4">
-            <div class="col-md-8">
-                <span class="text-uppercase tracking-wider fw-bold text-gold small d-block mb-1">Congregational
-                    Portal</span>
-                <h1 class="fw-bold text-charcoal display-6 mb-1">Member Workspace Dashboard</h1>
-                <p class="text-muted small mb-0">Official administrative registry hub for active diaspora
-                    communications.</p>
+            <!-- Left Main Body Column: Profile Cards and Leadership Overviews -->
+            <div class="col-lg-8">
+                <a href="/education/" class="btn btn-outline-charcoal btn-sm mb-4 fw-semibold">&larr; Back to Education
+                    Overview</a>
+
+                <span class="text-uppercase tracking-wider fw-bold text-gold small d-block mb-2">Our Instructors</span>
+                <h1 class="fw-bold text-charcoal display-5 mb-2">Faculty & Administration</h1>
+                <p class="lead text-muted mb-4">A dedicated team of verified academic professionals committed to
+                    building intellectual excellence and grounding students in foundational moral frameworks.</p>
+
+                <hr class="my-4">
+
+                <!-- Leadership Section -->
+                <h3 class="fw-bold text-charcoal h4 mb-3">Institutional Leadership</h3>
+                <div class="row g-4 mb-5">
+                    <!-- Card 1 -->
+                    <div class="col-sm-6">
+                        <div class="card h-100 border rounded-0 bg-light shadow-sm">
+                            <div class="card-body p-4 text-center text-sm-start">
+                                <h5 class="fw-bold text-charcoal h5 mb-1">Elder Emmanuel Tetteh</h5>
+                                <span
+                                    class="text-gold fw-bold small text-uppercase tracking-wider d-block mb-3">Director
+                                    of Education</span>
+                                <p class="text-muted small mb-0">Oversees the strategic alignment of academic curricula
+                                    with regional educational boards and internal governance charters.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-sm-6">
+                        <div class="card h-100 border rounded-0 bg-white shadow-sm">
+                            <div class="card-body p-4 text-center text-sm-start">
+                                <h5 class="fw-bold text-charcoal h5 mb-1">Sis. Abigail Mensah</h5>
+                                <span
+                                    class="text-gold fw-bold small text-uppercase tracking-wider d-block mb-3">Headmistress
+                                    / Registrar</span>
+                                <p class="text-muted small mb-0">Manages daily campus operations, student intake
+                                    protocols, and terminal academic records tracking matrices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primary Educators Section -->
+                <h3 class="fw-bold text-charcoal h4 mb-3">Core Teaching Faculty</h3>
+                <p class="text-muted mb-4">Our primary school division instructors are certified professionals managing
+                    foundational tracks:</p>
+
+                <div class="row g-3 mb-4">
+                    <div class="col-12">
+                        <div
+                            class="p-3 border rounded-0 bg-light d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
+                            <div>
+                                <h5 class="fw-bold text-charcoal h6 mb-1">Bro. Caleb Osei</h5>
+                                <p class="small text-muted mb-0">Lead Instructor — Mathematics, Critical Logic & Natural
+                                    Sciences.</p>
+                            </div>
+                            <span class="badge bg-charcoal text-white px-2 py-1.5 fw-medium admin-metric-label">Basic
+                                Primary</span>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div
+                            class="p-3 border rounded-0 bg-light d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
+                            <div>
+                                <h5 class="fw-bold text-charcoal h6 mb-1">Sis. Grace Addo</h5>
+                                <p class="small text-muted mb-0">Lead Instructor — Language Arts, Rhetoric & Historical
+                                    Chronology.</p>
+                            </div>
+                            <span class="badge bg-charcoal text-white px-2 py-1.5 fw-medium admin-metric-label">Basic
+                                Primary</span>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div
+                            class="p-3 border rounded-0 bg-light d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
+                            <div>
+                                <h5 class="fw-bold text-charcoal h6 mb-1">Sis. Eunice Boateng</h5>
+                                <p class="small text-muted mb-0">Early Childhood Coordinator — Cognitive Development &
+                                    Kindergarten.</p>
+                            </div>
+                            <span class="badge bg-secondary text-white px-2 py-1.5 fw-medium admin-metric-label">Early
+                                Years</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="col-md-4 text-md-end">
-                <a href="/connect/login/" class="btn btn-outline-charcoal btn-sm fw-semibold px-3">Exit Portal
-                    Session</a>
+
+            <!-- Right Column: Navigation Action Sidebar Box -->
+            <div class="col-lg-4">
+                <div class="p-4 bg-light border rounded-0 shadow-sm sticky-md-top sticky-sidebar-offset">
+                    <span class="text-gold fw-bold small text-uppercase tracking-wider d-block mb-2">Registry
+                        Inquiries</span>
+                    <h4 class="fw-bold h5 text-charcoal mb-3">Faculty Contact</h4>
+                    <p class="small text-muted mb-4">To schedule interviews with instructors or the registrar desk
+                        regarding student progress, route requests through the secretariat office.</p>
+                    <a href="/connect/#contact" class="btn btn-charcoal w-100 rounded-0 py-2 fw-semibold mb-2">Contact
+                        Administrative Desk</a>
+                    <a href="/education/term-schedule/"
+                        class="btn btn-outline-charcoal w-100 rounded-0 py-2 fw-semibold">View Term Schedule</a>
+                </div>
             </div>
+
         </div>
-
-        <!-- Content Modules Matrix Grid -->
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-                <div class="p-4 border bg-light h-100">
-                    <h5 class="fw-bold text-charcoal h6 mb-2">Secretariat Dispatches</h5>
-                    <p class="small text-muted mb-3">Access internal congregation circulars, assembly announcements, and
-                        administrative memos.</p>
-                    <a href="/global-mission/doctrine/"
-                        class="small text-charcoal fw-bold text-decoration-none border-bottom border-dark pb-0.5">Open
-                        Archives &rarr;</a>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="p-4 border bg-light h-100">
-                    <h5 class="fw-bold text-charcoal h6 mb-2">Fellowship Rosters</h5>
-                    <p class="small text-muted mb-3">Review your alignment parameters and training progress schedules
-                        for active demographic wings.</p>
-                    <a href="/global-mission/youth-women/"
-                        class="small text-charcoal fw-bold text-decoration-none border-bottom border-dark pb-0.5">View
-                        Your Wing &rarr;</a>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="p-4 border bg-light h-100">
-                    <h5 class="fw-bold text-charcoal h6 mb-2">Enterprise Training Nodes</h5>
-                    <p class="small text-muted mb-3">Explore active vocational module documents, workshop outlines, and
-                        tool resources.</p>
-                    <a href="/global-mission/vocational-guilds/"
-                        class="small text-charcoal fw-bold text-decoration-none border-bottom border-dark pb-0.5">Open
-                        Workspace &rarr;</a>
-                </div>
-            </div>
-        </div>
-
     </div>
 </section>
     </main>
