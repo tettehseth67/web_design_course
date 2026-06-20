@@ -22,16 +22,24 @@ Congregation."
                         secretariat communications matrix.</p>
                 </div>
 
+                <!-- Clean Traditional HTML Form Wrapper -->
+                <div class="p-4 border shadow-sm bg-light">
+                    <form action="/connect/dashboard/" method="GET">
 
-                <div class="p-5 border shadow-sm bg-light text-center">
-                    <h5 class="fw-bold text-charcoal h6 mb-3">Authentication Required</h5>
-                    <p class="text-muted small mb-4">Please log in using your verified congregational registry
-                        credentials to open your administrative dashboard node.</p>
+                        <div class="mb-3">
+                            <label class="form-label small fw-semibold text-muted">Registry Username / Email</label>
+                            <input type="email" class="form-control rounded-0" placeholder="name@example.com" required>
+                        </div>
 
-                    <!-- This data attribute triggers the automatic login popup modal box -->
+                        <div class="mb-4">
+                            <label class="form-label small fw-semibold text-muted">Secure Access Token /
+                                Password</label>
+                            <input type="password" class="form-control rounded-0" placeholder="••••••••••••" required>
+                        </div>
 
-                    Open Secure Login Portal
-                    </button>
+                        <button type="submit" class="btn btn-charcoal w-100 fw-semibold rounded-0 py-2">Open Portal
+                            Session</button>
+                    </form>
                 </div>
 
             </div>
