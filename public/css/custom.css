@@ -276,3 +276,22 @@ body {
     font-size: 0.8rem;
 }
 
+/* ==========================================================================
+   8. LAYOUT & INTERACTIVE STATE CONSTRAINTS (REPLACES INLINE STYLES)
+   ========================================================================== */
+
+/* Error View System Heights */
+.error-viewport-height {
+    min-height: 60vh;
+}
+
+/* Sticky Action Sidebar Constraints */
+.sticky-sidebar-offset {
+    top: 100px;
+}
+
+/* Metadata Text Token Tuning */
+.micro-notice-text {
+    font-size: 0.7rem;
+}
+

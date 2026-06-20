@@ -1,13 +1,15 @@
 module.exports = function (eleventyConfigure) {
-    // 1. Explicitly watch and copy asset directories from src over to public
+    // Asset Passthrough Engines
     eleventyConfigure.addPassthroughCopy("src/css");
     eleventyConfigure.addPassthroughCopy("src/js");
 
+    // New: Automated media, document, and structural assets tracking
+    eleventyConfigure.addPassthroughCopy("src/assets/images");
+    eleventyConfigure.addPassthroughCopy("src/assets/docs");
+
     return {
-        // 2. FORCES PLAIN HTML FILES TO PROCESS TEMPLATE ENGINE INCLUDE TAGS
         htmlTemplateEngine: "njk",
         markdownTemplateEngine: "njk",
-
         dir: {
             input: "src",
             output: "public"
