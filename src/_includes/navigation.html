@@ -12,19 +12,20 @@
 
                 <!-- Worship Center Dropdown -->
                 <li class="nav-item dropdown px-2">
-                    <a class="nav-link dropdown-toggle {% if page.url == '/' %}text-gold fw-bold{% else %}text-muted{% endif %}"
+                    <a class="nav-link dropdown-toggle {% if page.url == '/' or '/lunar-registry/' in page.url %}text-gold fw-bold{% else %}text-muted{% endif %}"
                         href="/" role="button" data-bs-toggle="dropdown">Worship Center</a>
                     <ul class="dropdown-menu dropdown-menu-end shadow border-0">
                         <li><a class="dropdown-item {% if page.url == '/' %}active bg-light text-charcoal fw-bold{% endif %}"
                                 href="/">Overview</a></li>
-                        <li><a class="dropdown-item" href="/#sermons">Sermons & Broadcasts</a></li>
+                        <li><a class="dropdown-item" href="/#sermons">Sermons &amp; Broadcasts</a></li>
                         <li><a class="dropdown-item" href="/#calendar">Sacred Calendar</a></li>
+                        <li><a class="dropdown-item {% if page.url == '/global-mission/lunar-registry/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/global-mission/lunar-registry/">Calculated New Moons</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
                         <li>
-                            <h6 class="dropdown-header text-uppercase text-muted dropdown-header-uppercase">Biblical
-                                Festivals</h6>
+                            <h6 class="dropdown-header text-uppercase text-muted dropdown-header-uppercase">Biblical Festivals</h6>
                         </li>
                         <li><a class="dropdown-item" href="/#feasts">Commanded Feasts</a></li>
                         <li><a class="dropdown-item" href="/#new-month">New Month Markings</a></li>
