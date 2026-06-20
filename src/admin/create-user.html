@@ -6,75 +6,110 @@ description: "Administrative interface portal for creating new membership record
 groups."
 ---
 
-<!-- Create User Workspace Component -->
-<section class="py-5 bg-white error-viewport-height">
-    <div class="container py-4">
-        <div class="row justify-content-center">
-            <div class="col-md-10 col-lg-7">
+<!-- Global Admin Workspace Container Wrapper -->
+<div class="container-fluid py-4 px-md-4 flex-grow-1 error-viewport-height">
+    <div class="row g-4">
 
-                <!-- Section Header Segment -->
-                <div class="text-center mb-4">
-                    <a href="/admin/" class="btn btn-outline-charcoal btn-sm mb-3 fw-semibold">&larr; Return to User
-                        Directory</a>
-                    <span class="text-uppercase tracking-wider fw-bold text-gold small d-block mb-1">System Provisioning
-                        Node</span>
-                    <h1 class="fw-bold text-charcoal h3 mb-2">Create Congregant Record</h1>
-                    <p class="text-muted small max-w-md mx-auto">Manually input profile metrics to initialize a new
-                        verified account under the corporate theocratic charter.</p>
+        <!-- Left Sidebar Component: Re-applied Navigation Directory Index -->
+        <aside class="col-lg-3 col-xl-2">
+            <div class="card p-3 console-sidebar-card shadow-sm sticky-md-top sticky-sidebar-offset">
+                <div class="mb-3 px-2">
+                    <span class="text-uppercase fw-bold console-sidebar-heading d-block">System Control</span>
                 </div>
-
-                <!-- Static Input Entry Block Wrapper (Completely Inline-CSS Free) -->
-                <div class="p-4 border shadow-sm bg-light">
-                    <form action="/admin/" method="GET">
-
-                        <!-- Account Name Row Split -->
-                        <div class="row g-3 mb-3">
-                            <div class="col-sm-6">
-                                <label class="form-label small fw-semibold text-muted">First Name / Given</label>
-                                <input type="text" class="form-control rounded-0" placeholder="John" required>
-                            </div>
-                            <div class="col-sm-6">
-                                <label class="form-label small fw-semibold text-muted">Surname / Family</label>
-                                <input type="text" class="form-control rounded-0" placeholder="Doe" required>
-                            </div>
-                        </div>
-
-
-                        <div class="mb-3">
-                            <label class="form-label small fw-semibold text-muted">Official Email Address</label>
-                            <input type="email" class="form-control rounded-0" placeholder="name@example.com" required>
-                        </div>
-
-                        <!-- Group and Clearance Classifications -->
-                        <div class="row g-3 mb-4">
-                            <div class="col-sm-6">
-                                <label class="form-label small fw-semibold text-muted">Group Unit Assignment</label>
-                                <select class="form-select rounded-0" required>
-                                    <option value="" disabled selected>Choose group...</option>
-                                    <option value="exec">Executive Central Board</option>
-                                    <option value="hospital">Healing Directorate</option>
-                                    <option value="youth">Theocratic Youth Council</option>
-                                    <option value="women">Virtuous Women Fellowship</option>
-                                    <option value="guilds">Vocational Skill Guilds</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-6">
-                                <label class="form-label small fw-semibold text-muted">System Security Clearance</label>
-                                <select class="form-select rounded-0" required>
-                                    <option value="" disabled selected>Choose clearance...</option>
-                                    <option value="standard">Standard Member Access</option>
-                                    <option value="root">Root Executive Controls</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Execution Submission Button -->
-                        <button type="submit" class="btn btn-charcoal w-100 fw-semibold rounded-0 py-2.5">Provision
-                            Account &amp; Save</button>
-                    </form>
+                <div class="list-group list-group-flush small mb-4">
+                    <a href="/admin/"
+                        class="list-group-item list-group-item-action console-menu-item active-console-node d-flex justify-content-between align-items-center px-2 py-2.5">
+                        <span>👤 User Directory</span>
+                        <span class="badge bg-white text-dark rounded-pill border">4</span>
+                    </a>
+                    <a href="/admin/groups/"
+                        class="list-group-item list-group-item-action console-menu-item d-flex justify-content-between align-items-center px-2 py-2.5">
+                        <span>📦 Group Matrix</span>
+                        <span class="badge bg-light text-muted rounded-pill">5</span>
+                    </a>
                 </div>
-
+                <div class="pt-3 border-top border-light">
+                    <a href="/admin/create-user/" class="btn btn-charcoal btn-sm w-100 fw-semibold py-2">Invite New
+                        User</a>
+                </div>
             </div>
-        </div>
+        </aside>
+
+        <!-- Right Main Content Component: User Provisioning Form -->
+        <main class="col-lg-9 col-xl-10">
+
+            <!-- Polished Header Callout Banner Module using pure Bootstrap 5 dark rules -->
+            <div class="card border rounded-0 p-4 shadow-sm bg-dark text-white mb-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                    <div>
+                        <span class="text-uppercase fw-bold text-warning small d-block mb-1">
+                            System Provisioning Node
+                        </span>
+                        <h1 class="fw-bold h3 mb-1 text-white">Create Congregant Record</h1>
+                        <p class="text-white-50 small mb-0">
+                            Manually input profile metrics to initialize a new verified account under the corporate
+                            theocratic charter.
+                        </p>
+                    </div>
+                    <div class="text-md-end text-nowrap">
+                        <a href="/admin/" class="btn btn-outline-light btn-sm rounded-0 fw-semibold px-3 py-2">
+                            &larr; Back to User Directory
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Static Input Entry Block Wrapper (Completely Inline-CSS Free) -->
+            <div class="p-4 border shadow-sm bg-white">
+                <form action="/admin/" method="GET">
+
+                    <!-- Account Name Row Split -->
+                    <div class="row g-3 mb-3">
+                        <div class="col-sm-6">
+                            <label class="form-label small fw-semibold text-muted">First Name / Given</label>
+                            <input type="text" class="form-control rounded-0" placeholder="John" required>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form-label small fw-semibold text-muted">Surname / Family</label>
+                            <input type="text" class="form-control rounded-0" placeholder="Doe" required>
+                        </div>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label class="form-label small fw-semibold text-muted">Official Email Address</label>
+                        <input type="email" class="form-control rounded-0" placeholder="name@example.com" required>
+                    </div>
+
+                    <!-- Group and Clearance Classifications -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <label class="form-label small fw-semibold text-muted">Group Unit Assignment</label>
+                            <select class="form-select rounded-0" required>
+                                <option value="" disabled selected>Choose group...</option>
+                                <option value="exec">Executive Central Board</option>
+                                <option value="hospital">Healing Directorate</option>
+                                <option value="youth">Theocratic Youth Council</option>
+                                <option value="women">Virtuous Women Fellowship</option>
+                                <option value="guilds">Vocational Skill Guilds</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form-label small fw-semibold text-muted">System Security Clearance</label>
+                            <select class="form-select rounded-0" required>
+                                <option value="" disabled selected>Choose clearance...</option>
+                                <option value="standard">Standard Member Access</option>
+                                <option value="root">Root Executive Controls</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Execution Submission Button -->
+                    <button type="submit" class="btn btn-charcoal w-100 fw-semibold rounded-0 py-2.5">Provision Account
+                        &amp; Save</button>
+                </form>
+            </div>
+
+        </main>
     </div>
-</section>
+</div>
