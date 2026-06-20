@@ -100,21 +100,37 @@
                     </ul>
                 </li>
 
-                <!-- Connect & Support Dropdown -->
+                <!-- Connect & Support Dropdown Link Structure (Pure Static Server-Rendered Layout) -->
                 <li class="nav-item dropdown px-2">
                     <a class="nav-link dropdown-toggle text-gold fw-bold"
-                        href="/connect/" role="button" data-bs-toggle="dropdown">Connect & Support</a>
+                        href="/connect/" role="button" data-bs-toggle="dropdown">Connect &amp; Support</a>
                     <ul class="dropdown-menu dropdown-menu-end shadow border-0">
                         <li><a class="dropdown-item "
                                 href="/connect/">Overview</a></li>
+                        <!-- Portal Authentication Gateway Paths -->
                         <li><a class="dropdown-item "
                                 href="/connect/login/">Member Login</a></li>
                         <li><a class="dropdown-item "
                                 href="/connect/dashboard/">Member Dashboard</a></li>
+                        <!-- New: Static Profile and Exit Nodes -->
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <h6 class="dropdown-header text-uppercase text-muted dropdown-header-uppercase">Account
+                                Actions</h6>
+                        </li>
+                        <li><a class="dropdown-item "
+                                href="/connect/profile/">Account Profile</a></li>
+                        <li><a class="dropdown-item" href="/connect/login/">Sign Out</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
                         <li><a class="dropdown-item active bg-light text-charcoal fw-bold"
                                 href="/connect/history-archive/">Church History</a></li>
                     </ul>
                 </li>
+
 
             </ul>
         </div>
