@@ -346,5 +346,28 @@ body {
     transform: scale(1) translateY(0);
 }
 
+/* ==========================================================================
+   16. DATA MATRIX HOVER SECTORS & INTERFACE TUNING
+   ========================================================================== */
+
+/* Professional matrix row highlight shading */
+.admin-matrix-hover-row tbody tr {
+    transition: background-color 0.2s ease-in-out;
+}
+
+.admin-matrix-hover-row tbody tr:hover {
+    background-color: rgba(33, 37, 41, 0.025) !important;
+}
+
+/* Specific left border pop on active data cell hover paths */
+.admin-matrix-hover-row tbody tr td {
+    border-left: 2px solid transparent;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.admin-matrix-hover-row tbody tr:hover td:first-child {
+    border-left-color: var(--bs-warning) !important;
+}
+
 
 
