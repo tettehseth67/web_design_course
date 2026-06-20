@@ -1,11 +1,43 @@
----
-layout: "admin-base.html"
-title: "Congregant Profile Ledger"
-permalink: "/admin/user-profile/"
-description: "Detailed institutional profiling ledger for reviewing active membership parameters and demographic wing
-histories."
----
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Congregant Profile Ledger | SDTWC Management Console</title>
+
+    <!-- Typography Pre-connections -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link
+        href="https://googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Core Bootstrap Framework and Custom Style Tokens -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <!-- Premium Isolated Administrative Header Bar (No Public Links) -->
+    <nav class="navbar navbar-dark bg-dark sticky-top shadow-sm py-2">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold text-uppercase tracking-wider small d-flex align-items-center gap-2"
+                href="/admin/">
+                <span class="border-start border-3 border-warning ps-2">SDTWC Console</span>
+                <span class="badge bg-secondary text-uppercase admin-metric-label">System Control</span>
+            </a>
+            <div class="d-flex align-items-center gap-3">
+                <span class="text-white-50 small font-monospace d-none d-sm-inline">Node: Exec-01</span>
+                <a href="/" class="btn btn-outline-light btn-sm rounded-0 fw-semibold">Exit Console</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Core Main Content Workspace Viewport Injection Mount -->
+    <main>
+        
 <!-- Global Custom Admin Workspace Wrapper -->
 <div class="container-fluid py-4 px-md-4 flex-grow-1 error-viewport-height">
     <div class="row g-4">
@@ -171,3 +203,10 @@ histories."
         </main>
     </div>
 </div>
+    </main>
+
+    <!-- Framework Execution Pipeline (Completely Free of Public Footers) -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
