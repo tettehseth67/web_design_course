@@ -1,0 +1,135 @@
+---
+layout: "admin-base.html"
+title: "System Activity Logs"
+permalink: "/admin/activity-logs/"
+description: "Review authorized system access histories, transactional logging ledger entries, and general console
+change records."
+---
+
+<!-- Global Admin Workspace Container Wrapper -->
+<div class="container-fluid py-4 px-md-4 flex-grow-1 error-viewport-height">
+    <div class="row g-4">
+
+        <!-- 1. LEFT SIDEBAR COMPONENT: Navigation Directory Index -->
+        <aside class="col-lg-3 col-xl-2">
+            <div class="card p-3 console-sidebar-card shadow-sm sticky-md-top sticky-sidebar-offset">
+                <div class="mb-3 px-2">
+                    <span class="text-uppercase fw-bold console-sidebar-heading d-block">System Control</span>
+                </div>
+                <div class="list-group list-group-flush small mb-4">
+                    <a href="/admin/"
+                        class="list-group-item list-group-item-action console-menu-item d-flex justify-content-between align-items-center px-2 py-2.5">
+                        <span>👤 User Directory</span>
+                        <span class="badge bg-light text-muted rounded-pill">4</span>
+                    </a>
+                    <a href="/admin/groups/"
+                        class="list-group-item list-group-item-action console-menu-item d-flex justify-content-between align-items-center px-2 py-2.5">
+                        <span>📦 Group Matrix</span>
+                        <span class="badge bg-light text-muted rounded-pill">5</span>
+                    </a>
+                    <a href="/admin/activity-logs/"
+                        class="list-group-item list-group-item-action console-menu-item active-console-node d-flex justify-content-between align-items-center px-2 py-2.5">
+                        <span>📋 Activity Logs</span>
+                        <span class="badge bg-white text-dark rounded-pill border">System</span>
+                    </a>
+                </div>
+                <div class="pt-3 border-top border-light">
+                    <a href="/admin/create-user/" class="btn btn-charcoal btn-sm w-100 fw-semibold py-2">Invite New
+                        User</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 2. RIGHT MAIN CONTENT COMPONENT: Chronological Audit Log Matrix -->
+        <main class="col-lg-9 col-xl-10">
+
+            <!-- Dark Bootstrap Header Card Banner -->
+            <div class="card border rounded-0 p-4 shadow-sm bg-dark text-white mb-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                    <div>
+                        <span class="text-uppercase fw-bold text-warning small d-block mb-1">
+                            Audit Operations Node
+                        </span>
+                        <h1 class="fw-bold h3 mb-1 text-white">System Activity Logs</h1>
+                        <p class="text-white-50 small mb-0">
+                            Chronological ledger records monitoring authentication transitions, profile modifications,
+                            and administrative operations.
+                        </p>
+                    </div>
+                    <div class="text-md-end text-nowrap">
+                        <a href="/admin/" class="btn btn-outline-light btn-sm rounded-0 fw-semibold px-3 py-2">
+                            &larr; Back to Directory
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Audit History Data Matrix Table -->
+            <div class="card border rounded-0 shadow-sm bg-white mb-4">
+                <div
+                    class="card-header bg-white py-3 border-bottom d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
+                    <div>
+                        <h2 class="fw-bold text-charcoal h5 mb-1">Security &amp; Change Ledger</h2>
+                        <p class="text-muted small mb-0">Real-time system events matched to unique security credential
+                            authorization hooks.</p>
+                    </div>
+                    <button type="button" class="btn btn-outline-charcoal btn-sm fw-semibold rounded-0 px-3">Export Log
+                        CSV</button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0 small admin-matrix-hover-row">
+                        <thead class="table-light text-uppercase table-uppercase-header">
+                            <tr>
+                                <th scope="col" class="ps-4 py-3 text-charcoal">Timestamp</th>
+                                <th scope="col" class="py-3 text-charcoal">Account Vector</th>
+                                <th scope="col" class="py-3 text-charcoal">Action Logged</th>
+                                <th scope="col" class="py-3 text-charcoal">Target Event Scope</th>
+                                <th scope="col" class="pe-4 py-3 text-charcoal text-end">Routing Hash</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-muted">
+                            <tr>
+                                <td class="ps-4 font-monospace text-dark">2026-06-20 12:04</td>
+                                <td class="fw-semibold text-dark">Secretariat Admin</td>
+                                <td><span
+                                        class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1 admin-metric-label">Session
+                                        Open</span></td>
+                                <td>Console Access Authentication Verified</td>
+                                <td class="pe-4 text-end font-monospace text-dark">log_auth_9002</td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4 font-monospace text-dark">2026-06-20 11:47</td>
+                                <td class="fw-semibold text-dark">Secretariat Admin</td>
+                                <td><span
+                                        class="badge bg-info bg-opacity-10 text-info border border-info border-opacity-25 px-2 py-1 admin-metric-label">Record
+                                        Add</span></td>
+                                <td>Manually Provisioned New User Account (youth@...)</td>
+                                <td class="pe-4 text-end font-monospace text-dark">log_prov_4118</td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4 font-monospace text-dark">2026-06-19 17:12</td>
+                                <td class="fw-semibold text-dark">Medical Director</td>
+                                <td><span
+                                        class="badge bg-warning bg-opacity-10 text-dark border border-warning border-opacity-25 px-2 py-1 admin-metric-label">Record
+                                        Edit</span></td>
+                                <td>Updated Clinical Operational Hours Matrix</td>
+                                <td class="pe-4 text-end font-monospace text-dark">log_mod_5033</td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4 font-monospace text-dark">2026-06-19 14:00</td>
+                                <td class="fw-semibold text-dark">System System</td>
+                                <td><span
+                                        class="badge bg-dark bg-opacity-10 text-dark border px-2 py-1 admin-metric-label">Sitemap
+                                        Loop</span></td>
+                                <td>Automated XML and SEO Crawl Directories Rebuilt</td>
+                                <td class="pe-4 text-end font-monospace text-dark">log_sys_0012</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</div>
