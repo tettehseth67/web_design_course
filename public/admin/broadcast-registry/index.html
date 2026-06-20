@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Digital Broadcast &amp; Script Registry | SDTWC Management Console</title>
+
+    <!-- Typography Pre-connections -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link
+        href="https://googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Core Bootstrap Framework and Custom Style Tokens -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <!-- Premium Isolated Administrative Header Bar (No Public Links) -->
+    <nav class="navbar navbar-dark bg-dark sticky-top shadow-sm py-2">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold text-uppercase tracking-wider small d-flex align-items-center gap-2"
+                href="/admin/">
+                <span class="border-start border-3 border-warning ps-2">SDTWC Console</span>
+                <span class="badge bg-secondary text-uppercase admin-metric-label">System Control</span>
+            </a>
+            <div class="d-flex align-items-center gap-3">
+                <span class="text-white-50 small font-monospace d-none d-sm-inline">Node: Exec-01</span>
+                <a href="/" class="btn btn-outline-light btn-sm rounded-0 fw-semibold">Exit Console</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Core Main Content Workspace Viewport Injection Mount -->
+    <main>
+        
+<div class="container-fluid py-4 px-md-4 flex-grow-1 error-viewport-height">
+    <div class="row g-4">
+
+        <!-- Left Sidebar Component matching the console index look -->
+        <aside class="col-lg-3 col-xl-2">
+            <div class="card p-3 console-sidebar-card shadow-sm sticky-md-top sticky-sidebar-offset">
+                <div class="mb-3 px-2">
+                    <span class="text-uppercase fw-bold console-sidebar-heading d-block">System Control</span>
+                </div>
+                <div class="list-group list-group-flush small mb-4">
+                    <a href="/admin/"
+                        class="list-group-item list-group-item-action console-menu-item active-console-node d-flex justify-content-between align-items-center px-2 py-2.5">
+                        <span>👤 User Directory</span>
+                        <span class="badge bg-white text-dark rounded-pill border">4</span>
+                    </a>
+                    <a href="/admin/groups/"
+                        class="list-group-item list-group-item-action console-menu-item d-flex justify-content-between align-items-center px-2 py-2.5">
+                        <span>📦 Group Matrix</span>
+                        <span class="badge bg-light text-muted rounded-pill">5</span>
+                    </a>
+                </div>
+                <div class="pt-3 border-top border-light">
+                    <a href="/admin/create-user/" class="btn btn-charcoal btn-sm w-100 fw-semibold py-2">Invite New
+                        User</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area with Media Grid Logs -->
+        <main class="col-lg-9 col-xl-10">
+
+            <!-- Dark Bootstrap Header Card Banner -->
+            <div class="card border rounded-0 p-4 shadow-sm bg-dark text-white mb-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                    <div>
+                        <span class="text-uppercase fw-bold text-warning small d-block mb-1">
+                            Media Directorate Node
+                        </span>
+                        <h1 class="fw-bold h3 mb-1 text-white">Broadcast Script Management</h1>
+                        <p class="text-white-50 small mb-0">
+                            Manage live stream interaction keys, server parameters, and script text pathways.
+                        </p>
+                    </div>
+                    <div class="text-md-end text-nowrap">
+                        <a href="/admin/" class="btn btn-outline-light btn-sm rounded-0 fw-semibold px-3 py-2">
+                            &larr; Back to Console
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Historical & Pending Stream Entry Matrix -->
+            <div class="card border rounded-0 shadow-sm bg-white mb-4">
+                <div
+                    class="card-header bg-white py-3 border-bottom d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
+                    <div>
+                        <h2 class="fw-bold text-charcoal h5 mb-1">Logged Convocation Audio &amp; Video Feeds</h2>
+                        <p class="text-muted small mb-0">System reference repository tracking all global network audio
+                            scripts.</p>
+                    </div>
+                    <button type="button" class="btn btn-charcoal btn-sm fw-semibold rounded-0 px-3">Log New Stream
+                        Node</button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0 small">
+                        <thead class="table-light text-uppercase table-uppercase-header">
+                            <tr>
+                                <th scope="col" class="ps-4 py-3 text-charcoal">Assembly Event</th>
+                                <th scope="col" class="py-3 text-charcoal">Calculated Schedule Target</th>
+                                <th scope="col" class="py-3 text-charcoal">Liturgical Script URL Path</th>
+                                <th scope="col" class="pe-4 py-3 text-charcoal text-end">Broadcast Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-muted">
+                            <tr>
+                                <td class="fw-semibold text-dark ps-4">Sabbath Morning Convocation</td>
+                                <td>Weekly Sabbath Morning (09:00 UTC)</td>
+                                <td><span class="font-monospace text-dark">/live/sab-current</span></td>
+                                <td class="pe-4 text-end"><span
+                                        class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1 fw-bold text-uppercase admin-metric-label">Ready</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fw-semibold text-dark ps-4">New Month Marking Feast</td>
+                                <td>Calculated Sunset Transition Cycle</td>
+                                <td><span class="font-monospace text-dark">/archive/lunar-cycle-0626</span></td>
+                                <td class="pe-4 text-end"><span
+                                        class="badge bg-light text-dark border px-2 py-1 fw-medium text-uppercase admin-metric-label">Archived</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</div>
+    </main>
+
+    <!-- Framework Execution Pipeline (Completely Free of Public Footers) -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
