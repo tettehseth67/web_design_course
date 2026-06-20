@@ -8,7 +8,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="mainChurchNav">
-            <ul class="navbar-nav ms-auto fw-semibold align-items-center">
+            <ul class="navbar-nav me-auto fw-semibold align-items-center">
 
                 <!-- Worship Center Dropdown -->
                 <li class="nav-item dropdown px-2">
@@ -104,14 +104,13 @@
                                 href="/connect/history-archive/">Church History</a></li>
                     </ul>
                 </li>
-
-                <!-- Standalone Isolated Administration Node Link Button -->
-                <li class="nav-item px-2">
+            </ul>
+            <!-- 2. RIGHT LIST: Administrative Console button remains pushed to the right side -->
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item px-2 py-2 py-lg-0">
                     <a class="btn btn-outline-charcoal btn-sm px-3 fw-bold tracking-wider rounded-pill {% if page.url == '/admin/' %}active{% endif %}"
-                        href="/admin/">ADMIN CONSOLE</a>
+                        href="/admin/" aria-label="Open Secure Isolated System Admin Console">ADMIN CONSOLE</a>
                 </li>
-
-
             </ul>
         </div>
     </div>
