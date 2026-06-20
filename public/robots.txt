@@ -10,6 +10,7 @@ Disallow: /admin/
 Disallow: /admin/login/
 Disallow: /admin/access-denied/
 Disallow: /admin/activity-logs/
+Disallow: /admin/financial-entry/
 
 # Core Sitemap Matrix Location Anchor
 Sitemap: https://netlify.app

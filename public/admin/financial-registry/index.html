@@ -141,11 +141,18 @@
                             <p class="text-muted small mb-0">Logged historical ledger transaction dispatches for the current operational
                                 cycle.</p>
                         </div>
-                        <!-- FIXED: Data target attributes launch the modal receipt form box natively -->
-                        <button type="button" class="btn btn-charcoal btn-sm fw-semibold rounded-0 px-3" data-bs-toggle="modal"
-                            data-bs-target="#logReceiptModal">
-                            Log Manual Receipt
-                        </button>
+                        <div
+                            class="card-header bg-white py-3 border-bottom d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
+                            <div>
+                                <h2 class="fw-bold text-charcoal h5 mb-1">Recent Registry Contributions</h2>
+                                <p class="text-muted small mb-0">Logged historical ledger transaction dispatches for the current operational
+                                    cycle.</p>
+                            </div>
+                            <!-- FIXED ACTION PATH LINK TO THE NEW FORM BELOW -->
+                            <a href="/admin/financial-entry/"
+                                class="btn btn-charcoal btn-sm fw-semibold rounded-0 px-3 text-white text-decoration-none">Log Manual
+                                Receipt</a>
+                        </div>
                     </div>
 
                 </div>
