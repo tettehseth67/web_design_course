@@ -1,0 +1,3 @@
+# Update this line inside your wrangler.toml file
+[assets]
+directory = "docs"
