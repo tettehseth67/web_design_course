@@ -6,14 +6,14 @@ eleventyExcludeFromCollections: true
 <urlset xmlns="http://sitemaps.org">
   <!-- Core Static Homepage Mapping -->
   <url>
-    <loc>https://seventhdaytheocraticworld.org</loc>
+    <loc>https://netlify.app</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   {%- for page in collections.all %}
   {%- if page.url and page.url != '/' %}
   <url>
-    <loc>https://seventhdaytheocraticworld.org{{ page.url }}</loc>
+    <loc>https://netlify.app{{ page.url }}</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
