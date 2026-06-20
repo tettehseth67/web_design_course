@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Group Management Matrix | SDTWC Management Console</title>
+
+    <!-- Typography Pre-connections -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link
+        href="https://googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Core Bootstrap Framework and Custom Style Tokens -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <!-- Premium Isolated Administrative Header Bar (No Public Links) -->
+    <nav class="navbar navbar-dark bg-dark sticky-top shadow-sm py-2">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold text-uppercase tracking-wider small d-flex align-items-center gap-2"
+                href="/admin/">
+                <span class="border-start border-3 border-warning ps-2">SDTWC Console</span>
+                <span class="badge bg-secondary text-uppercase admin-metric-label">System Control</span>
+            </a>
+            <div class="d-flex align-items-center gap-3">
+                <span class="text-white-50 small font-monospace d-none d-sm-inline">Node: Exec-01</span>
+                <a href="/" class="btn btn-outline-light btn-sm rounded-0 fw-semibold">Exit Console</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Core Main Content Workspace Viewport Injection Mount -->
+    <main>
+        
+<!-- Global Admin Groups Container Wrapper -->
+<div class="container-fluid py-4 px-md-4 flex-grow-1 error-viewport-height">
+    <div class="row g-4">
+
+        <!-- 1. LEFT SIDEBAR COMPONENT: Shared Navigation Directory Matching Index -->
+        <aside class="col-lg-3 col-xl-2">
+            <div class="card border rounded-0 shadow-sm sticky-md-top sticky-sidebar-offset">
+                <div class="card-header bg-white py-3 border-bottom">
+                    <h5 class="fw-bold text-charcoal h6 mb-0 text-uppercase tracking-wider">Console Index</h5>
+                </div>
+                <div class="list-group list-group-flush small">
+                    <a href="/admin/"
+                        class="list-group-item list-group-item-action text-muted d-flex justify-content-between align-items-center">
+                        User Directory <span class="badge bg-light text-dark rounded-pill">4</span>
+                    </a>
+                    <a href="/admin/groups/"
+                        class="list-group-item list-group-item-action active bg-charcoal border-charcoal d-flex justify-content-between align-items-center">
+                        Group Matrix <span class="badge bg-light text-dark rounded-pill">5</span>
+                    </a>
+                </div>
+                <div class="card-footer bg-white p-3 border-top">
+                    <a href="/connect/signup/"
+                        class="btn btn-outline-charcoal btn-sm w-100 fw-semibold rounded-0">Invite New User</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 2. RIGHT MAIN CONTENT COMPONENT: Groups Data List Matrix -->
+        <main class="col-lg-9 col-xl-10">
+
+            <div class="card border rounded-0 shadow-sm bg-white mb-4">
+                <div
+                    class="card-header bg-white py-3 border-bottom d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
+                    <div>
+                        <h1 class="fw-bold text-charcoal h5 mb-1">Functional Subdivisions Matrix</h1>
+                        <p class="text-muted small mb-0">Systematic inventory of active working groups under the
+                            corporate charter.</p>
+                    </div>
+                    <button class="btn btn-charcoal btn-sm fw-semibold rounded-0 px-3">Create New Group</button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0 small">
+                        <thead class="table-light text-uppercase table-uppercase-header">
+                            <tr>
+                                <th scope="col" class="ps-4 py-3 text-charcoal">Group Division Unit</th>
+                                <th scope="col" class="py-3 text-charcoal">Parent Directorate</th>
+                                <th scope="col" class="py-3 text-charcoal">Registered Seats</th>
+                                <th scope="col" class="py-3 text-charcoal">System Control Token</th>
+                                <th scope="col" class="pe-4 py-3 text-charcoal text-end">Operational Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-muted">
+                            <tr>
+                                <td class="fw-semibold text-dark ps-4">Global Executive Secretariat</td>
+                                <td>Administrative Central Board</td>
+                                <td>12 Accounts</td>
+                                <td><span
+                                        class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-2 py-1 fw-semibold">Root
+                                        Clearance</span></td>
+                                <td class="pe-4 text-end"><a href="/admin/groups/"
+                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5">Edit
+                                        Configuration</a></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-semibold text-dark ps-4">Sufficient Grace Hospital Unit</td>
+                                <td>Medical Directorate</td>
+                                <td>45 Accounts</td>
+                                <td><span
+                                        class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1 fw-semibold">Standard
+                                        Access</span></td>
+                                <td class="pe-4 text-end"><a href="/admin/groups/"
+                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5">Edit
+                                        Configuration</a></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-semibold text-dark ps-4">Theocratic Youth Council</td>
+                                <td>Demographic Frameworks Branch</td>
+                                <td>180 Accounts</td>
+                                <td><span
+                                        class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1 fw-semibold">Standard
+                                        Access</span></td>
+                                <td class="pe-4 text-end"><a href="/admin/groups/"
+                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5">Edit
+                                        Configuration</a></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-semibold text-dark ps-4">Virtuous Women Fellowship</td>
+                                <td>Demographic Frameworks Branch</td>
+                                <td>240 Accounts</td>
+                                <td><span
+                                        class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1 fw-semibold">Standard
+                                        Access</span></td>
+                                <td class="pe-4 text-end"><a href="/admin/groups/"
+                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5">Edit
+                                        Configuration</a></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-semibold text-dark ps-4">Vocational Skill Guilds</td>
+                                <td>Enterprise Development Wing</td>
+                                <td>65 Accounts</td>
+                                <td><span
+                                        class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1 fw-semibold">Standard
+                                        Access</span></td>
+                                <td class="pe-4 text-end"><a href="/admin/groups/"
+                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5">Edit
+                                        Configuration</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</div>
+    </main>
+
+    <!-- Framework Execution Pipeline (Completely Free of Public Footers) -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
