@@ -309,5 +309,27 @@ body {
     width: 30%;
 }
 
+/* ==========================================================================
+   13. SMOOTH DROPDOWN TRANSITIONS (PURE CSS)
+   ========================================================================== */
+@media (min-width: 992px) {
+
+    /* Set up the initial hidden state for desktop dropdown submenus */
+    .navbar-nav .dropdown-menu {
+        display: block !important;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.25s ease-out, transform 0.25s ease-out, visibility 0.25s;
+    }
+
+    /* Animate to full visibility instantly when Bootstrap applies the active show token */
+    .navbar-nav .dropdown-menu.show {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 
