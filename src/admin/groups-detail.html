@@ -1,0 +1,112 @@
+---
+layout: "admin-base.html"
+title: "Group Division Details"
+permalink: "/admin/groups-detail/"
+description: "Review discrete departmental nodes, administrative group controls, and user access parameters within the
+SDTWC management matrix."
+---
+
+<!-- Global Main Group Matrix Layout Container -->
+<div class="container-fluid py-4 px-md-4 flex-grow-1 error-viewport-height">
+    <div class="row g-4">
+
+        <!-- 1. LEFT SIDEBAR COMPONENT: Polished Navigation Directory Index -->
+        <aside class="col-lg-3 col-xl-2">
+            <div class="card p-3 console-sidebar-card shadow-sm sticky-md-top sticky-sidebar-offset">
+                <div class="mb-3 px-2">
+                    <span class="text-uppercase fw-bold console-sidebar-heading d-block">System Control</span>
+                </div>
+                <div class="list-group list-group-flush small mb-4">
+                    <a href="/admin/"
+                        class="list-group-item list-group-item-action console-menu-item d-flex justify-content-between align-items-center px-2 py-2.5">
+                        <span>👤 User Directory</span>
+                        <span class="badge bg-light text-muted rounded-pill">4</span>
+                    </a>
+                    <a href="/admin/groups/"
+                        class="list-group-item list-group-item-action console-menu-item active-console-node d-flex justify-content-between align-items-center px-2 py-2.5">
+                        <span>📦 Group Matrix</span>
+                        <span class="badge bg-white text-dark rounded-pill border">5</span>
+                    </a>
+                </div>
+                <div class="pt-3 border-top border-light">
+                    <a href="/admin/create-user/" class="btn btn-charcoal btn-sm w-100 fw-semibold py-2">Invite New
+                        User</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 2. RIGHT MAIN CONTENT COMPONENT: Detailed Division Configuration Data Sheets -->
+        <main class="col-lg-9 col-xl-10">
+
+            <!-- Polished Header Callout Banner Module using pure Bootstrap 5 dark rules -->
+            <div class="card border rounded-0 p-4 shadow-sm bg-dark text-white mb-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                    <div>
+                        <span class="text-uppercase fw-bold text-warning small d-block mb-1">
+                            Directorate Control Node
+                        </span>
+                        <h1 class="fw-bold h3 mb-1 text-white">
+                            Healing Directorate: Sufficient Grace Hospital Group
+                        </h1>
+                        <p class="text-white-50 small mb-0">
+                            Assigned Security Clearance Token Class: Standard Account System Access Protocol.
+                        </p>
+                    </div>
+                    <div class="text-md-end text-nowrap">
+                        <a href="/admin/groups/" class="btn btn-outline-light btn-sm rounded-0 fw-semibold px-3 py-2">
+                            &larr; Back to Matrix Index
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Allocation Grid Section -->
+            <div class="card border rounded-0 shadow-sm bg-white mb-4">
+                <div
+                    class="card-header bg-white py-3 border-bottom d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
+                    <div>
+                        <h2 class="fw-bold text-charcoal h5 mb-1">Assigned Group Members</h2>
+                        <p class="text-muted small mb-0">List of all authenticated accounts provisioned into this
+                            operational directory branch.</p>
+                    </div>
+                    <button type="button" class="btn btn-charcoal btn-sm fw-semibold rounded-0 px-3">Attach Existing
+                        User</button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0 small">
+                        <thead class="table-light text-uppercase table-uppercase-header">
+                            <tr>
+                                <th scope="col" class="ps-4 py-3 text-charcoal">Account Identity</th>
+                                <th scope="col" class="py-3 text-charcoal">Email Address</th>
+                                <th scope="col" class="py-3 text-charcoal">System Function Role</th>
+                                <th scope="col" class="pe-4 py-3 text-charcoal text-end">Operational Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-muted">
+                            <tr>
+                                <td class="fw-semibold text-dark ps-4">Medical Director</td>
+                                <td>hospital@seventhdaytheocraticworld.org</td>
+                                <td>Chief Officer Directorate Representative</td>
+                                <td class="pe-4 text-end">
+                                    <a href="/admin/groups-detail/"
+                                        class="link-danger fw-bold text-decoration-none border-bottom pb-0.5">Detach</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fw-semibold text-dark ps-4">Clinical Registry Clerk</td>
+                                <td>records@seventhdaytheocraticworld.org</td>
+                                <td>Data Intake Administrator Officer</td>
+                                <td class="pe-4 text-end">
+                                    <a href="/admin/groups-detail/"
+                                        class="link-danger fw-bold text-decoration-none border-bottom pb-0.5">Detach</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</div>
