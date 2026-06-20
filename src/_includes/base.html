@@ -47,6 +47,19 @@
 
     <!-- Bootstrap Javascript Bundle -->
     <script src="/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        if (globalThis.netlifyIdentity) {
+            globalThis.netlifyIdentity.on("init", function (user) {
+                if (!user) {
+                    globalThis.netlifyIdentity.on("login", function () {
+                        document.location.href = "/"; // Route to homepage or custom dashboard on login
+                    });
+                }
+            });
+        }
+    </script>
+
 </body>
 
 </html>

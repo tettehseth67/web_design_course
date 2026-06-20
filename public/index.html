@@ -108,6 +108,8 @@
                         <li><a class="dropdown-item "
                                 href="/connect/">Overview</a></li>
                         <li><a class="dropdown-item "
+                                href="/connect/login/">Member Login</a></li>
+                        <li><a class="dropdown-item "
                                 href="/connect/history-archive/">Church History</a></li>
                     </ul>
                 </li>
@@ -350,6 +352,19 @@
 
     <!-- Bootstrap Javascript Bundle -->
     <script src="/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        if (globalThis.netlifyIdentity) {
+            globalThis.netlifyIdentity.on("init", function (user) {
+                if (!user) {
+                    globalThis.netlifyIdentity.on("login", function () {
+                        document.location.href = "/"; // Route to homepage or custom dashboard on login
+                    });
+                }
+            });
+        }
+    </script>
+
 </body>
 
 </html>
