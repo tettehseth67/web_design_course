@@ -331,5 +331,20 @@ body {
     }
 }
 
+/* ==========================================================================
+   14. CUSTOM MODAL OVERLAY TRANSITIONS (PURE CSS)
+   ========================================================================== */
+
+/* Overrides the default initial entry state for Bootstrap modals */
+.modal.fade .modal-dialog {
+    transform: scale(0.95) translateY(-15px);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Coordinates smooth scaling and descent when the modal box opens active */
+.modal.show .modal-dialog {
+    transform: scale(1) translateY(0);
+}
+
 
 
