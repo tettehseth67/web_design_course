@@ -208,3 +208,46 @@ demographic allocations."
         </main>
     </div>
 </div>
+
+<!-- Native Bootstrap 5 Pure HTML Member Purge Validation Modal Node -->
+<div class="modal fade" id="deleteMemberModal" tabindex="-1" aria-labelledby="deleteMemberModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-0 border">
+
+            <!-- Modal Header WARNING Overlay (CSS Inline-Free) -->
+            <div class="modal-header bg-danger text-white rounded-0 py-3">
+                <div class="tracking-wide">
+                    <span class="text-uppercase fw-bold text-white-50 small d-block mb-1 admin-metric-label">System
+                        De-provisioning Node</span>
+                    <h5 class="modal-title fw-bold h6" id="deleteMemberModalLabel">Confirm Registry Purge</h5>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+
+            <!-- Modal Verification Warning Content Body -->
+            <div class="modal-body p-4 bg-light">
+                <form action="/admin/" method="GET">
+
+                    <div class="mb-4 text-center text-md-start">
+                        <h5 class="fw-bold text-charcoal h6 mb-2">Are you absolutely certain?</h5>
+                        <p class="text-muted small mb-0">This layout routing execution will completely detach the chosen
+                            congregant profiling ledger data and access keys from the system directory footprint. This
+                            action is immutable.</p>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-outline-charcoal w-50 rounded-0 fw-semibold"
+                            data-bs-dismiss="modal">Cancel Purge</button>
+                        <!-- Form submit processes the traditional static server request link -->
+                        <button type="submit" class="btn btn-danger w-50 rounded-0 fw-semibold text-white">Execute
+                            Purge</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
