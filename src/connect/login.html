@@ -26,22 +26,24 @@ Congregation."
                 <div class="p-4 border shadow-sm bg-light">
                     <form action="/connect/dashboard/" method="GET">
 
+                        <!-- Inside the form wrapper container in src/connect/login.html -->
                         <div class="mb-3">
-                            <label class="form-label small fw-semibold text-muted">Registry Username / Email</label>
-                            <input type="email" class="form-control rounded-0" placeholder="name@example.com" required>
-                        </div>
-
-                        <div class="mb-4">
                             <label class="form-label small fw-semibold text-muted">Secure Access Token /
                                 Password</label>
                             <input type="password" class="form-control rounded-0" placeholder="••••••••••••" required>
                         </div>
-
+                        <!-- FIXED: Pure HTML/Bootstrap Custom Checkbox Form Node -->
+                        <div class="mb-4 form-check text-start">
+                            <input type="checkbox" class="form-check-input rounded-0" id="memberRememberMe">
+                            <label class="form-check-label small fw-medium text-muted user-select-none"
+                                for="memberRememberMe">
+                                Remember profile credentials on this device
+                            </label>
+                        </div>
                         <button type="submit" class="btn btn-charcoal w-100 fw-semibold rounded-0 py-2">Open Portal
                             Session</button>
                     </form>
                 </div>
-
             </div>
         </div>
     </div>

@@ -31,14 +31,28 @@ Congregation."
                                 placeholder="e.g., exec_admin_01" autofocus required>
                         </div>
 
+                        <!-- Inside the form container in src/admin/login.html -->
                         <div class="mb-4">
                             <label class="form-label small fw-semibold text-muted">Secure Security Key</label>
-                            <input type="password" class="form-control rounded-0" autocomplete="new-password" placeholder="••••••••••••" autofocus required>
+                            <input type="password" class="form-control rounded-0" placeholder="••••••••••••" required>
                         </div>
 
-                        <!-- Form submission routes verified traffic straight into your main admin index -->
-                        <button type="submit" class="btn btn-charcoal w-100 fw-semibold rounded-0 py-2.5">Verify &amp;
-                            Establish Session</button>
+                        <!-- FIXED: Pure HTML/Bootstrap Custom Switch Form Node -->
+                        <div class="mb-4 form-check text-start">
+                            <input type="checkbox" class="form-check-input rounded-0" id="adminRememberMe">
+                            <label class="form-check-label small fw-medium text-muted user-select-none"
+                                for="adminRememberMe">
+                                Remember security token session
+                            </label>
+                        </div>
+                        <!-- Button Row Framework remains below... -->
+                        <div class="d-flex gap-2">
+                            <a href="/"
+                                class="btn btn-outline-charcoal w-50 rounded-0 fw-semibold text-center py-2 text-decoration-none small rounded-pill">Exit
+                                Gate</a>
+                            <button type="submit" class="btn btn-charcoal w-50 fw-semibold rounded-0 py-2 small rounded-pill">Verify
+                                &amp; Enter</button>
+                        </div>
                     </form>
                 </div>
 
