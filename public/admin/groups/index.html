@@ -29,8 +29,14 @@
                 <span class="badge bg-secondary text-uppercase admin-metric-label">System Control</span>
             </a>
             <div class="d-flex align-items-center gap-3">
-                <span class="text-white-50 small font-monospace d-none d-sm-inline">Node: Exec-01</span>
-                <a href="/" class="btn btn-outline-light btn-sm rounded-0 fw-semibold">Exit Console</a>
+                <button type="button" class="btn btn-primary position-relative rounded-pill">
+                    Inbox
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        99+
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </button>
+                <a href="/" class="btn btn-outline-light btn-sm rounded-0 fw-semibold rounded-pill">Exit Console</a>
             </div>
         </div>
     </nav>
@@ -84,7 +90,7 @@
                             <p class="text-muted small mb-0">Systematic inventory of active working groups under the corporate charter.</p>
                         </div>
                         <!-- FIXED: Data attributes launch the overlay dialog box natively -->
-                        <button type="button" class="btn btn-charcoal btn-sm fw-semibold rounded-0 px-3" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-charcoal btn-sm fw-semibold rounded-0 px-3 py-2 rounded-pill" data-bs-toggle="modal"
                             data-bs-target="#createGroupModal">
                             Create New Group
                         </button>
