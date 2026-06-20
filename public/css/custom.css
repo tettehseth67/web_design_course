@@ -295,3 +295,17 @@ body {
     font-size: 0.7rem;
 }
 
+/* ==========================================================================
+   10. STANDALONE ADMIN SIDEBAR AND MATRIX TOKENS
+   ========================================================================== */
+
+/* Subdued label texts for grid tracking metrics */
+.admin-metric-label {
+    font-size: 0.65rem;
+}
+
+/* Width allocation constraints for administrative information sheets */
+.admin-sheet-width-limit {
+    width: 30%;
+}
+
