@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3 border-bottom">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-uppercase tracking-wider border-start border-3 border-warning ps-3 text-charcoal"
+            href="/">
+            SDTWC <span class="d-block small fw-normal brand-subtext">World Congregation</span>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainChurchNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainChurchNav">
+            <ul class="navbar-nav ms-auto fw-semibold align-items-center">
+
+                <!-- Worship Center Dropdown -->
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle {% if page.url == '/' %}text-gold fw-bold{% else %}text-muted{% endif %}"
+                        href="/" role="button" data-bs-toggle="dropdown">Worship Center</a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                        <li><a class="dropdown-item {% if page.url == '/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/">Overview</a></li>
+                        <li><a class="dropdown-item" href="/#sermons">Sermons & Broadcasts</a></li>
+                        <li><a class="dropdown-item" href="/#calendar">Sacred Calendar</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <h6 class="dropdown-header text-uppercase text-muted dropdown-header-uppercase">Biblical
+                                Festivals</h6>
+                        </li>
+                        <li><a class="dropdown-item" href="/#feasts">Commanded Feasts</a></li>
+                        <li><a class="dropdown-item" href="/#new-month">New Month Markings</a></li>
+                    </ul>
+                </li>
+
+                <!-- Global Mission Dropdown -->
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle {% if '/global-mission/' in page.url %}text-gold fw-bold{% else %}text-muted{% endif %}"
+                        href="/global-mission/" role="button" data-bs-toggle="dropdown">Global Mission</a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                        <li><a class="dropdown-item {% if page.url == '/global-mission/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/global-mission/">Mission Overview</a></li>
+                        <li><a class="dropdown-item" href="/global-mission/#doctrine">Articles &amp; Doctrine</a></li>
+                        <li><a class="dropdown-item {% if page.url == '/global-mission/hospital/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/global-mission/hospital/">Sufficient Grace Hospital</a></li>
+                    </ul>
+                </li>
+
+                <!-- Education Complex Dropdown (Checks if standing on overview or nested child pages) -->
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle {% if '/education/' in page.url %}text-gold fw-bold{% else %}text-muted{% endif %}"
+                        href="/education/" role="button" data-bs-toggle="dropdown">Education Complex</a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                        <li><a class="dropdown-item {% if page.url == '/education/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/education/">Overview</a></li>
+                        <li><a class="dropdown-item  {% if page.url == '/education/basic-school/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/education/basic-school/">Basic School</a></li>
+                        <li><a class="dropdown-item {% if page.url == '/education/admissions-policy/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/education/admissions-policy/">Admissions Portal</a></li>
+                    </ul>
+                </li>
+
+                <!-- Connect & Support Dropdown (Checks if standing on overview or nested history pages) -->
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle {% if '/connect/' in page.url %}text-gold fw-bold{% else %}text-muted{% endif %}"
+                        href="/connect/" role="button" data-bs-toggle="dropdown">Connect & Support</a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                        <li><a class="dropdown-item {% if page.url == '/connect/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/connect/">Overview</a></li>
+                        <li><a class="dropdown-item {% if page.url == '/connect/history-archive/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/connect/history-archive/">Church History</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>

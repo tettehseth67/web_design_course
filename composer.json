@@ -1,0 +1,15 @@
+{
+    "require": {
+        "twbs/bootstrap": "5.3.8"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "php -r \"is_dir('src/css') || mkdir('src/css', 0755, true);\"",
+            "php -r \"is_dir('src/js') || mkdir('src/js', 0755, true);\"",
+            "php -r \"copy('vendor/twbs/bootstrap/dist/css/bootstrap.min.css', 'src/css/bootstrap.min.css');\"",
+            "php -r \"copy('vendor/twbs/bootstrap/dist/css/bootstrap.min.css.map', 'src/css/bootstrap.min.css.map');\"",
+            "php -r \"copy('vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js', 'src/js/bootstrap.bundle.min.js');\"",
+            "php -r \"copy('vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js.map', 'src/js/bootstrap.bundle.min.js.map');\""
+        ]
+    }
+}
