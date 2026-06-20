@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }} | SDTWC Control Gate</title>
+
+    <!-- Typography Pre-connections -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Core Bootstrap Framework and Custom Style Tokens -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+</head>
+
+<body class="bg-light d-flex flex-column min-vh-100 justify-content-center">
+
+    <!-- Main Content Workspace Injected Here Directly (No Headers, No Footers) -->
+    <main>
+        {{ content | safe }}
+    </main>
+
+    <!-- Framework Execution Pipeline -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
