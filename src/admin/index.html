@@ -168,6 +168,7 @@ demographic allocations."
                                 <th scope="col" class="pe-4 py-3 text-charcoal text-end">Operational Actions</th>
                             </tr>
                         </thead>
+                        <!-- Inside the user directory data row matrix of src/admin/index.html -->
                         <tbody class="text-muted">
                             <tr>
                                 <td class="fw-semibold text-dark ps-4">Secretariat Admin</td>
@@ -175,45 +176,31 @@ demographic allocations."
                                 <td>Executive Central Board</td>
                                 <td><span class="badge badge-clearance-root px-2 py-1 fw-semibold text-uppercase admin-metric-label">Root
                                         Executive</span></td>
-                                <!-- FIXED ACTION LINK PATH BELOW -->
-                                <td class="pe-4 text-end"><a href="/admin/user-profile/"
-                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5">Manage</a></td>
+                                <td class="pe-4 text-end">
+                                    <a href="/admin/user-profile/"
+                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5 me-2">Manage</a>
+                                    <!-- FIXED: Separate pure HTML target trigger button to pop the warning modal block -->
+                                    <button type="button"
+                                        class="btn btn-link link-danger p-0 border-0 align-baseline small fw-bold text-decoration-none border-bottom pb-0.5"
+                                        data-bs-toggle="modal" data-bs-target="#deleteMemberModal">Delete</button>
+                                </td>
                             </tr>
-
                             <tr>
                                 <td class="fw-semibold text-dark ps-4">Medical Director</td>
                                 <td>hospital@seventhdaytheocraticworld.org</td>
                                 <td>Healing Directorate</td>
-                                <td><span
-                                        class="badge badge-clearance-standard px-2 py-1 fw-medium text-uppercase admin-metric-label">Standard
+                                <td><span class="badge badge-clearance-standard px-2 py-1 fw-medium text-uppercase admin-metric-label">Standard
                                         Access</span></td>
-                                <td class="pe-4 text-end"><a href="/admin/"
-                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5">Manage</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="fw-semibold text-dark ps-4">Youth Mentor</td>
-                                <td>youth@seventhdaytheocraticworld.org</td>
-                                <td>Theocratic Youth Council</td>
-                                <td><span
-                                        class="badge badge-clearance-standard px-2 py-1 fw-medium text-uppercase admin-metric-label">Standard
-                                        Access</span></td>
-                                <td class="pe-4 text-end"><a href="/admin/"
-                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5">Manage</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="fw-semibold text-dark ps-4">New Inquirer</td>
-                                <td>diaspora@example.com</td>
-                                <td>Unassigned / Guest</td>
-                                <td><span
-                                        class="badge badge-clearance-guest px-2 py-1 fw-medium text-uppercase admin-metric-label">Pending
-                                        Verify</span></td>
-                                <td class="pe-4 text-end"><a href="/admin/"
-                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5">Approve</a>
+                                <td class="pe-4 text-end">
+                                    <a href="/admin/user-profile/"
+                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5 me-2">Manage</a>
+                                    <button type="button"
+                                        class="btn btn-link link-danger p-0 border-0 align-baseline small fw-bold text-decoration-none border-bottom pb-0.5"
+                                        data-bs-toggle="modal" data-bs-target="#deleteMemberModal">Delete</button>
                                 </td>
                             </tr>
                         </tbody>
+
                     </table>
                 </div>
             </div>

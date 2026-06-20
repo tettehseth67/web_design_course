@@ -95,8 +95,21 @@ and headquarters project funding parameters."
                         <p class="text-muted small mb-0">Logged historical ledger transaction dispatches for the current
                             operational cycle.</p>
                     </div>
-                    <button type="button" class="btn btn-charcoal btn-sm fw-semibold rounded-0 px-3">Log Manual
-                        Receipt</button>
+                    <!-- Inside src/admin/financial-registry.html card header tracking area -->
+                    <div
+                        class="card-header bg-white py-3 border-bottom d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
+                        <div>
+                            <h2 class="fw-bold text-charcoal h5 mb-1">Recent Registry Contributions</h2>
+                            <p class="text-muted small mb-0">Logged historical ledger transaction dispatches for the current operational
+                                cycle.</p>
+                        </div>
+                        <!-- FIXED: Data target attributes launch the modal receipt form box natively -->
+                        <button type="button" class="btn btn-charcoal btn-sm fw-semibold rounded-0 px-3" data-bs-toggle="modal"
+                            data-bs-target="#logReceiptModal">
+                            Log Manual Receipt
+                        </button>
+                    </div>
+
                 </div>
 
                 <div class="table-responsive">
@@ -134,5 +147,65 @@ and headquarters project funding parameters."
             </div>
 
         </main>
+    </div>
+</div>
+
+<!-- Native Bootstrap 5 Pure HTML Treasury Receipt Logging Modal Node -->
+<div class="modal fade" id="logReceiptModal" tabindex="-1" aria-labelledby="logReceiptModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-0 border">
+
+            <!-- Modal Header Overlay -->
+            <div class="modal-header bg-dark text-white rounded-0 py-3">
+                <div class="tracking-wide">
+                    <span class="text-uppercase fw-bold text-warning small d-block mb-1 admin-metric-label">Treasury
+                        Secretariat Entry</span>
+                    <h5 class="modal-title fw-bold h6" id="logReceiptModalLabel">Log Manual Revenue Receipt</h5>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+
+            <!-- Modal Form Body Container -->
+            <div class="modal-body p-4 bg-light">
+                <form action="/admin/financial-registry/" method="GET">
+
+                    <div class="mb-3">
+                        <label class="form-label small fw-semibold text-muted">Contributor Reference Identity</label>
+                        <input type="text" class="form-control rounded-0"
+                            placeholder="e.g., Metropolitan Registry Entry" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label small fw-semibold text-muted">Regional Assembly Source Location</label>
+                        <select class="form-select rounded-0" required>
+                            <option value="" disabled selected>Select localized source cell...</option>
+                            <option value="hq">Shalom Otiakrom Global Headquarters</option>
+                            <option value="accra">Accra Metropolitan Assembly</option>
+                            <option value="london">London Convocation Hub</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label small fw-semibold text-muted">Allocation Category Matrix</label>
+                        <select class="form-select rounded-0" required>
+                            <option value="" disabled selected>Choose treasury fund classification...</option>
+                            <option value="tithe">Annual Festival Tithe Allocation</option>
+                            <option value="hq-fund">Headquarters Infrastructure Fund</option>
+                            <option value="welfare">Healthcare Welfare Contribution</option>
+                        </select>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-outline-charcoal w-50 rounded-0 fw-semibold"
+                            data-bs-dismiss="modal">Cancel Entry</button>
+                        <button type="submit" class="btn btn-charcoal w-50 rounded-0 fw-semibold">Commit
+                            Transaction</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
     </div>
 </div>
