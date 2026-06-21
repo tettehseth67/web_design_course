@@ -64,36 +64,94 @@
 <div class="container-fluid py-4 px-md-4 flex-grow-1 error-viewport-height">
     <div class="row g-4">
 
-        <!-- Left Sidebar Component: Re-applied Navigation Directory Index -->
-        <aside class="col-lg-3 col-xl-2">
-            <div class="card p-3 console-sidebar-card shadow-sm sticky-md-top sticky-sidebar-offset">
-                <div class="mb-3 px-2">
-                    <span class="text-uppercase fw-bold console-sidebar-heading d-block">System Control</span>
-                </div>
-                <div class="list-group list-group-flush small mb-4">
-                    <a href="/admin/"
-                        class="list-group-item list-group-item-action console-menu-item active-console-node d-flex justify-content-between align-items-center px-2 py-2.5">
-                        <span>👤 User Directory</span>
-                        <span class="badge bg-white text-dark rounded-pill border">4</span>
-                    </a>
-                    <a href="/admin/groups/"
-                        class="list-group-item list-group-item-action console-menu-item d-flex justify-content-between align-items-center px-2 py-2.5">
-                        <span>📦 Group Matrix</span>
-                        <span class="badge bg-light text-muted rounded-pill">5</span>
-                    </a>
-                    <a href="/admin/activity-logs/"
-                        class="list-group-item list-group-item-action console-menu-item d-flex justify-content-between align-items-center px-2 py-2.5">
-                        <span>📋 Activity Logs</span>
-                        <span class="badge bg-light text-muted rounded-pill border">System</span>
-                    </a>
+        <!-- 1. LEFT SIDEBAR COMPONENT: Injects Centralized Include Module -->
+        <!-- Reusable Administrative Navigation Sidebar Component -->
+<aside class="col-lg-4 col-xl-3">
+    <div class="card p-3 console-sidebar-card shadow-sm sticky-md-top sticky-sidebar-offset">
 
-                </div>
-                <div class="pt-3 border-top border-light">
-                    <a href="/admin/create-user/" class="btn btn-charcoal btn-sm w-100 fw-semibold py-2">Invite New
-                        User</a>
-                </div>
-            </div>
-        </aside>
+        <!-- Category Segment Header -->
+        <div class="mb-3 px-2">
+            <span class="text-uppercase fw-bold console-sidebar-heading d-block">System Control</span>
+        </div>
+
+        <!-- Centralized Admin Navigation Directory Links -->
+        <div class="list-group list-group-flush small mb-4" role="navigation" aria-label="Admin Console Navigation">
+
+            <a href="/admin/"
+                class="list-group-item list-group-item-action console-menu-item  d-flex justify-content-between align-items-center px-2 py-2.5">
+                <span>👤 User Directory</span>
+                <span
+                    class="badge bg-light text-muted rounded-pill border">4</span>
+            </a>
+
+            <a href="/admin/groups/"
+                class="list-group-item list-group-item-action console-menu-item  d-flex justify-content-between align-items-center px-2 py-2.5">
+                <span>📦 Group Matrix</span>
+                <span
+                    class="badge bg-light text-muted rounded-pill">5</span>
+            </a>
+
+            <a href="/admin/medical-inventory/"
+                class="list-group-item list-group-item-action console-menu-item  d-flex justify-content-between align-items-center px-2 py-2.5">
+                <span>🏥 Medical Supply</span>
+                <span
+                    class="badge bg-light text-muted rounded-pill">Logs</span>
+            </a>
+
+            <a href="/admin/ward-registry/"
+                class="list-group-item list-group-item-action console-menu-item  d-flex justify-content-between align-items-center px-2 py-2.5">
+                <span>🛏️ Ward Registry</span>
+                <span
+                    class="badge bg-light text-muted rounded-pill">Beds</span>
+            </a>
+
+            <a href="/admin/student-ledger/"
+                class="list-group-item list-group-item-action console-menu-item  d-flex justify-content-between align-items-center px-2 py-2.5">
+                <span>🎒 Student Ledger</span>
+                <span
+                    class="badge bg-light text-muted rounded-pill">Grades</span>
+            </a>
+
+            <a href="/admin/school-inventory/"
+                class="list-group-item list-group-item-action console-menu-item  d-flex justify-content-between align-items-center px-2 py-2.5">
+                <span>📚 School Inventory</span>
+                <span
+                    class="badge bg-light text-muted rounded-pill">Stock</span>
+            </a>
+
+            <a href="/admin/broadcast-registry/"
+                class="list-group-item list-group-item-action console-menu-item  d-flex justify-content-between align-items-center px-2 py-2.5">
+                <span>📻 Broadcasts</span>
+                <span
+                    class="badge bg-light text-muted rounded-pill">Feeds</span>
+            </a>
+
+            <a href="/admin/financial-registry/"
+                class="list-group-item list-group-item-action console-menu-item  d-flex justify-content-between align-items-center px-2 py-2.5">
+                <span>💰 Treasury Ledger</span>
+                <span
+                    class="badge bg-light text-muted rounded-pill">Tithe</span>
+            </a>
+
+            <a href="/admin/activity-logs/"
+                class="list-group-item list-group-item-action console-menu-item  d-flex justify-content-between align-items-center px-2 py-2.5">
+                <span>📋 Activity Logs</span>
+                <span
+                    class="badge bg-light text-muted rounded-pill border">Audit</span>
+            </a>
+
+        </div>
+
+        <!-- Operational Action Button Area -->
+        <div class="pt-3 border-top border-light">
+            <a href="/admin/create-user/"
+                class="btn btn-charcoal btn-sm w-100 fw-semibold text-center py-2 d-block text-dark text-decoration-none">
+                Invite New User
+            </a>
+        </div>
+
+    </div>
+</aside>
 
         <!-- Right Main Content Component: User Provisioning Form -->
         <main class="col-lg-8 col-xl-9">
