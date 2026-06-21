@@ -132,35 +132,62 @@ demographic allocations."
                             accounts.</p>
                     </div>
 
-                    <!-- NEW COMPONENT: Pure HTML Search and Filtering Toolbar Grid -->
+                    <!-- NEW COMPONENT: Pure HTML Search and Filtering Toolbar Grid with Integrated Vectors -->
                     <div class="card-body bg-light border-bottom p-3">
                         <form action="/admin/" method="GET" class="row g-2">
+                            <!-- Search Text Field with Vector Icon -->
                             <div class="col-md-5">
-                                <input type="text" name="search"
-                                    class="form-control rounded-0 form-control-sm console-filter-input"
-                                    placeholder="🔍 Search full legal name, ID hash, or email reference..."
-                                    aria-label="Search directory records">
+                                <div class="console-icon-input-group">
+                                    <svg xmlns="http://w3.org" width="14" height="14" fill="currentColor"
+                                        class="bi bi-search console-field-vector-icon" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                    </svg>
+                                    <input type="text" name="search"
+                                        class="form-control rounded-0 form-control-sm console-filter-input"
+                                        placeholder="Search full legal name, ID hash, or email reference..."
+                                        aria-label="Search directory records">
+                                </div>
                             </div>
+
+                            <!-- Group Select with Vector Icon -->
                             <div class="col-sm-6 col-md-3">
-                                <select name="group_filter"
-                                    class="form-select rounded-0 form-select-sm small text-muted"
-                                    aria-label="Filter by organizational group unit">
-                                    <option value="" selected>All Working Groups</option>
-                                    <option value="exec">Executive Central Board</option>
-                                    <option value="hospital">Healing Directorate</option>
-                                    <option value="youth">Theocratic Youth Council</option>
-                                </select>
+                                <div class="console-icon-input-group">
+                                    <svg xmlns="http://w3.org" width="14" height="14" fill="currentColor"
+                                        class="bi bi-grid console-field-vector-icon" viewBox="0 0 16 16">
+                                        <path
+                                            d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z" />
+                                    </svg>
+                                    <select name="group_filter"
+                                        class="form-select rounded-0 form-select-sm small text-muted"
+                                        aria-label="Filter by organizational group unit">
+                                        <option value="" selected>All Working Groups</option>
+                                        <option value="exec">Executive Central Board</option>
+                                        <option value="hospital">Healing Directorate</option>
+                                        <option value="youth">Theocratic Youth Council</option>
+                                    </select>
+                                </div>
                             </div>
+
+                            <!-- Security Select with Vector Icon -->
                             <div class="col-sm-6 col-md-3">
-                                <select name="clearance_filter"
-                                    class="form-select rounded-0 form-select-sm small text-muted"
-                                    aria-label="Filter by security clearance status">
-                                    <option value="" selected>All Clearances</option>
-                                    <option value="root">Root Executive</option>
-                                    <option value="standard">Standard Access</option>
-                                    <option value="guest">Pending Verify</option>
-                                </select>
+                                <div class="console-icon-input-group">
+                                    <svg xmlns="http://w3.org" width="14" height="14" fill="currentColor"
+                                        class="bi bi-shield-lock console-field-vector-icon" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.338 1.59a61 61 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.117.738 7.508 2.63 9.87 1.157 1.446 2.32 2.108 3.188 2.108.867 0 2.031-.662 3.188-2.108 1.892-2.362 3.184-5.753 2.63-9.87a.48.48 0 0 0-.329-.39c-.743-.246-1.7-.512-2.834-.855a.6.6 0 0 0-.4-.022L8 1.946l-.666-.378a.6.6 0 0 0-.396-.022zM7.001 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM1 4.586V4c0-.552.448-1 1-1h2c.552 0 1 .448 1 1v.586l.854-.853A.5.5 0 0 1 6.5 4h3a.5.5 0 0 1 .354.146l.854.853V4c0-.552.448-1 1-1h2c.552 0 1 .448 1 1v.586l.854-.853A.5.5 0 0 1 14.5 4h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.354-.146l-.854-.853V11c0 .552-.448 1-1 1h-2c-.552 0-1-.448-1-1v-.586l-.854.853A.5.5 0 0 1 9.5 12h-3a.5.5 0 0 1-.354-.146l-.854-.853V11c0 .552-.448 1-1 1H2c-.552 0-1-.448-1-1v-.586l-.854.853A.5.5 0 0 1 .5 11h-1a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5h1zm2 1.5V4h-1v2.086l1-.586zm4-1.5h-1v2.086l1-.586V4.586zm4 0h-1v2.086l1-.586V4.586zm3 0h-1v2.086l1-.586V4.586z" />
+                                    </svg>
+                                    <select name="clearance_filter"
+                                        class="form-select rounded-0 form-select-sm small text-muted"
+                                        aria-label="Filter by security clearance status">
+                                        <option value="" selected>All Clearances</option>
+                                        <option value="root">Root Executive</option>
+                                        <option value="standard">Standard Access</option>
+                                        <option value="guest">Pending Verify</option>
+                                    </select>
+                                </div>
                             </div>
+
                             <div class="col-12 col-md-1 d-grid">
                                 <button type="submit"
                                     class="btn btn-charcoal btn-sm rounded-0 fw-semibold">Filter</button>

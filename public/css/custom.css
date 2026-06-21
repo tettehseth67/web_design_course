@@ -391,5 +391,34 @@ body {
     transform: translateX(4px);
 }
 
+/* ==========================================================================
+   18. PREMIUM INPUT FIELD ICON WRAPPERS
+   ========================================================================== */
+
+/* Structural layout anchor container for icon inputs */
+.console-icon-input-group {
+    position: relative !important;
+}
+
+/* absolute positioning values for native html input selectors */
+.console-icon-input-group .form-control {
+    padding-left: 2.25rem !important;
+}
+
+.console-icon-input-group .form-select {
+    padding-left: 2.25rem !important;
+}
+
+/* Subdued layout tokens for vector icons */
+.console-field-vector-icon {
+    position: absolute;
+    top: 50%;
+    left: 0.75rem;
+    transform: translateY(-50%);
+    color: #a0aec0;
+    pointer-events: none;
+    z-index: 4;
+}
+
 
 
