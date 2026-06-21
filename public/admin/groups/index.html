@@ -157,79 +157,99 @@
         <main class="col-lg-8 col-xl-9">
 
             <div class="card border rounded-0 shadow-sm bg-white mb-4">
-                <div
-                    class="card-header bg-white py-3 border-bottom d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
-                    <div>
-                        <h1 class="fw-bold text-charcoal h5 mb-1">Functional Subdivisions Matrix</h1>
-                        <p class="text-muted small mb-0">Systematic inventory of active working groups under the
-                            corporate charter.</p>
-                    </div>
-                    <!-- Inside src/admin/groups.html card header -->
+                <div class="card border rounded-0 shadow-sm bg-white mb-4">
                     <div
                         class="card-header bg-white py-3 border-bottom d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
                         <div>
-                            <h1 class="fw-bold text-charcoal h5 mb-1">Functional Subdivisions Matrix</h1>
-                            <p class="text-muted small mb-0">Systematic inventory of active working groups under the corporate charter.</p>
+                            <h2 class="fw-bold text-charcoal h5 mb-1">Functional Subdivisions Matrix</h2>
+                            <p class="text-muted small mb-0">Systematic inventory of active working groups under the
+                                corporate charter.
+                            </p>
                         </div>
-                        <!-- FIXED: Data attributes launch the overlay dialog box natively -->
-                        <button type="button" class="btn btn-charcoal btn-sm fw-semibold rounded-0 px-3 py-2 rounded-pill" data-bs-toggle="modal"
-                            data-bs-target="#createGroupModal">
+                        <button type="button" class="btn btn-charcoal btn-sm fw-semibold rounded-0 px-3"
+                            data-bs-toggle="modal" data-bs-target="#createGroupModal">
                             Create New Group
                         </button>
                     </div>
+                    <!-- DUPLICATED: Pure HTML Toolbar for Group Grid Filtering -->
+                    <div class="card-body bg-light border-bottom p-3">
+                        <form action="/admin/groups/" method="GET" class="row g-2">
+                            <div class="col-md-6">
+                                <input type="text" name="search"
+                                    class="form-control rounded-0 form-control-sm console-filter-input"
+                                    placeholder="🔍 Search group unit name, seats description, or parent board..."
+                                    aria-label="Search group records">
+                            </div>
+                            <div class="col-md-5">
+                                <select name="parent_directorate"
+                                    class="form-select rounded-0 form-select-sm small text-muted"
+                                    aria-label="Filter by parent directorate board branch">
+                                    <option value="" selected>All Parent Directorates</option>
+                                    <option value="admin">Administrative Central Board</option>
+                                    <option value="medical">Medical Directorate</option>
+                                    <option value="demographic">Demographic Frameworks Branch</option>
+                                    <option value="enterprise">Enterprise Development Wing</option>
+                                </select>
+                            </div>
+                            <div class="col-md-1 d-grid">
+                                <button type="submit"
+                                    class="btn btn-charcoal btn-sm rounded-0 fw-semibold">Filter</button>
+                            </div>
+                        </form>
+                    </div>
 
-                </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0 small admin-matrix-hover-row">
+                            <thead class="table-light text-uppercase table-uppercase-header">
+                                <tr>
+                                    <th scope="col" class="ps-4 py-3 text-charcoal">Group Division Unit</th>
+                                    <th scope="col" class="py-3 text-charcoal">Parent Directorate</th>
+                                    <th scope="col" class="py-3 text-charcoal">Registered Seats</th>
+                                    <th scope="col" class="py-3 text-charcoal">System Control Token</th>
+                                    <th scope="col" class="pe-4 py-3 text-charcoal text-end">Operational Actions</th>
+                                </tr>
+                            </thead>
+                            <!-- Inside the group directory data row matrix of src/admin/groups.html -->
+                            <tbody class="text-muted">
+                                <tr>
+                                    <td class="fw-semibold text-dark ps-4">Global Executive Secretariat</td>
+                                    <td>Administrative Central Board</td>
+                                    <td>12 Accounts</td>
+                                    <td><span
+                                            class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-2 py-1 fw-semibold">Root
+                                            Clearance</span></td>
+                                    <td class="pe-4 text-end">
+                                        <a href="/admin/groups-detail/"
+                                            class="link-dark fw-bold text-decoration-none border-bottom pb-0.5 me-2">View
+                                            Group</a>
+                                        <!-- FIXED: Added pure HTML target trigger button to launch the group purge warning modal -->
+                                        <button type="button"
+                                            class="btn btn-link link-danger p-0 border-0 align-baseline small fw-bold text-decoration-none border-bottom pb-0.5"
+                                            data-bs-toggle="modal" data-bs-target="#deleteGroupModal">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-semibold text-dark ps-4">Sufficient Grace Hospital Unit</td>
+                                    <td>Medical Directorate</td>
+                                    <td>45 Accounts</td>
+                                    <td><span
+                                            class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1 fw-semibold">Standard
+                                            Access</span></td>
+                                    <td class="pe-4 text-end">
+                                        <a href="/admin/groups-detail/"
+                                            class="link-dark fw-bold text-decoration-none border-bottom pb-0.5 me-2">View
+                                            Group</a>
+                                        <button type="button"
+                                            class="btn btn-link link-danger p-0 border-0 align-baseline small fw-bold text-decoration-none border-bottom pb-0.5"
+                                            data-bs-toggle="modal" data-bs-target="#deleteGroupModal">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
 
-                <div class="table-responsive">
-                    <table class="table table-hover align-middle mb-0 small admin-matrix-hover-row">
-                        <thead class="table-light text-uppercase table-uppercase-header">
-                            <tr>
-                                <th scope="col" class="ps-4 py-3 text-charcoal">Group Division Unit</th>
-                                <th scope="col" class="py-3 text-charcoal">Parent Directorate</th>
-                                <th scope="col" class="py-3 text-charcoal">Registered Seats</th>
-                                <th scope="col" class="py-3 text-charcoal">System Control Token</th>
-                                <th scope="col" class="pe-4 py-3 text-charcoal text-end">Operational Actions</th>
-                            </tr>
-                        </thead>
-                        <!-- Inside the group directory data row matrix of src/admin/groups.html -->
-                        <tbody class="text-muted">
-                            <tr>
-                                <td class="fw-semibold text-dark ps-4">Global Executive Secretariat</td>
-                                <td>Administrative Central Board</td>
-                                <td>12 Accounts</td>
-                                <td><span
-                                        class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-2 py-1 fw-semibold">Root
-                                        Clearance</span></td>
-                                <td class="pe-4 text-end">
-                                    <a href="/admin/groups-detail/"
-                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5 me-2">View Group</a>
-                                    <!-- FIXED: Added pure HTML target trigger button to launch the group purge warning modal -->
-                                    <button type="button"
-                                        class="btn btn-link link-danger p-0 border-0 align-baseline small fw-bold text-decoration-none border-bottom pb-0.5"
-                                        data-bs-toggle="modal" data-bs-target="#deleteGroupModal">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="fw-semibold text-dark ps-4">Sufficient Grace Hospital Unit</td>
-                                <td>Medical Directorate</td>
-                                <td>45 Accounts</td>
-                                <td><span
-                                        class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1 fw-semibold">Standard
-                                        Access</span></td>
-                                <td class="pe-4 text-end">
-                                    <a href="/admin/groups-detail/"
-                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5 me-2">View Group</a>
-                                    <button type="button"
-                                        class="btn btn-link link-danger p-0 border-0 align-baseline small fw-bold text-decoration-none border-bottom pb-0.5"
-                                        data-bs-toggle="modal" data-bs-target="#deleteGroupModal">Delete</button>
-                                </td>
-                            </tr>
-                        </tbody>
-
-                    </table>
+                        </table>
+                    </div>
                 </div>
             </div>
-
         </main>
     </div>
 </div>

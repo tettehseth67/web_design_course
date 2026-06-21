@@ -206,71 +206,88 @@
 
             <!-- Financial Ledger Transaction Matrix -->
             <div class="card border rounded-0 shadow-sm bg-white mb-4">
-                <div
-                    class="card-header bg-white py-3 border-bottom d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
-                    <div>
-                        <h2 class="fw-bold text-charcoal h5 mb-1">Recent Registry Contributions</h2>
-                        <p class="text-muted small mb-0">Logged historical ledger transaction dispatches for the current
-                            operational cycle.</p>
-                    </div>
-                    <!-- Inside src/admin/financial-registry.html card header tracking area -->
+                <div class="card border rounded-0 shadow-sm bg-white mb-4">
                     <div
                         class="card-header bg-white py-3 border-bottom d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
                         <div>
                             <h2 class="fw-bold text-charcoal h5 mb-1">Recent Registry Contributions</h2>
-                            <p class="text-muted small mb-0">Logged historical ledger transaction dispatches for the current operational
+                            <p class="text-muted small mb-0">Logged historical ledger transaction dispatches for the
+                                current operational
                                 cycle.</p>
                         </div>
-                        <div
-                            class="card-header bg-white py-3 border-bottom d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
-                            <div>
-                                <h2 class="fw-bold text-charcoal h5 mb-1">Recent Registry Contributions</h2>
-                                <p class="text-muted small mb-0">Logged historical ledger transaction dispatches for the current operational
-                                    cycle.</p>
-                            </div>
-                            <!-- FIXED ACTION PATH LINK TO THE NEW FORM BELOW -->
-                            <a href="/admin/financial-entry/"
-                                class="btn btn-charcoal btn-sm fw-semibold rounded-0 px-3 text-white text-decoration-none">Log Manual
-                                Receipt</a>
-                        </div>
+                        <button type="button" class="btn btn-charcoal btn-sm fw-semibold rounded-0 px-3"
+                            data-bs-toggle="modal" data-bs-target="#logReceiptModal">
+                            Log Manual Receipt
+                        </button>
                     </div>
 
-                </div>
+                    <!-- DUPLICATED: Pure HTML Toolbar for Treasury Transaction Sorting -->
+                    <div class="card-body bg-light border-bottom p-3">
+                        <form action="/admin/financial-registry/" method="GET" class="row g-2">
+                            <div class="col-md-5">
 
-                <div class="table-responsive">
-                    <table class="table table-hover align-middle mb-0 small admin-matrix-hover-row">
-                        <thead class="table-light text-uppercase table-uppercase-header">
-                            <tr>
-                                <th scope="col" class="ps-4 py-3 text-charcoal">Contributor Reference</th>
-                                <th scope="col" class="py-3 text-charcoal">Regional Assembly Source</th>
-                                <th scope="col" class="py-3 text-charcoal">Allocation Category</th>
-                                <th scope="col" class="pe-4 py-3 text-charcoal text-end">Ledger Code</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-muted">
-                            <tr>
-                                <td class="fw-semibold text-dark ps-4">Diaspora Account Member</td>
-                                <td>London Convocation Hub</td>
-                                <td>Annual Festival Tithe Allocation</td>
-                                <td class="pe-4 text-end font-monospace text-dark">tx_ldn_99014a</td>
-                            </tr>
-                            <tr>
-                                <td class="fw-semibold text-dark ps-4">Metropolitan Registry Entry</td>
-                                <td>Accra Metropolitan Assembly</td>
-                                <td>Headquarters Infrastructure Fund</td>
-                                <td class="pe-4 text-end font-monospace text-dark">tx_acc_04471b</td>
-                            </tr>
-                            <tr>
-                                <td class="fw-semibold text-dark ps-4">Medical Directorate Cell</td>
-                                <td>Sufficient Grace Hospital Unit</td>
-                                <td>Healthcare Welfare Contribution</td>
-                                <td class="pe-4 text-end font-monospace text-dark">tx_med_55102f</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <select name="assembly_source"
+                                    class="form-select rounded-0 form-select-sm small text-muted"
+                                    aria-label="Filter by regional assembly source cell">
+                                    <option value="" selected>All Assemblies</option>
+                                    <option value="hq">Shalom Otiakrom HQ</option>
+                                    <option value="accra">Accra Metropolitan</option>
+                                    <option value="london">London Convocation</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <select name="fund_category"
+                                    class="form-select rounded-0 form-select-sm small text-muted"
+                                    aria-label="Filter by treasury fund classification">
+                                    <option value="" selected>All Fund Categories</option>
+                                    <option value="tithe">Annual Festival Tithe</option>
+                                    <option value="hq-fund">Headquarters Infrastructure</option>
+                                    <option value="welfare">Healthcare Welfare Aid</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-1 d-grid">
+                                <button type="submit"
+                                    class="btn btn-charcoal btn-sm rounded-0 fw-semibold">Filter</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0 small admin-matrix-hover-row">
+                            <thead class="table-light text-uppercase table-uppercase-header">
+                                <tr>
+                                    <th scope="col" class="ps-4 py-3 text-charcoal">Contributor Reference</th>
+                                    <th scope="col" class="py-3 text-charcoal">Regional Assembly Source</th>
+                                    <th scope="col" class="py-3 text-charcoal">Allocation Category</th>
+                                    <th scope="col" class="pe-4 py-3 text-charcoal text-end">Ledger Code</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-muted">
+                                <tr>
+                                    <td class="fw-semibold text-dark ps-4">Diaspora Account Member</td>
+                                    <td>London Convocation Hub</td>
+                                    <td>Annual Festival Tithe Allocation</td>
+                                    <td class="pe-4 text-end font-monospace text-dark">tx_ldn_99014a</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-semibold text-dark ps-4">Metropolitan Registry Entry</td>
+                                    <td>Accra Metropolitan Assembly</td>
+                                    <td>Headquarters Infrastructure Fund</td>
+                                    <td class="pe-4 text-end font-monospace text-dark">tx_acc_04471b</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-semibold text-dark ps-4">Medical Directorate Cell</td>
+                                    <td>Sufficient Grace Hospital Unit</td>
+                                    <td>Healthcare Welfare Contribution</td>
+                                    <td class="pe-4 text-end font-monospace text-dark">tx_med_55102f</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-
         </main>
     </div>
 </div>
