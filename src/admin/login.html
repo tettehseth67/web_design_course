@@ -27,19 +27,19 @@ Congregation."
 
                         <div class="mb-3">
                             <label for="exec_admin" class="form-label small fw-semibold text-muted">Administrative Token ID</label>
-                            <input type="text" class="form-control rounded-0 font-monospace"
+                            <input type="text" class="form-control rounded-0 font-monospace" name="exec_admin"
                                 placeholder="e.g., exec_admin_01" autofocus required>
                         </div>
 
                         <!-- Inside the form container in src/admin/login.html -->
                         <div class="mb-4">
                             <label for="password" class="form-label small fw-semibold text-muted">Secure Security Key</label>
-                            <input type="password" class="form-control rounded-0" autocomplete="" placeholder="••••••••••••" required>
+                            <input type="password" class="form-control rounded-0" name="password" autocomplete="" placeholder="••••••••••••" required>
                         </div>
 
                         <!-- FIXED: Pure HTML/Bootstrap Custom Switch Form Node -->
                         <div class="mb-4 form-check text-start">
-                            <input type="checkbox" class="form-check-input rounded-0" id="adminRememberMe">
+                            <input type="checkbox" class="form-check-input rounded-0" name="checkbox" id="adminRememberMe">
                             <label class="form-check-label small fw-medium text-muted user-select-none"
                                 for="adminRememberMe">
                                 Remember security token session
