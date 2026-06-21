@@ -12,6 +12,7 @@ Disallow: /admin/access-denied/
 Disallow: /admin/activity-logs/
 Disallow: /admin/medical-inventory/
 Disallow: /admin/student-ledger/
+Disallow: /admin/school-inventory/
 
 # Core Sitemap Matrix Location Anchor
 Sitemap: https://netlify.app

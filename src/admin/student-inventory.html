@@ -1,0 +1,205 @@
+---
+layout: "admin-base.html"
+title: "School Inventory Registry"
+permalink: "/admin/school-inventory/"
+description: "Administrative infrastructure board tracking classroom assets, text materials, and logistics equipment for
+the SDTWC Education Complex."
+---
+
+<!-- Global Admin Workspace Container Wrapper -->
+<div class="container-fluid py-4 px-md-4 flex-grow-1 error-viewport-height">
+    <div class="row g-4">
+
+        <!-- Left Sidebar Component: Console Index Links -->
+        <aside class="col-lg-3 col-xl-2">
+            <div class="card p-3 console-sidebar-card shadow-sm sticky-md-top sticky-sidebar-offset">
+                <div class="mb-3 px-2">
+                    <span class="text-uppercase fw-bold console-sidebar-heading d-block">System Control</span>
+                </div>
+                <div class="list-group list-group-flush small mb-4">
+                    <a href="/admin/"
+                        class="list-group-item list-group-item-action console-menu-item d-flex justify-content-between align-items-center px-2 py-2.5">
+                        <span>👤 User Directory</span>
+                        <span class="badge bg-light text-muted rounded-pill">4</span>
+                    </a>
+                    <a href="/admin/groups/"
+                        class="list-group-item list-group-item-action console-menu-item d-flex justify-content-between align-items-center px-2 py-2.5">
+                        <span>📦 Group Matrix</span>
+                        <span class="badge bg-light text-muted rounded-pill">5</span>
+                    </a>
+                    <a href="/admin/school-inventory/"
+                        class="list-group-item list-group-item-action console-menu-item active-console-node d-flex justify-content-between align-items-center px-2 py-2.5">
+                        <span>📚 School Inventory</span>
+                        <span class="badge bg-white text-dark rounded-pill border">Stock</span>
+                    </a>
+                </div>
+                <div class="pt-3 border-top border-light">
+                    <a href="/admin/create-user/" class="btn btn-charcoal btn-sm w-100 fw-semibold py-2">Invite New
+                        User</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Main Content Component: Infrastructure Tracking Board -->
+        <main class="col-lg-9 col-xl-10">
+
+            <!-- Dark Bootstrap Header Card Banner -->
+            <div class="card border rounded-0 p-4 shadow-sm bg-dark text-white mb-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                    <div>
+                        <span class="text-uppercase fw-bold text-warning small d-block mb-1">
+                            Logistics Directorate Node
+                        </span>
+                        <h1 class="fw-bold h3 mb-1 text-white">School Supplies &amp; Infrastructure Registry</h1>
+                        <p class="text-white-50 small mb-0">
+                            Tracking physical assets, classroom desks allocation, and library textbook resource
+                            inventories.
+                        </p>
+                    </div>
+                    <div class="text-md-end text-nowrap">
+                        <a href="/admin/" class="btn btn-outline-light btn-sm rounded-0 fw-semibold px-3 py-2">
+                            &larr; Back to Console
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inventory Status Metrics Row -->
+            <div class="row g-3 mb-4">
+                <div class="col-sm-6 col-md-4">
+                    <div class="p-3 bg-white border shadow-sm rounded-1">
+                        <span
+                            class="text-muted text-uppercase tracking-wider small d-block mb-1 admin-metric-label">Registered
+                            Classrooms</span>
+                        <h3 class="fw-bold text-charcoal mb-0">12 Blocks</h3>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="p-3 bg-white border shadow-sm rounded-1">
+                        <span
+                            class="text-muted text-uppercase tracking-wider small d-block mb-1 admin-metric-label">Supply
+                            Check Status</span>
+                        <h3 class="fw-bold text-charcoal mb-0 h4 mt-1">Balanced</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 bg-white border shadow-sm rounded-1 text-center">
+                        <span
+                            class="text-muted text-uppercase tracking-wider small d-block mb-2 admin-metric-label">Asset
+                            Allocation</span>
+                        <button type="button" class="btn btn-outline-charcoal btn-sm fw-semibold w-100 rounded-0 py-1"
+                            data-bs-toggle="modal" data-bs-target="#logAssetModal">
+                            Log Asset Entry
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Infrastructure Supply Matrix Table -->
+            <div class="card border rounded-0 shadow-sm bg-white mb-4">
+                <div class="card-header bg-white py-3 border-bottom">
+                    <h2 class="fw-bold text-charcoal h5 mb-1">Classroom &amp; Academic Supply Sheet</h2>
+                    <p class="text-muted small mb-0">Review tracked academic resources across primary school sectors.
+                    </p>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0 small admin-matrix-hover-row">
+                        <thead class="table-light text-uppercase table-uppercase-header">
+                            <tr>
+                                <th scope="col" class="ps-4 py-3 text-charcoal">Resource Item</th>
+                                <th scope="col" class="py-3 text-charcoal">Location Block</th>
+                                <th scope="col" class="py-3 text-charcoal">Total Count</th>
+                                <th scope="col" class="py-3 text-charcoal">Assigned Status</th>
+                                <th scope="col" class="pe-4 py-3 text-charcoal text-end">Operational Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-muted">
+                            <tr>
+                                <td class="fw-semibold text-dark ps-4">Double-Seater Academic Desks</td>
+                                <td>Primary Blocks A &amp; B</td>
+                                <td>120 Units</td>
+                                <td>Fully Deployed</td>
+                                <td class="pe-4 text-end"><a href="/admin/school-inventory/"
+                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5">Audit</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fw-semibold text-dark ps-4">Foundational Mathematics Texts</td>
+                                <td>Central Library Repository</td>
+                                <td>250 Volumes</td>
+                                <td>In Circulation</td>
+                                <td class="pe-4 text-end"><a href="/admin/school-inventory/"
+                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5">Audit</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fw-semibold text-dark ps-4">Laboratory Science Kits</td>
+                                <td>Secondary Complex Lab</td>
+                                <td>35 Units</td>
+                                <td>Stored / Secure</td>
+                                <td class="pe-4 text-end"><a href="/admin/school-inventory/"
+                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5">Audit</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</div>
+
+<!-- Pure HTML/Bootstrap Scriptless Asset Entry Modal -->
+<div class="modal fade" id="logAssetModal" tabindex="-1" aria-labelledby="logAssetModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-0 border">
+            <div class="modal-header bg-dark text-white rounded-0 py-3">
+                <div class="tracking-wide">
+                    <span class="text-uppercase fw-bold text-warning small d-block mb-1 admin-metric-label">Logistics
+                        Tracking</span>
+                    <h5 class="modal-title fw-bold h6" id="logAssetModalLabel">Log Infrastructure Supply</h5>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4 bg-light">
+                <form action="/admin/school-inventory/" method="GET">
+                    <div class="mb-3">
+                        <label class="form-label small fw-semibold text-muted">Asset Item Description</label>
+                        <input type="text" class="form-control rounded-0" placeholder="e.g., Double-Seater Desks"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small fw-semibold text-muted">Target Campus Location</label>
+                        <select class="form-select rounded-0" required>
+                            <option value="" disabled selected>Choose campus block...</option>
+                            <option value="block-a">Primary Block A</option>
+                            <option value="block-b">Primary Block B</option>
+                            <option value="library">Library Repository</option>
+                        </select>
+                    </div>
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <label class="form-label small fw-semibold text-muted">Total Unit Count</label>
+                            <input type="number" class="form-control rounded-0" min="1" required>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form-label small fw-semibold text-muted">Allocation Status</label>
+                            <select class="form-select rounded-0" required>
+                                <option value="deployed">Fully Deployed</option>
+                                <option value="stored">Stored / Secure</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-outline-charcoal w-50 rounded-0 fw-semibold"
+                            data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-charcoal w-50 rounded-0 fw-semibold">Save Supply</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
