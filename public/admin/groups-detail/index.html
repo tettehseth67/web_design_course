@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Group Division Details | SDTWC Management Console</title>
+    <title>Group Division Details</title>
 
     <!-- Typography Pre-connections -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,28 +21,44 @@
 <body class="bg-light">
 
     <!-- Premium Isolated Administrative Header Bar (No Public Links) -->
-    <nav class="navbar navbar-dark bg-dark sticky-top shadow-sm py-2">
+    <nav class="navbar navbar-dark bg-dark sticky-top shadow-sm py-2" role="navigation"
+        aria-label="Management Console Header">
         <div class="container-fluid px-4">
+
+            <!-- Logo Branding Node -->
             <a class="navbar-brand fw-bold text-uppercase tracking-wider small d-flex align-items-center gap-2"
-                href="/admin/">
+                href="/admin/" aria-label="SDTWC Administration Console Home">
                 <span class="border-start border-3 border-warning ps-2">SDTWC Console</span>
-                <span class="badge bg-secondary text-uppercase admin-metric-label">System Control</span>
+                <span class="badge bg-secondary text-uppercase admin-metric-label" aria-hidden="true">System
+                    Control</span>
             </a>
+
+            <!-- Right Controls Interface Block -->
             <div class="d-flex align-items-center gap-3">
-                <button type="button" class="btn btn-primary position-relative rounded-pill">
-                    Inbox
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+
+                <!-- Optimized Inbox Notification Button Indicator -->
+                <button type="button" class="btn btn-outline-light btn-sm rounded-0 position-relative fw-semibold px-3"
+                    aria-label="Open Secretariat Inbox, 99 plus unread dispatches">
+                    <span>📬 Inbox</span>
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-dark admin-metric-label">
                         99+
-                        <span class="visually-hidden">unread messages</span>
+                        <span class="visually-hidden">unread dispatches</span>
                     </span>
                 </button>
-                <a href="/" class="btn btn-outline-light btn-sm rounded-0 fw-semibold rounded-pill">Exit Console</a>
+
+                <!-- Clean Control Gate Portal Exit Button -->
+                <a href="/" class="btn btn-outline-light btn-sm rounded-0 fw-semibold px-3">
+                    Exit Console
+                </a>
+
             </div>
+
         </div>
     </nav>
 
     <!-- Core Main Content Workspace Viewport Injection Mount -->
-    <main>
+    <main role="main" aria-label="Console Workspace">
         
 <!-- Global Main Group Matrix Layout Container -->
 <div class="container-fluid py-4 px-md-4 flex-grow-1 error-viewport-height">
