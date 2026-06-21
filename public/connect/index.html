@@ -206,7 +206,8 @@
             <div class="col-lg-6">
                 <div class="p-4 rounded border shadow-sm bg-light">
                     <h4 class="fw-bold h5 text-charcoal mb-3">Inquiry Dispatch Form</h4>
-                    <form action="#" method="POST">
+                    <form name="church-inquiry-dispatch" method="POST" action="/connect/success/" data-netlify="true">
+                        <input type="hidden" name="form-name" value="church-inquiry-dispatch">
                         <div class="mb-3">
                             <label class="form-label small fw-semibold text-muted">Full Name / Member ID</label>
                             <input type="text" class="form-control rounded-0" placeholder="John Doe">
