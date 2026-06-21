@@ -123,55 +123,95 @@ demographic allocations."
 
             <!-- Active User Registry Management Table Section -->
             <div class="card border rounded-0 shadow-sm bg-white mb-4">
-                <div class="card-header bg-white py-3 border-bottom">
-                    <h2 class="fw-bold text-charcoal h5 mb-1">Active User Authorization Matrix</h2>
-                    <p class="text-muted small mb-0">Review system clearance parameters and group status assignments
-                        across accounts.</p>
-                </div>
-                <div class="table-responsive">
-                    <table class="table table-hover align-middle mb-0 small admin-matrix-hover-row">
-                        <thead class="table-light text-uppercase table-uppercase-header">
-                            <tr>
-                                <th scope="col" class="ps-4 py-3 text-charcoal">Account Name</th>
-                                <th scope="col" class="py-3 text-charcoal">Email Address</th>
-                                <th scope="col" class="py-3 text-charcoal">Group Unit</th>
-                                <th scope="col" class="py-3 text-charcoal">Clearance Status</th>
-                                <th scope="col" class="pe-4 py-3 text-charcoal text-end">Operational Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-muted">
-                            <tr>
-                                <td class="fw-semibold text-dark ps-4">Secretariat Admin</td>
-                                <td>admin@seventhdaytheocraticworld.org</td>
-                                <td>Executive Central Board</td>
-                                <td><span
-                                        class="badge badge-clearance-root px-2 py-1 fw-semibold text-uppercase admin-metric-label">Root
-                                        Executive</span></td>
-                                <td class="pe-4 text-end">
-                                    <a href="/admin/user-profile/"
-                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5 me-2">Manage</a>
-                                    <button type="button"
-                                        class="btn btn-link link-danger p-0 border-0 align-baseline small fw-bold text-decoration-none border-bottom pb-0.5"
-                                        data-bs-toggle="modal" data-bs-target="#deleteMemberModal">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="fw-semibold text-dark ps-4">Medical Director</td>
-                                <td>hospital@seventhdaytheocraticworld.org</td>
-                                <td>Healing Directorate</td>
-                                <td><span
-                                        class="badge badge-clearance-standard px-2 py-1 fw-medium text-uppercase admin-metric-label">Standard
-                                        Access</span></td>
-                                <td class="pe-4 text-end">
-                                    <a href="/admin/user-profile/"
-                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5 me-2">Manage</a>
-                                    <button type="button"
-                                        class="btn btn-link link-danger p-0 border-0 align-baseline small fw-bold text-decoration-none border-bottom pb-0.5"
-                                        data-bs-toggle="modal" data-bs-target="#deleteMemberModal">Delete</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- Active User Registry Management Table Section -->
+                <div class="card border rounded-0 shadow-sm bg-white mb-4">
+                    <div class="card-header bg-white py-3 border-bottom">
+                        <h2 class="fw-bold text-charcoal h5 mb-1">Active User Authorization Matrix</h2>
+                        <p class="text-muted small mb-0">Review system clearance parameters and group status assignments
+                            across
+                            accounts.</p>
+                    </div>
+
+                    <!-- NEW COMPONENT: Pure HTML Search and Filtering Toolbar Grid -->
+                    <div class="card-body bg-light border-bottom p-3">
+                        <form action="/admin/" method="GET" class="row g-2">
+                            <div class="col-md-5">
+                                <input type="text" name="search"
+                                    class="form-control rounded-0 form-control-sm console-filter-input"
+                                    placeholder="🔍 Search full legal name, ID hash, or email reference..."
+                                    aria-label="Search directory records">
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <select name="group_filter"
+                                    class="form-select rounded-0 form-select-sm small text-muted"
+                                    aria-label="Filter by organizational group unit">
+                                    <option value="" selected>All Working Groups</option>
+                                    <option value="exec">Executive Central Board</option>
+                                    <option value="hospital">Healing Directorate</option>
+                                    <option value="youth">Theocratic Youth Council</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <select name="clearance_filter"
+                                    class="form-select rounded-0 form-select-sm small text-muted"
+                                    aria-label="Filter by security clearance status">
+                                    <option value="" selected>All Clearances</option>
+                                    <option value="root">Root Executive</option>
+                                    <option value="standard">Standard Access</option>
+                                    <option value="guest">Pending Verify</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-1 d-grid">
+                                <button type="submit"
+                                    class="btn btn-charcoal btn-sm rounded-0 fw-semibold">Filter</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0 small admin-matrix-hover-row">
+                            <thead class="table-light text-uppercase table-uppercase-header">
+                                <tr>
+                                    <th scope="col" class="ps-4 py-3 text-charcoal">Account Name</th>
+                                    <th scope="col" class="py-3 text-charcoal">Email Address</th>
+                                    <th scope="col" class="py-3 text-charcoal">Group Unit</th>
+                                    <th scope="col" class="py-3 text-charcoal">Clearance Status</th>
+                                    <th scope="col" class="pe-4 py-3 text-charcoal text-end">Operational Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-muted">
+                                <tr>
+                                    <td class="fw-semibold text-dark ps-4">Secretariat Admin</td>
+                                    <td>admin@seventhdaytheocraticworld.org</td>
+                                    <td>Executive Central Board</td>
+                                    <td><span
+                                            class="badge badge-clearance-root px-2 py-1 fw-semibold text-uppercase admin-metric-label">Root
+                                            Executive</span></td>
+                                    <td class="pe-4 text-end">
+                                        <a href="/admin/user-profile/"
+                                            class="link-dark fw-bold text-decoration-none border-bottom pb-0.5 me-2">Manage</a>
+                                        <button type="button"
+                                            class="btn btn-link link-danger p-0 border-0 align-baseline small fw-bold text-decoration-none border-bottom pb-0.5"
+                                            data-bs-toggle="modal" data-bs-target="#deleteMemberModal">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-semibold text-dark ps-4">Medical Director</td>
+                                    <td>hospital@seventhdaytheocraticworld.org</td>
+                                    <td>Healing Directorate</td>
+                                    <td><span
+                                            class="badge badge-clearance-standard px-2 py-1 fw-medium text-uppercase admin-metric-label">Standard
+                                            Access</span></td>
+                                    <td class="pe-4 text-end">
+                                        <a href="/admin/user-profile/"
+                                            class="link-dark fw-bold text-decoration-none border-bottom pb-0.5 me-2">Manage</a>
+                                        <button type="button"
+                                            class="btn btn-link link-danger p-0 border-0 align-baseline small fw-bold text-decoration-none border-bottom pb-0.5"
+                                            data-bs-toggle="modal" data-bs-target="#deleteMemberModal">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </main>

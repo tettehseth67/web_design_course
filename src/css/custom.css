@@ -369,5 +369,27 @@ body {
     border-left-color: var(--bs-warning) !important;
 }
 
+/* ==========================================================================
+   17. SYSTEM SEARCH BAR AND INBOX HOVER MATRIX
+   ========================================================================== */
+
+/* Refined typography placeholder variables for filter rows */
+.console-filter-input::placeholder {
+    font-size: 0.8rem;
+    color: #a0aec0;
+}
+
+/* Elegant transition behaviors for the centralized message layout rows */
+.broadcast-log-node {
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.broadcast-log-node:hover {
+    background-color: #f8f9fa !important;
+    border-left-color: var(--bs-warning) !important;
+    transform: translateX(4px);
+}
+
 
 
