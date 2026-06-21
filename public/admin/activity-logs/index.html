@@ -33,11 +33,11 @@
                     Control</span>
             </a>
 
-            <!-- Right Controls Interface Block -->
+            <!-- Inside src/_includes/admin-base.html navbar controls menu -->
             <div class="d-flex align-items-center gap-3">
-
-                <!-- Optimized Inbox Notification Button Indicator -->
+                <!-- FIXED: Data attributes natively wire this button to open the inbox modal overlay -->
                 <button type="button" class="btn btn-outline-light btn-sm rounded-0 position-relative fw-semibold px-3"
+                    data-bs-toggle="modal" data-bs-target="#adminInboxModal"
                     aria-label="Open Secretariat Inbox, 99 plus unread dispatches">
                     <span>📬 Inbox</span>
                     <span
@@ -47,12 +47,12 @@
                     </span>
                 </button>
 
-                <!-- Clean Control Gate Portal Exit Button -->
                 <a href="/" class="btn btn-outline-light btn-sm rounded-0 fw-semibold px-3">
                     Exit Console
                 </a>
 
             </div>
+
 
         </div>
     </nav>
