@@ -1,0 +1,216 @@
+---
+layout: "admin-base.html"
+title: "Inpatient Ward Registry"
+permalink: "/admin/ward-registry/"
+description: "Administrative clinical operational hub tracking bed allocations, attending officers, and inpatient
+discharge timelines for Sufficient Grace Hospital."
+---
+
+<!-- Global Admin Workspace Container Wrapper -->
+<div class="container-fluid py-4 px-md-4 flex-grow-1 error-viewport-height">
+    <div class="row g-4">
+
+        <!-- Left Sidebar Component: Console Index Links -->
+        <aside class="col-lg-3 col-xl-2">
+            <div class="card p-3 console-sidebar-card shadow-sm sticky-md-top sticky-sidebar-offset">
+                <div class="mb-3 px-2">
+                    <span class="text-uppercase fw-bold console-sidebar-heading d-block">System Control</span>
+                </div>
+                <div class="list-group list-group-flush small mb-4">
+                    <a href="/admin/"
+                        class="list-group-item list-group-item-action console-menu-item d-flex justify-content-between align-items-center px-2 py-2.5">
+                        <span>👤 User Directory</span>
+                        <span class="badge bg-light text-muted rounded-pill border">4</span>
+                    </a>
+                    <a href="/admin/groups/"
+                        class="list-group-item list-group-item-action console-menu-item d-flex justify-content-between align-items-center px-2 py-2.5">
+                        <span>📦 Group Matrix</span>
+                        <span class="badge bg-light text-muted rounded-pill">5</span>
+                    </a>
+                    <a href="/admin/ward-registry/"
+                        class="list-group-item list-group-item-action console-menu-item active-console-node d-flex justify-content-between align-items-center px-2 py-2.5">
+                        <span>🏥 Ward Registry</span>
+                        <span class="badge bg-white text-dark rounded-pill border">Beds</span>
+                    </a>
+                </div>
+                <div class="pt-3 border-top border-light">
+                    <a href="/admin/create-user/" class="btn btn-charcoal btn-sm w-100 fw-semibold py-2">Invite New
+                        User</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Main Content Component: Inpatient Grid Desk Layout -->
+        <main class="col-lg-9 col-xl-10">
+
+            <!-- Dark Bootstrap Header Card Banner -->
+            <div class="card border rounded-0 p-4 shadow-sm bg-dark text-white mb-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                    <div>
+                        <span class="text-uppercase fw-bold text-warning small d-block mb-1">
+                            Clinical Operations Node
+                        </span>
+                        <h1 class="fw-bold h3 mb-1 text-white">Inpatient Ward Allocations</h1>
+                        <p class="text-white-50 small mb-0">
+                            Operational track system balancing current bed capacities, ward triage levels, and discharge
+                            timeline indicators.
+                        </p>
+                    </div>
+                    <div class="text-md-end text-nowrap">
+                        <a href="/admin/" class="btn btn-outline-light btn-sm rounded-0 fw-semibold px-3 py-2">
+                            &larr; Back to Console
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Capacity Snapshots Row -->
+            <div class="row g-3 mb-4">
+                <div class="col-sm-6 col-md-4">
+                    <div class="p-3 bg-white border shadow-sm rounded-1">
+                        <span
+                            class="text-muted text-uppercase tracking-wider small d-block mb-1 admin-metric-label">Maternal
+                            Ward Beds</span>
+                        <h3 class="fw-bold text-charcoal mb-0">14 / 20 Allocated</h3>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="p-3 bg-white border shadow-sm rounded-1">
+                        <span
+                            class="text-muted text-uppercase tracking-wider small d-block mb-1 admin-metric-label">General
+                            Care Beds</span>
+                        <h3 class="fw-bold text-charcoal mb-0">8 / 30 Allocated</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 bg-white border shadow-sm rounded-1 text-center">
+                        <span
+                            class="text-muted text-uppercase tracking-wider small d-block mb-2 admin-metric-label">Triage
+                            Registry</span>
+                        <button type="button" class="btn btn-outline-charcoal btn-sm fw-semibold w-100 rounded-0 py-1"
+                            data-bs-toggle="modal" data-bs-target="#assignBedModal">
+                            Assign Inpatient Bed
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INJECTS PART 2: Visual Card Grid and Native Assignment Modal Elements -->
+            {% include "ward-cards.html" %}
+
+        </main>
+    </div>
+</div>
+<!-- Operational Cards Deck Layout Grid -->
+<h4 class="fw-bold text-charcoal h5 mb-3 text-uppercase tracking-wider">Active Ward Deployments</h4>
+<div class="row g-3 mb-4">
+
+    <!-- Ward Node Card 1 -->
+    <div class="col-md-6 col-xl-4">
+        <div class="card h-100 border rounded-0 bg-white shadow-sm">
+            <div class="card-header bg-light py-2 border-bottom d-flex justify-content-between align-items-center">
+                <span class="fw-bold text-dark font-monospace small">BED_MAT_04</span>
+                <span
+                    class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-0.5 admin-metric-label fw-bold">Occupied</span>
+            </div>
+            <div class="card-body p-4">
+                <h5 class="fw-bold text-charcoal h6 mb-1">Maternal &amp; Child Ward</h5>
+                <p class="text-muted small mb-3">Patient Intake ID: <span
+                        class="font-monospace text-dark">pt_mat_201a</span></p>
+                <ul class="list-unstyled small text-muted mb-0">
+                    <li class="mb-1"><strong>Attending Officer:</strong> Dr. K. Mensah</li>
+                    <li><strong>Est. Discharge:</strong> June 22, 2026</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ward Node Card 2 -->
+    <div class="col-md-6 col-xl-4">
+        <div class="card h-100 border rounded-0 bg-white shadow-sm">
+            <div class="card-header bg-light py-2 border-bottom d-flex justify-content-between align-items-center">
+                <span class="fw-bold text-dark font-monospace small">BED_GEN_12</span>
+                <span
+                    class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-0.5 admin-metric-label fw-bold">Occupied</span>
+            </div>
+            <div class="card-body p-4">
+                <h5 class="fw-bold text-charcoal h6 mb-1">General Medical Block</h5>
+                <p class="text-muted small mb-3">Patient Intake ID: <span
+                        class="font-monospace text-dark">pt_gen_884f</span></p>
+                <ul class="list-unstyled small text-muted mb-0">
+                    <li class="mb-1"><strong>Attending Officer:</strong> Nurse G. Addo</li>
+                    <li><strong>Est. Discharge:</strong> June 21, 2026</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ward Node Card 3 -->
+    <div class="col-md-6 col-xl-4">
+        <div class="card h-100 border rounded-0 bg-white shadow-sm">
+            <div class="card-header bg-light py-2 border-bottom d-flex justify-content-between align-items-center">
+                <span class="fw-bold text-dark font-monospace small">BED_MAT_05</span>
+                <span class="badge bg-secondary text-white px-2 py-0.5 admin-metric-label">Available</span>
+            </div>
+            <div class="card-body p-4">
+                <h5 class="fw-bold text-muted h6 mb-1">Maternal &amp; Child Ward</h5>
+                <p class="text-muted small mb-3">Patient Intake ID: <span class="font-monospace text-muted">Empty</span>
+                </p>
+                <p class="small text-muted mb-0">Ready for clinical sterilization tracking and triage scheduling
+                    assignment.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Pure HTML/Bootstrap Scriptless Bed Assignment Modal -->
+<div class="modal fade" id="assignBedModal" tabindex="-1" aria-labelledby="assignBedModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-0 border">
+            <div class="modal-header bg-dark text-white rounded-0 py-3">
+                <div class="tracking-wide">
+                    <span class="text-uppercase fw-bold text-warning small d-block mb-1 admin-metric-label">Triage
+                        Allocation</span>
+                    <h5 class="modal-title fw-bold h6" id="assignBedModalLabel">Allocate Inpatient Bed</h5>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4 bg-light">
+                <form action="/admin/ward-registry/" method="GET">
+                    <div class="mb-3">
+                        <label class="form-label small fw-semibold text-muted">Patient Reference / Intake ID</label>
+                        <input type="text" class="form-control rounded-0 font-monospace" placeholder="e.g., pt_mat_205c"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small fw-semibold text-muted">Target Facility Ward Block</label>
+                        <select class="form-select rounded-0" required>
+                            <option value="" disabled selected>Choose facility ward...</option>
+                            <option value="maternal">Maternal &amp; Child Ward</option>
+                            <option value="general">General Medical Block</option>
+                        </select>
+                    </div>
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <label class="form-label small fw-semibold text-muted">Bed Code Identifier</label>
+                            <input type="text" class="form-control rounded-0 font-monospace"
+                                placeholder="e.g., BED_MAT_05" required>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form-label small fw-semibold text-muted">Attending Professional</label>
+                            <input type="text" class="form-control rounded-0" placeholder="e.g., Dr. K. Mensah"
+                                required>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-outline-charcoal w-50 rounded-0 fw-semibold"
+                            data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-charcoal w-50 rounded-0 fw-semibold">Assign Bed</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
