@@ -4,19 +4,15 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://sitemaps.org">
-  <!-- Core Static Homepage Mapping -->
-  <url>
-    <loc>https://netlify.app</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <!-- Dynamic Nunjucks Loop mapping all public static pages error-free -->
   {%- for page in collections.all %}
-  {%- if page.url and page.url != '/' %}
-  <url>
-    <loc>https://netlify.app{{ page.url }}</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  {%- endif %}
+    {%- if not "/admin/" in page.url and not "/connect/" in page.url %}
+    <url>
+      <loc>https://seventhdaytheocraticworld.org{{ page.url }}</loc>
+      <lastmod>2026-06-21</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>{% if page.url == "/" %}1.0{% else %}0.8{% endif %}</priority>
+    </url>
+    {%- endif %}
   {%- endfor %}
 </urlset>

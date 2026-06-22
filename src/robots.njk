@@ -2,23 +2,26 @@
 permalink: /robots.txt
 eleventyExcludeFromCollections: true
 ---
-# Global Crawl Rules for Search Engine Spiders
+# Global Security Crawl Exclusions for SDTWC
 User-agent: *
-Allow: /
 
-# Exclude Secure Member and Admin Panels from Public Search Engine Spiders
-Disallow: /connect/login/
-Disallow: /connect/dashboard/
-Disallow: /connect/profile/
+# Block public search engine indexing on all secure panel paths
 Disallow: /admin/
 Disallow: /admin/login/
 Disallow: /admin/access-denied/
 Disallow: /admin/activity-logs/
 Disallow: /admin/medical-inventory/
+Disallow: /admin/ward-registry/
 Disallow: /admin/student-ledger/
 Disallow: /admin/school-inventory/
-Disallow: /admin/ward-registry/
 Disallow: /admin/announcements-manager/
+Disallow: /connect/login/
+Disallow: /connect/dashboard/
+Disallow: /connect/profile/
 
-# Core Sitemap Matrix Location Anchor
-Sitemap: https://netlify.app
+# Explicitly index public content folders
+Allow: /global-mission/
+Allow: /education/
+
+# Dynamically direct crawlers to your sitemap asset footprint
+Sitemap: https://seventhdaytheocraticworld.org
