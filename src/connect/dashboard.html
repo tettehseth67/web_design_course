@@ -1,62 +1,181 @@
 ---
 layout: "base.html"
-title: "Member Dashboard"
+title: "Member Portal Dashboard"
 permalink: "/connect/dashboard/"
-description: "Secure workspace portal for active members of the Seventh-Day Theocratic World Congregation."
+description: "Secure interactive dashboard for congregation members of the Seventh-Day Theocratic World Congregation."
 ---
 
-<!-- Public Static Dashboard Component (No-JS Enabled) -->
-<section id="dashboard-view" class="py-5 bg-white">
-    <div class="container py-4">
-
-        <!-- Welcome Header Segment -->
-        <div class="row align-items-center mb-5 g-4">
-            <div class="col-md-8">
-                <span class="text-uppercase tracking-wider fw-bold text-gold small d-block mb-1">Congregational
-                    Portal</span>
-                <h1 class="fw-bold text-charcoal display-6 mb-1">Member Workspace Dashboard</h1>
-                <p class="text-muted small mb-0">Official administrative registry hub for active diaspora
-                    communications.</p>
-            </div>
-            <div class="col-md-4 text-md-end">
-                <a href="/connect/login/" class="btn btn-outline-charcoal btn-sm fw-semibold px-3">Exit Portal
-                    Session</a>
-            </div>
-        </div>
-
-        <!-- Content Modules Matrix Grid -->
+<!-- Core Member Dashboard Workspace Grid Layout Section -->
+<section class="py-5 bg-white flex-grow-1 error-viewport-height">
+    <div class="container py-2">
         <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-                <div class="p-4 border bg-light h-100">
-                    <h5 class="fw-bold text-charcoal h6 mb-2">Secretariat Dispatches</h5>
-                    <p class="small text-muted mb-3">Access internal congregation circulars, assembly announcements, and
-                        administrative memos.</p>
-                    <a href="/global-mission/doctrine/"
-                        class="small text-charcoal fw-bold text-decoration-none border-bottom border-dark pb-0.5">Open
-                        Archives &rarr;</a>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="p-4 border bg-light h-100">
-                    <h5 class="fw-bold text-charcoal h6 mb-2">Fellowship Rosters</h5>
-                    <p class="small text-muted mb-3">Review your alignment parameters and training progress schedules
-                        for active demographic wings.</p>
-                    <a href="/global-mission/youth-women/"
-                        class="small text-charcoal fw-bold text-decoration-none border-bottom border-dark pb-0.5">View
-                        Your Wing &rarr;</a>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="p-4 border bg-light h-100">
-                    <h5 class="fw-bold text-charcoal h6 mb-2">Enterprise Training Nodes</h5>
-                    <p class="small text-muted mb-3">Explore active vocational module documents, workshop outlines, and
-                        tool resources.</p>
-                    <a href="/global-mission/vocational-guilds/"
-                        class="small text-charcoal fw-bold text-decoration-none border-bottom border-dark pb-0.5">Open
-                        Workspace &rarr;</a>
-                </div>
-            </div>
-        </div>
 
+            <!-- 1. LEFT COLUMN: Expanded Member Navigation Sidebar Index -->
+            <aside class="col-lg-4 col-xl-3">
+                <div class="card p-4 rounded-0 bg-light shadow-sm sticky-md-top sticky-sidebar-offset">
+
+                    <!-- Congregant Profile Summary Head -->
+                    <div class="text-center mb-4 pb-3 border-bottom">
+                        <div class="d-inline-block p-3 bg-charcoal text-white rounded-circle mb-2" aria-hidden="true">
+                            <svg xmlns="http://w3.org" width="32" height="32" fill="currentColor"
+                                class="bi bi-person-badge" viewBox="0 0 16 16">
+                                <path d="M6.5 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                <path
+                                    d="M4.5 0A2.5 2.5 0 0 0 2 2.5V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2.5A2.5 2.5 0 0 0 11.5 0zM3 2.5A1.5 1.5 0 0 1 4.5 1h7A1.5 1.5 0 0 1 13 2.5V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z" />
+                            </svg>
+                        </div>
+                        <h4 class="fw-bold text-charcoal h5 mb-1">Covenant Member Portal</h4>
+                        <span
+                            class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1 fw-bold text-uppercase admin-metric-label">Active
+                            Status</span>
+                    </div>
+
+                    <!-- Semantic Navigation Directory Anchor List -->
+                    <div class="list-group list-group-flush small mb-3" role="navigation"
+                        aria-label="Member Subpage Directory">
+                        <a href="/connect/dashboard/"
+                            class="list-group-item list-group-item-action border-0 px-2 py-2.5 bg-charcoal text-white fw-bold">
+                            📊 Portal Overview Dashboard
+                        </a>
+                        <a href="/connect/profile/"
+                            class="list-group-item list-group-item-action border-0 px-2 py-2.5 text-muted console-menu-item">
+                            👤 Account Profile Ledger
+                        </a>
+                        <a href="/global-mission/announcements/"
+                            class="list-group-item list-group-item-action border-0 px-2 py-2.5 text-muted console-menu-item">
+                            📢 News &amp; Secretariat Dispatches
+                        </a>
+                        <a href="/connect/history-archive/"
+                            class="list-group-item list-group-item-action border-0 px-2 py-2.5 text-muted console-menu-item">
+                            📜 Church History &amp; Archives
+                        </a>
+                    </div>
+
+                    <div class="pt-3 border-top text-center">
+                        <a href="/connect/login/"
+                            class="btn btn-outline-danger btn-sm w-100 rounded-0 fw-semibold py-2">Sign Out of
+                            Session</a>
+                    </div>
+
+                </div>
+            </aside>
+
+            <!-- 2. RIGHT COLUMN: Core Analytical Metrics Grid & Spiritual Resources -->
+            <main class="col-lg-8 col-xl-9">
+
+                <!-- Welcome Jumbotron Banner Component -->
+                <div class="p-4 bg-dark text-white rounded-0 mb-4 shadow-sm border-start border-4 border-warning">
+                    <span
+                        class="text-uppercase fw-bold text-warning small d-block mb-1 admin-metric-label">Congregational
+                        Registry Node</span>
+                    <h2 class="fw-bold h3 mb-1 text-white">Shalom, Covenant Member</h2>
+                    <p class="text-white-50 small mb-0">Welcome back to your secure individual interface panel. Review
+                        your synchronized liturgical tracks and upcoming Biblical alignments below.</p>
+                </div>
+
+                <!-- Metric Snapshot Information Blocks Row -->
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6 col-xl-4">
+                        <div class="p-3 bg-white border h-100 shadow-sm rounded-0">
+                            <span
+                                class="text-muted text-uppercase tracking-wider small d-block mb-1 admin-metric-label">Assigned
+                                Assembly Cell</span>
+                            <h4 class="fw-bold text-charcoal h6 mb-0">Accra Metropolitan Assembly</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="p-3 bg-white border h-100 shadow-sm rounded-0">
+                            <span
+                                class="text-muted text-uppercase tracking-wider small d-block mb-1 admin-metric-label">Active
+                                Group Affiliations</span>
+                            <h4 class="fw-bold text-charcoal h6 mb-0">Vocational Skill Guilds Track</h4>
+                        </div>
+                    </div>
+                    <div class="col-xl-4">
+                        <div
+                            class="p-3 bg-white border h-100 shadow-sm rounded-0 d-flex flex-column justify-content-between">
+                            <span
+                                class="text-muted text-uppercase tracking-wider small d-block mb-1 admin-metric-label">Current
+                                Calendar Phase</span>
+                            <h4 class="fw-bold text-success h6 mb-0 fw-bold">Fifth Biblical Month</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Integrated Spiritual Alignment Utilities Resource Card Deck -->
+                <h3 class="fw-bold text-charcoal h5 mb-3 text-uppercase tracking-wider">Quick Liturgical Controls</h3>
+                <div class="row g-3 mb-4">
+
+                    <!-- Resource Block 1 -->
+                    <div class="col-md-6">
+                        <div class="card h-100 border rounded-0 bg-light shadow-sm">
+                            <div class="card-body p-4 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h4 class="fw-bold h6 text-charcoal mb-2">Calculated New Moon Matrix</h4>
+                                    <p class="text-muted small mb-3">Track upcoming calculated lunar crescent alignments
+                                        and holy day rests for the current 2026 calendar cycle phase.</p>
+                                </div>
+                                <a href="/global-mission/lunar-registry/"
+                                    class="btn btn-charcoal btn-sm w-100 rounded-0 fw-semibold py-2">Open Lunar Calendar
+                                    Matrix</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resource Block 2 -->
+                    <div class="col-md-6">
+                        <div class="card h-100 border rounded-0 bg-light shadow-sm">
+                            <div class="card-body p-4 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h4 class="fw-bold h6 text-charcoal mb-2">Solar Transition Matrix</h4>
+                                    <p class="text-muted small mb-3">Monitor precise, calculated seasonal sunset entry
+                                        boundaries across international assemblies to prepare for Sabbath gates.</p>
+                                </div>
+                                <a href="/global-mission/solar-matrix/"
+                                    class="btn btn-outline-charcoal btn-sm w-100 rounded-0 fw-semibold py-2">Open Solar
+                                    Transition Matrix</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Latest Dispatches Tabular Ledger Preview -->
+                <div class="card border rounded-0 shadow-sm bg-white">
+                    <div
+                        class="card-header bg-white py-3 border-bottom d-flex justify-content-between align-items-center">
+                        <h4 class="fw-bold text-charcoal h6 mb-0 text-uppercase tracking-wider">Recent Central
+                            Dispatches</h4>
+                        <a href="/global-mission/announcements/"
+                            class="small fw-bold text-gold text-decoration-none border-bottom pb-0.5">View All News</a>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0 small admin-matrix-hover-row">
+                            <thead class="table-light text-uppercase table-uppercase-header">
+                                <tr>
+                                    <th scope="col" class="ps-4 py-2.5 text-charcoal">Publish Date</th>
+                                    <th scope="col" class="py-2.5 text-charcoal">Subject Heading</th>
+                                    <th scope="col" class="pe-4 py-2.5 text-charcoal text-end">Department</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-muted">
+                                {%- for item in announcements | reverse | batch(2) | first %}
+                                <tr>
+                                    <td class="ps-4 font-monospace text-dark">{{ item.date }}</td>
+                                    <td class="fw-semibold text-dark text-nowrap text-truncate matrix-email-col">{{
+                                        item.title }}</td>
+                                    <td class="pe-4 text-end"><span
+                                            class="badge bg-secondary text-white admin-metric-label">{{ item.badge
+                                            }}</span></td>
+                                </tr>
+                                {%- endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </main>
+
+        </div>
     </div>
 </section>
