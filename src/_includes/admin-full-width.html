@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link
+        href="https://googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <!-- Shared Premium Dark Header Bar (Includes Global Inbox Modal) -->
+    <nav class="navbar navbar-dark bg-dark sticky-top shadow-sm py-2" role="navigation"
+        aria-label="Management Console Header">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold text-uppercase tracking-wider small d-flex align-items-center gap-2"
+                href="/admin/">
+                <span class="border-start border-3 border-warning ps-2">SDTWC Console</span>
+                <span class="badge bg-secondary text-uppercase admin-metric-label">Panoramic View</span>
+            </a>
+            <div class="d-flex align-items-center gap-3">
+                <button type="button" class="btn btn-outline-light btn-sm rounded-0 position-relative fw-semibold px-3"
+                    data-bs-toggle="modal" data-bs-target="#adminInboxModal">
+                    <span>📬 Inbox</span>
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-dark admin-metric-label">99+</span>
+                </button>
+                <a href="/" class="btn btn-outline-light btn-sm rounded-0 fw-semibold px-3">Exit Console</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PANORAMIC VIEWPORT: Complete Full-Width Container Injection Frame (No Sidebars) -->
+    <main role="main" class="container-fluid p-4 px-md-5 error-viewport-height">
+        {{ content | safe }}
+    </main>
+
+    <!-- Global Modal Mount Included Automatically -->
+    {% include "admin-sidebar.html" %}
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

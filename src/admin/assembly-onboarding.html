@@ -1,0 +1,165 @@
+---
+layout: "admin-base.html"
+title: "Assembly Onboarding"
+permalink: "/admin/assembly-onboarding/"
+description: "Administrative configuration matrix tracking territorial branch property acquisition, communications
+infrastructure, and elder allocations."
+---
+
+<!-- Global Admin Workspace Container Wrapper -->
+<div class="container-fluid py-4 px-md-4 flex-grow-1 error-viewport-height">
+    <div class="row g-4">
+
+        <!-- 1. LEFT SIDEBAR COMPONENT: Injects Centralized Include Module -->
+        {% include "admin-sidebar.html" %}
+
+        <!-- 2. RIGHT MAIN CONTENT COMPONENT: Branch Allocation Tracking Matrix -->
+        <main class="col-lg-8 col-xl-9">
+
+            <!-- Dark Bootstrap Header Card Banner -->
+            <div class="card border rounded-0 p-4 shadow-sm bg-dark text-white mb-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                    <div>
+                        <span class="text-uppercase fw-bold text-warning small d-block mb-1">
+                            Expansion Operations Node
+                        </span>
+                        <h1 class="fw-bold h3 mb-1 text-white">Territorial Assembly Onboarding</h1>
+                        <p class="text-white-50 small mb-0">
+                            Systematic deployment matrix monitoring property verification, elder assignments, and
+                            connection node synchronization.
+                        </p>
+                    </div>
+                    <div class="text-md-end text-nowrap">
+                        <a href="/admin/" class="btn btn-outline-light btn-sm rounded-0 fw-semibold px-3 py-2">
+                            &larr; Back to Console
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progressive Pure HTML Form Checklist Matrix -->
+            <div class="card border rounded-0 shadow-sm bg-white mb-4">
+                <div
+                    class="card-header bg-white py-3 border-bottom d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
+                    <div>
+                        <h2 class="fw-bold text-charcoal h5 mb-1">Onboarding Pipeline Progress</h2>
+                        <p class="text-muted small mb-0">Record and track active validation layers for localized
+                            cellular assemblies.</p>
+                    </div>
+                    <button type="button" class="btn btn-charcoal btn-sm rounded-0 px-3" data-bs-toggle="modal"
+                        data-bs-target="#logBranchModal">Initialize Branch Cell</button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0 small admin-matrix-hover-row">
+                        <thead class="table-light text-uppercase table-uppercase-header">
+                            <tr>
+                                <th scope="col" class="ps-4 py-3 text-charcoal">Territorial Branch</th>
+                                <th scope="col" class="py-3 text-charcoal">Assigned Elder Anchor</th>
+                                <th scope="col" class="py-3 text-charcoal">Property/Land Audit</th>
+                                <th scope="col" class="py-3 text-charcoal">Stream Link Active</th>
+                                <th scope="col" class="pe-4 py-3 text-charcoal text-end">Operational Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-muted">
+                            <tr>
+                                <td class="fw-semibold text-dark ps-4">Kumasi Metropolitan Cell</td>
+                                <td>Elder John Boateng</td>
+                                <td><span
+                                        class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1 admin-metric-label text-uppercase">Verified</span>
+                                </td>
+                                <td><span
+                                        class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1 admin-metric-label text-uppercase">Synchronized</span>
+                                </td>
+                                <td class="pe-4 text-end"><a href="/admin/assembly-onboarding/"
+                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5">Manage
+                                        Cell</a></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-semibold text-dark ps-4">Takoradi Coastal Station</td>
+                                <td>Elder Peter Osei</td>
+                                <td><span
+                                        class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1 admin-metric-label text-uppercase">Verified</span>
+                                </td>
+                                <td><span
+                                        class="badge bg-warning bg-opacity-10 text-dark border border-warning border-opacity-25 px-2 py-1 admin-metric-label text-uppercase">Pending
+                                        Test</span></td>
+                                <td class="pe-4 text-end"><a href="/admin/assembly-onboarding/"
+                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5">Manage
+                                        Cell</a></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-semibold text-dark ps-4">New York Diaspora Node</td>
+                                <td>Unassigned</td>
+                                <td><span
+                                        class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-2 py-1 admin-metric-label text-uppercase">In
+                                        Review</span></td>
+                                <td><span
+                                        class="badge bg-light text-muted border px-2 py-1 admin-metric-label text-uppercase">Inactive</span>
+                                </td>
+                                <td class="pe-4 text-end"><a href="/admin/assembly-onboarding/"
+                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5">Manage
+                                        Cell</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</div>
+
+<!-- Pure HTML/Bootstrap Scriptless Branch Ingestion Modal -->
+<div class="modal fade" id="logBranchModal" tabindex="-1" aria-labelledby="logBranchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-0 border">
+            <div class="modal-header bg-dark text-white rounded-0 py-3">
+                <div class="tracking-wide">
+                    <span class="text-uppercase fw-bold text-warning small d-block mb-1 admin-metric-label">System
+                        Expansion</span>
+                    <h5 class="modal-title fw-bold h6" id="logBranchModalLabel">Provision New Branch Cell</h5>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4 bg-light">
+                <form action="/admin/assembly-onboarding/" method="GET">
+                    <div class="mb-3">
+                        <label class="form-label small fw-semibold text-muted">Territorial Cell Designation Name</label>
+                        <input type="text" class="form-control rounded-0" placeholder="e.g., Kumasi Metropolitan Cell"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small fw-semibold text-muted">Elder Assignment Anchor</label>
+                        <input type="text" class="form-control rounded-0" placeholder="e.g., Elder John Boateng"
+                            required>
+                    </div>
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <label class="form-label small fw-semibold text-muted">Property Status</label>
+                            <select class="form-select rounded-0" required>
+                                <option value="review">In Review / Audit</option>
+                                <option value="verified">Verified Clear</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form-label small fw-semibold text-muted">Media Synchronization</label>
+                            <select class="form-select rounded-0" required>
+                                <option value="inactive">Inactive</option>
+                                <option value="pending">Pending Test</option>
+                                <option value="synced">Synchronized</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-outline-charcoal w-50 rounded-0 fw-semibold"
+                            data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-charcoal w-50 rounded-0 fw-semibold">Initialize
+                            Node</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
