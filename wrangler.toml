@@ -2,8 +2,8 @@
 name = "web-design-course"
 compatibility_date = "2026-06-20"
 
-# 2. STATIC ASSETS OVERRIDE CONFIGURATION WITH CORRECT 404 TERM
+# 2. STATIC ASSETS OVERRIDE CONFIGURATION
 [assets]
 directory = "docs"
-# FIXED: Changed from "custom-page" to "404-page" to satisfy Cloudflare build criteria
+# FIXED: Replaced "custom-page" with the exact string accepted by Wrangler
 not_found_handling = "404-page"
