@@ -2,8 +2,8 @@
 name = "web-design-course"
 compatibility_date = "2026-06-20"
 
-# 2. STATIC ASSETS OVERRIDE CONFIGURATION WITH CUSTOM 404 FALLBACK
+# 2. STATIC ASSETS OVERRIDE CONFIGURATION WITH CORRECT 404 TERM
 [assets]
 directory = "docs"
-# FIXED: Forces edge routers to catch broken links and serve your 404 file natively
+# FIXED: Changed from "custom-page" to "404-page" to satisfy Cloudflare build criteria
 not_found_handling = "404-page"
