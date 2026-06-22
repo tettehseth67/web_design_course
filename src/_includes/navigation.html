@@ -21,9 +21,8 @@
             <!-- 1. LEFT LIST: Directory folders pull left tightly next to logo branding -->
             <ul class="navbar-nav me-auto fw-semibold align-items-center">
 
-                <!-- Worship Center Dropdown Section -->
                 <li class="nav-item dropdown px-2">
-                    <a class="nav-link dropdown-toggle {% if page.url == '/' or '/lunar-registry/' in page.url or '/solar-matrix/' in page.url or '/liturgy/' in page.url %}text-gold fw-bold{% else %}text-muted{% endif %}"
+                    <a class="nav-link dropdown-toggle {% if page.url == '/' %}text-gold fw-bold{% else %}text-muted{% endif %}"
                         href="/" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                         aria-label="Worship Center Department Menu Options">Worship Center</a>
                     <ul class="dropdown-menu dropdown-menu-start shadow border-0"
@@ -32,25 +31,19 @@
                                 href="/">Overview</a></li>
                         <li><a class="dropdown-item" href="/#sermons">Sermons &amp; Broadcasts</a></li>
                         <li><a class="dropdown-item" href="/#calendar">Sacred Calendar</a></li>
-                        <li><a class="dropdown-item {% if page.url == '/global-mission/lunar-registry/' %}active bg-light text-charcoal fw-bold{% endif %}"
-                                href="/global-mission/lunar-registry/">Calculated New Moons</a></li>
-                        <li><a class="dropdown-item {% if page.url == '/global-mission/solar-matrix/' %}active bg-light text-charcoal fw-bold{% endif %}"
-                                href="/global-mission/solar-matrix/">Solar Transition Matrix</a></li>
-                        <li><a class="dropdown-item {% if page.url == '/global-mission/liturgy/' %}active bg-light text-charcoal fw-bold{% endif %}"
-                                href="/global-mission/liturgy/">Sabbath Liturgy Outlines</a></li>
                         <li>
                             <hr class="dropdown-divider" role="separator">
                         </li>
                         <li>
                             <h6 class="dropdown-header text-uppercase text-muted dropdown-header-uppercase"
-                                role="heading">Biblical Festivals</h6>
+                                role="heading">Biblical
+                                Festivals</h6>
                         </li>
                         <li><a class="dropdown-item" href="/#feasts">Commanded Feasts</a></li>
                         <li><a class="dropdown-item" href="/#new-month">New Month Markings</a></li>
                     </ul>
                 </li>
-
-                <!-- Global Mission Dropdown Section -->
+                <!-- 2. GLOBAL MISSION DROPDOWN: Groups all global-mission file subpaths uniformly -->
                 <li class="nav-item dropdown px-2">
                     <a class="nav-link dropdown-toggle {% if '/global-mission/' in page.url %}text-gold fw-bold{% else %}text-muted{% endif %}"
                         href="/global-mission/" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
@@ -62,18 +55,32 @@
                         <li><a class="dropdown-item" href="/global-mission/doctrine/">Articles &amp; Doctrine</a></li>
                         <li><a class="dropdown-item {% if page.url == '/global-mission/announcements/' %}active bg-light text-charcoal fw-bold{% endif %}"
                                 href="/global-mission/announcements/">News &amp; Announcements</a></li>
+
                         <li>
                             <hr class="dropdown-divider" role="separator">
                         </li>
                         <li>
                             <h6 class="dropdown-header text-uppercase text-muted dropdown-header-uppercase"
-                                role="heading">Localized Branch Assemblies</h6>
+                                role="heading">Lunisolar
+                                &amp; Liturgical Sync</h6>
                         </li>
-                        <li><a class="dropdown-item {% if page.url == '/global-mission/kumasi/' %}active bg-light text-charcoal fw-bold{% endif %}"
-                                href="/global-mission/kumasi/">Kumasi Metropolitan Cell</a></li>
+                        <li><a class="dropdown-item {% if page.url == '/global-mission/lunar-registry/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/global-mission/lunar-registry/">Calculated New Moons</a></li>
+                        <li><a class="dropdown-item {% if page.url == '/global-mission/solar-matrix/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/global-mission/solar-matrix/">Solar Transition Matrix</a></li>
+                        <li><a class="dropdown-item {% if page.url == '/global-mission/liturgy/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/global-mission/liturgy/">Sabbath Liturgy Outlines</a></li>
+
                         <li>
                             <hr class="dropdown-divider" role="separator">
                         </li>
+                        <li>
+                            <h6 class="dropdown-header text-uppercase text-muted dropdown-header-uppercase"
+                                role="heading">Localized
+                                Assemblies &amp; Wings</h6>
+                        </li>
+                        <li><a class="dropdown-item {% if page.url == '/global-mission/kumasi/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/global-mission/kumasi/">Kumasi Metropolitan Cell</a></li>
                         <li><a class="dropdown-item {% if page.url == '/global-mission/hospital/' %}active bg-light text-charcoal fw-bold{% endif %}"
                                 href="/global-mission/hospital/">Sufficient Grace Hospital</a></li>
                         <li><a class="dropdown-item {% if page.url == '/global-mission/hospital-intake/' %}active bg-light text-charcoal fw-bold{% endif %}"
@@ -144,7 +151,8 @@
                 <li class="nav-item px-2 py-2 py-lg-0">
                     <!-- FIXED: Stripped rounded-pill class to restore crisp rectangular design tokens -->
                     <a class="btn btn-outline-charcoal btn-sm px-3 fw-bold tracking-wider rounded-pill {% if page.url == '/admin/login/' or '/admin/' in page.url %}active{% endif %}"
-                        href="/admin/login/" aria-label="Open Secure Isolated System Admin Console Gate">ADMIN CONSOLE</a>
+                        href="/admin/login/" aria-label="Open Secure Isolated System Admin Console Gate">ADMIN
+                        CONSOLE</a>
                 </li>
             </ul>
 
