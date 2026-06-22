@@ -11,13 +11,28 @@
     <!-- Dynamic Search Engine Meta Descriptions -->
     <meta name="description"
         content="{% if description %}{{ description }}{% else %}Official portal of the Seventh-Day Theocratic World Congregation (SDTWC), preserving the foundational Mount Sinai Covenant and original biblical time structures.{% endif %}">
-
     <!-- Open Graph / Facebook Social Previews -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="{% if title %}{{ title }} | SDTWC{% else %}SDTWC World Congregation{% endif %}">
     <meta property="og:description"
         content="{% if description %}{{ description }}{% else %}Preserving the foundational Mount Sinai Covenant and walking in authentic Judeo-Christian philosophy.{% endif %}">
     <meta property="og:url" content="https://seventhdaytheocraticworld.org{{ page.url }}">
+
+    <meta property="og:site_name" content="SDTWC">
+    <meta property="og:image" content="https://seventhdaytheocraticworld.org">
+    <meta property="og:image:secure_url" content="https://seventhdaytheocraticworld.org">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Seventh-Day Theocratic World Congregation Complex">
+
+    <!-- Technical Twitter Display Card Hooks -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}SDTWC{% endif %}">
+    <meta name="twitter:description"
+        content="{% if description %}{{ description }}{% else %}Official registry portal of the Seventh-Day Theocratic World Congregation.{% endif %}">
+    <meta name="twitter:image" content="https://seventhdaytheocraticworld.org">
+
 
     <!-- Core Branding Favicon Icon Suite -->
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
