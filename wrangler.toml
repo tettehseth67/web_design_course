@@ -1,7 +1,9 @@
-# 1. CORE WORKER PARAMETERS (MUST SIT AT THE TOP)
+# 1. CORE WORKER PARAMETERS
 name = "web-design-course"
 compatibility_date = "2026-06-20"
 
-# 2. STATIC ASSETS OVERRIDE CONFIGURATION
+# 2. STATIC ASSETS OVERRIDE CONFIGURATION WITH CUSTOM 404 FALLBACK
 [assets]
 directory = "docs"
+# FIXED: Forces edge routers to catch broken links and serve your 404 file natively
+not_found_handling = "custom-page"

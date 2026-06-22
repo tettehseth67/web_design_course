@@ -449,5 +449,19 @@ body {
     background-color: #ffffff !important;
 }
 
+/* ==========================================================================
+   20. REUSABLE MATRIX TEXT TRUNCATION LIMITS (INLINE-FREE)
+   ========================================================================== */
+
+/* Caps email columns to prevent boundary leakage */
+.matrix-email-col {
+    max-width: 200px !important;
+}
+
+/* Caps description or role columns uniformly */
+.matrix-desc-col {
+    max-width: 180px !important;
+}
+
 
 
