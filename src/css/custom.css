@@ -500,6 +500,31 @@ body {
     border-left-color: var(--color-gold) !important;
 }
 
+/* ==========================================================================
+   22. PERSISTENT GLOBAL PRIVACY LANDMARK NOTIFICATION (INLINE-FREE)
+   ========================================================================== */
+
+/* Fixed bottom container layer with subtle drop shadow styling */
+.global-privacy-banner {
+    position: fixed !important;
+    bottom: 1.5rem !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: calc(100% - 3rem) !important;
+    max-width: 650px !important;
+    background-color: var(--color-charcoal) !important;
+    color: #ffffff !important;
+    border-left: 4px solid var(--color-gold) !important;
+    z-index: 1050;
+    /* Sits cleanly over all table components and section layers */
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Subdued custom typography layout helper class */
+.privacy-text-muted {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
 
 
 
