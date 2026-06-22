@@ -420,5 +420,34 @@ body {
     z-index: 4;
 }
 
+/* ==========================================================================
+   19. RESPONSIVE PUBLIC DROPDOWN TRANSITIONS & VALIDATION SHADING
+   ========================================================================== */
+@media (min-width: 992px) {
+
+    /* Set up the initial hidden sliding state for public dropdown submenus */
+    .navbar-nav .dropdown-menu {
+        display: block !important;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.22s ease-out, transform 0.22s ease-out, visibility 0.22s;
+    }
+
+    /* Animate to full visibility instantly when Bootstrap applies the active show token */
+    .navbar-nav .dropdown-menu.show {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Strict visual feedback when search filter inputs receive active cursor focus */
+.console-filter-input:focus {
+    border-color: var(--color-gold) !important;
+    box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.15) !important;
+    background-color: #ffffff !important;
+}
+
 
 
