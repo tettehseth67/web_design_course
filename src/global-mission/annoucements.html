@@ -7,12 +7,12 @@ Secretariat."
 ---
 
 <!-- Public Announcements View Grid -->
-<section class="py-5 bg-white">
-    <div class="container py-4">
-        <div class="row g-5">
+<section class="py-5 bg-white flex-grow-1 error-viewport-height">
+    <div class="container py-2">
+        <div class="row g-4">
 
-            <!-- Main Content Column -->
-            <div class="col-lg-8">
+            <!-- A. LEFT COLUMN: Main Announcements Stream Feed -->
+            <main class="col-lg-8 col-xl-9" role="main" aria-label="Announcements Feed">
                 <a href="/global-mission/" class="btn btn-outline-charcoal btn-sm mb-4 fw-semibold">&larr; Back to
                     Mission Overview</a>
 
@@ -20,7 +20,7 @@ Secretariat."
                     Dispatches</span>
                 <h1 class="fw-bold text-charcoal display-5 mb-2">News &amp; Announcements</h1>
                 <p class="lead text-muted mb-4">Official chronological briefings managed directly from the centralized
-                    administration control console panels.</p>
+                    administration control console panels [INDEX].</p>
 
                 <hr class="my-4">
 
@@ -40,20 +40,21 @@ Secretariat."
                     No active general announcements logged for the current cycle phase.
                 </div>
                 {%- endfor %}
+            </main>
 
-            </div>
-
-            <!-- Right Sidebar Column -->
-            <div class="col-lg-4">
+            <!-- B. RIGHT COLUMN: Balanced Side Resource Panel Box -->
+            <aside class="col-lg-4 col-xl-3">
                 <div class="p-4 bg-light border rounded-0 shadow-sm sticky-md-top sticky-sidebar-offset">
                     <span class="text-gold fw-bold small text-uppercase tracking-wider d-block mb-2">Media Link</span>
                     <h4 class="fw-bold h5 text-charcoal mb-3">Broadcast Stream</h4>
                     <p class="small text-muted mb-4">All live streaming liturgical scripts are verified weekly through
-                        the secure central administration dashboard desk.</p>
-                    <a href="/global-mission/liturgy/" class="btn btn-charcoal w-100 rounded-0 py-2 fw-semibold">View
-                        Sabbath Liturgy</a>
+                        the secure central administration dashboard desk [INDEX].</p>
+                    <a href="/global-mission/lunar-registry/"
+                        class="btn btn-charcoal w-100 rounded-0 py-2 fw-semibold mb-2">View New Moon Matrix</a>
+                    <a href="/global-mission/liturgy/"
+                        class="btn btn-outline-charcoal w-100 rounded-0 py-2 fw-semibold">View Sabbath Liturgy</a>
                 </div>
-            </div>
+            </aside>
 
         </div>
     </div>
