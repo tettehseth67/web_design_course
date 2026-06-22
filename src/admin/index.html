@@ -14,225 +14,235 @@ demographic allocations."
         {% include "admin-sidebar.html" %}
 
         <!-- 2. RIGHT MAIN CONTENT COMPONENT: Metrics, Broadcast Registry, & User Matrix -->
-        <div class="container-fluid py-4 px-md-4 flex-grow-1 error-viewport-height">
-            <div class="row g-4">
+        <main class="col-lg-8 col-xl-9">
 
-                <!-- 1. LEFT SIDEBAR COMPONENT: Injects Centralized Include Module -->
-                {% include "admin-sidebar.html" %}
-
-                <!-- 2. RIGHT MAIN CONTENT COMPONENT: Split-Screen Master-Detail Workspace -->
-                <main class="col-lg-8 col-xl-9">
-
-                    <!-- Top Level Status Metrics Row -->
-                    <div class="row g-3 mb-4">
-                        <div class="col-sm-6 col-md-3">
-                            <div class="p-3 bg-white border h-100 shadow-sm rounded-0">
-                                <span
-                                    class="text-muted text-uppercase tracking-wider small d-block mb-1 admin-metric-label">Total
-                                    Congregation Base</span>
-                                <h3 class="fw-bold text-charcoal mb-0">1,240</h3>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="p-3 bg-white border h-100 shadow-sm rounded-0">
-                                <span
-                                    class="text-muted text-uppercase tracking-wider small d-block mb-1 admin-metric-label">Active
-                                    Groups / Wings</span>
-                                <h3 class="fw-bold text-charcoal mb-0">5 Units</h3>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="p-3 bg-white border h-100 shadow-sm rounded-0">
-                                <span
-                                    class="text-muted text-uppercase tracking-wider small d-block mb-1 admin-metric-label">System
-                                    Security Clearance</span>
-                                <h3 class="fw-bold text-success h5 mb-0 mt-1 fw-bold">Verified Node</h3>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div
-                                class="p-3 bg-white border h-100 shadow-sm rounded-0 text-center d-flex flex-column justify-content-between">
-                                <span
-                                    class="text-muted text-uppercase tracking-wider small d-block mb-2 admin-metric-label">Treasury
-                                    Logs</span>
-                                <a href="/admin/financial-registry/"
-                                    class="btn btn-outline-charcoal btn-sm fw-semibold w-100 rounded-0 py-1.5">
-                                    Open Financial Ledger
-                                </a>
-                            </div>
-                        </div>
+            <!-- Top Level Status Metrics Row -->
+            <div class="row g-3 mb-4">
+                <div class="col-sm-6 col-md-3">
+                    <div class="p-3 bg-white border h-100 shadow-sm rounded-0">
+                        <span
+                            class="text-muted text-uppercase tracking-wider small d-block mb-1 admin-metric-label">Total
+                            Congregation Base</span>
+                        <h3 class="fw-bold text-charcoal mb-0">1,240</h3>
                     </div>
-
-                    <!-- MASTER-DETAIL GRID WRAPPER ROW SPLIT -->
-                    <div class="row g-4">
-
-                        <!-- A. MASTER COLUMN (Left Side: Search Form & Primary Records Table Matrix) -->
-                        <div class="col-xl-7">
-                            <div class="card border rounded-0 shadow-sm bg-white h-100">
-                                <div class="card-header bg-white py-3 border-bottom">
-                                    <h2 class="fw-bold text-charcoal h5 mb-1">User Directory Registry</h2>
-                                    <p class="text-muted small mb-0">Select a record below to inspect metrics on the
-                                        detail
-                                        sheet.</p>
-                                </div>
-
-                                <!-- Pure HTML Search Tool Array -->
-                                <div class="card-body bg-light border-bottom p-3">
-                                    <form action="/admin/" method="GET" class="row g-2">
-                                        <div class="col-12">
-                                            <div class="console-icon-input-group">
-                                                <svg xmlns="http://w3.org" width="14" height="14" fill="currentColor"
-                                                    class="bi bi-search console-field-vector-icon" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                                </svg>
-                                                <input type="text" name="search"
-                                                    class="form-control rounded-0 form-control-sm console-filter-input"
-                                                    placeholder="Filter legal names, hashes, emails..." maxlength="100"
-                                                    pattern="[A-Za-z0-9@. ]+" aria-label="Search directory records">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-
-                                <!-- Directory Table Registry -->
-                                <div class="table-responsive">
-                                    <table class="table table-hover align-middle mb-0 small admin-matrix-hover-row">
-                                        <thead class="table-light text-uppercase table-uppercase-header">
-                                            <tr>
-                                                <th scope="col" class="ps-3 py-3 text-charcoal">Account Name</th>
-                                                <th scope="col" class="py-3 text-charcoal">Clearance</th>
-                                                <th scope="col" class="pe-3 py-3 text-charcoal text-end">Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="text-muted">
-                                            <tr class="table-active">
-                                                <td class="fw-semibold text-dark ps-3">Secretariat Admin</td>
-                                                <td><span
-                                                        class="badge badge-clearance-root px-2 py-0.5 fw-semibold text-uppercase admin-metric-label">Root</span>
-                                                </td>
-                                                <td class="pe-3 text-end"><a href="/admin/user-profile/"
-                                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5">Inspect</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="fw-semibold text-dark ps-3">Medical Director</td>
-                                                <td><span
-                                                        class="badge badge-clearance-standard px-2 py-0.5 fw-medium text-uppercase admin-metric-label">Active</span>
-                                                </td>
-                                                <td class="pe-3 text-end"><a href="/admin/user-profile/"
-                                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5">Inspect</a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- B. DETAIL COLUMN (Right Side: Real-Time Static Deep-Dive View & Controls Sheet) -->
-                        <div class="col-xl-5">
-                            <div class="card border rounded-0 shadow-sm bg-white sticky-md-top sticky-sidebar-offset">
-                                <div class="card-header bg-dark text-white py-3 border-bottom rounded-0">
-                                    <span
-                                        class="text-uppercase fw-bold text-warning small d-block mb-1 admin-metric-label">Active
-                                        Record Details</span>
-                                    <h3 class="fw-bold h6 text-white mb-0">Ledger Summary: Secretariat Admin</h3>
-                                </div>
-
-                                <!-- Biographical Metadata Sheet Grid -->
-                                <div class="table-responsive border-bottom">
-                                    <table class="table align-middle mb-0 small">
-                                        <tbody class="text-muted">
-                                            <tr>
-                                                <td class="fw-semibold text-dark ps-4 py-2.5 bg-light"
-                                                    style="width: 40%;">ID
-                                                    Hash</td>
-                                                <td class="font-monospace text-dark">usr_sec_77af01</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="fw-semibold text-dark ps-4 py-2.5 bg-light">Email Link</td>
-                                                <td>admin@seventhdaytheocraticworld.org</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="fw-semibold text-dark ps-4 py-2.5 bg-light">Assignment</td>
-                                                <td>Executive Central Board</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="fw-semibold text-dark ps-4 py-2.5 bg-light">Registry Date
-                                                </td>
-                                                <td>January 14, 2026</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                                <!-- Integrated Fast-Action Panel Form Block -->
-                                <div class="card-body bg-light p-4">
-                                    <h6 class="fw-bold text-charcoal small mb-2 text-uppercase tracking-wider">
-                                        Administrative
-                                        Session Actions</h6>
-                                    <p class="text-muted small mb-3">Adjust parameters or suspend directory mapping
-                                        clearance
-                                        attributes manually below:</p>
-
-                                    <form action="/admin/" method="GET" class="d-grid gap-2">
-                                        <button type="button"
-                                            class="btn btn-outline-charcoal btn-sm fw-semibold py-2 rounded-0">Reset
-                                            Security
-                                            Token</button>
-                                        <button type="button"
-                                            class="btn btn-outline-charcoal btn-sm fw-semibold py-2 rounded-0"
-                                            data-bs-toggle="modal" data-bs-target="#deleteMemberModal">Manually Purge
-                                            Record</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="p-3 bg-white border h-100 shadow-sm rounded-0">
+                        <span
+                            class="text-muted text-uppercase tracking-wider small d-block mb-1 admin-metric-label">Active
+                            Groups / Wings</span>
+                        <h3 class="fw-bold text-charcoal mb-0">5 Units</h3>
                     </div>
-                </main>
-
-            </div>
-        </div>
-
-        <!-- Native Bootstrap 5 Pure HTML Member Purge Validation Modal Node -->
-        <div class="modal fade" id="deleteMemberModal" tabindex="-1" aria-labelledby="deleteMemberModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content rounded-0 border">
-                    <div class="modal-header bg-danger text-white rounded-0 py-3">
-                        <div class="tracking-wide">
-                            <span
-                                class="text-uppercase fw-bold text-white-50 small d-block mb-1 admin-metric-label">System
-                                De-provisioning Node</span>
-                            <h5 class="modal-title fw-bold h6" id="deleteMemberModalLabel">Confirm Registry Purge</h5>
-                        </div>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="p-3 bg-white border h-100 shadow-sm rounded-0">
+                        <span
+                            class="text-muted text-uppercase tracking-wider small d-block mb-1 admin-metric-label">System
+                            Security Clearance</span>
+                        <h3 class="fw-bold text-success h5 mb-0 mt-1">Verified Node</h3>
                     </div>
-                    <div class="modal-body p-4 bg-light">
-                        <form action="/admin/" method="GET">
-                            <div class="mb-4 text-center text-md-start">
-                                <h5 class="fw-bold text-charcoal h6 mb-2">Are you absolutely certain?</h5>
-                                <p class="text-muted small mb-0">This layout routing execution will completely detach
-                                    the chosen
-                                    congregant profiling ledger data and access keys from the system directory
-                                    footprint. This
-                                    action is immutable.</p>
-                            </div>
-                            <div class="d-flex gap-2">
-                                <button type="button" class="btn btn-outline-charcoal w-50 rounded-0 fw-semibold"
-                                    data-bs-dismiss="modal">Cancel Purge</button>
-                                <button type="submit"
-                                    class="btn btn-danger w-50 rounded-0 fw-semibold text-white">Execute
-                                    Purge</button>
-                            </div>
-                        </form>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div
+                        class="p-3 bg-white border h-100 shadow-sm rounded-0 text-center d-flex flex-column justify-content-between">
+                        <span
+                            class="text-muted text-uppercase tracking-wider small d-block mb-2 admin-metric-label">Treasury
+                            Logs</span>
+                        <a href="/admin/financial-registry/"
+                            class="btn btn-outline-charcoal btn-sm fw-semibold w-100 rounded-0 py-1.5">
+                            Open Financial Ledger
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
+
+            <!-- DIGITAL BROADCAST & SCRIPT REGISTRY: Premium Dark Callout Banner Framework -->
+            <div class="card border rounded-0 p-4 shadow-sm bg-dark text-white mb-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                    <div>
+                        <span class="text-uppercase fw-bold text-warning small d-block mb-1">
+                            Media Directorate Node
+                        </span>
+                        <h2 class="fw-bold h4 mb-1 text-white">
+                            Digital Broadcast &amp; Script Registry
+                        </h2>
+                        <p class="text-white-50 small mb-0">
+                            Coordinate upcoming Sabbath live streams, verify active routing parameters, and archive
+                            liturgical manuscript script paths.
+                        </p>
+                    </div>
+                    <div class="text-md-end text-nowrap">
+                        <a href="/admin/broadcast-registry/"
+                            class="btn btn-outline-light btn-sm rounded-0 fw-semibold px-4 py-2">
+                            Log New Convocation Script
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Standalone Branch Locations & Assemblies Data Cards Grid -->
+            <h4 class="fw-bold text-charcoal h5 mb-3 text-uppercase tracking-wider">Territorial Assemblies Registry</h4>
+            <div class="row g-3 mb-4">
+                <!-- Branch Card 1 -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="card h-100 border rounded-0 bg-white shadow-sm">
+                        <div class="card-body p-4">
+                            <span class="badge bg-dark text-uppercase admin-metric-label mb-2 fw-semibold">Global
+                                Headquarters</span>
+                            <h5 class="fw-bold text-charcoal mb-1">Shalom Otiakrom</h5>
+                            <p class="text-muted small mb-0">Homedakrom Operational Complex, Eastern Region, Ghana.
+                                Serves as central registry and framework base.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Branch Card 2 -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="card h-100 border rounded-0 bg-white shadow-sm">
+                        <div class="card-body p-4">
+                            <span class="badge bg-secondary text-uppercase admin-metric-label mb-2">Regional
+                                Branch</span>
+                            <h5 class="fw-bold text-charcoal mb-1">Accra Metropolitan Assembly</h5>
+                            <p class="text-muted small mb-0">Greater Accra Regional Node coordinates localized Sabbath
+                                fellowships and dynamic teaching schedules.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Branch Card 3 -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="card h-100 border rounded-0 bg-white shadow-sm">
+                        <div class="card-body p-4">
+                            <span class="badge bg-secondary text-uppercase admin-metric-label mb-2">Diaspora
+                                Station</span>
+                            <h5 class="fw-bold text-charcoal mb-1">London Convocation Hub</h5>
+                            <p class="text-muted small mb-0">United Kingdom administrative cell coordinates remote
+                                interaction streams and covenant tracking matrices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active User Registry Management Table Section -->
+            <div class="card border rounded-0 shadow-sm bg-white mb-4">
+                <!-- Active User Registry Management Table Section -->
+                <div class="card border rounded-0 shadow-sm bg-white mb-4">
+                    <div class="card-header bg-white py-3 border-bottom">
+                        <h2 class="fw-bold text-charcoal h5 mb-1">Active User Authorization Matrix</h2>
+                        <p class="text-muted small mb-0">Review system clearance parameters and group status assignments
+                            across
+                            accounts.</p>
+                    </div>
+
+                    <!-- NEW COMPONENT: Pure HTML Search and Filtering Toolbar Grid with Integrated Vectors -->
+                    <div class="card-body bg-light border-bottom p-3">
+                        <form action="/admin/" method="GET" class="row g-2">
+                            <!-- Search Text Field with Vector Icon -->
+                            <div class="col-md-5">
+                                <div class="console-icon-input-group">
+                                    <svg xmlns="http://w3.org" width="14" height="14" fill="currentColor"
+                                        class="bi bi-search console-field-vector-icon" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                    </svg>
+                                    <!-- FIXED: Appended HTML pattern validations and maximum character length constraints safely -->
+                                    <input type="text" name="search" class="form-control rounded-0 form-control-sm console-filter-input"
+                                        placeholder="Search full legal name, ID hash, or email reference..." maxlength="100"
+                                        pattern="[A-Za-z0-9@. ]+" title="Alphanumeric characters, spaces, periods, and @ symbols only."
+                                        aria-label="Search directory records">
+                                </div>
+                            </div>
+
+                            <!-- Group Select with Vector Icon -->
+                            <div class="col-sm-6 col-md-3">
+                                <div class="console-icon-input-group">
+                                    <svg xmlns="http://w3.org" width="14" height="14" fill="currentColor"
+                                        class="bi bi-grid console-field-vector-icon" viewBox="0 0 16 16">
+                                        <path
+                                            d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z" />
+                                    </svg>
+                                    <select name="group_filter"
+                                        class="form-select rounded-0 form-select-sm small text-muted"
+                                        aria-label="Filter by organizational group unit">
+                                        <option value="" selected>All Working Groups</option>
+                                        <option value="exec">Executive Central Board</option>
+                                        <option value="hospital">Healing Directorate</option>
+                                        <option value="youth">Theocratic Youth Council</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Security Select with Vector Icon -->
+                            <div class="col-sm-6 col-md-3">
+                                <div class="console-icon-input-group">
+                                    <svg xmlns="http://w3.org" width="14" height="14" fill="currentColor"
+                                        class="bi bi-shield-lock console-field-vector-icon" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.338 1.59a61 61 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.117.738 7.508 2.63 9.87 1.157 1.446 2.32 2.108 3.188 2.108.867 0 2.031-.662 3.188-2.108 1.892-2.362 3.184-5.753 2.63-9.87a.48.48 0 0 0-.329-.39c-.743-.246-1.7-.512-2.834-.855a.6.6 0 0 0-.4-.022L8 1.946l-.666-.378a.6.6 0 0 0-.396-.022zM7.001 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM1 4.586V4c0-.552.448-1 1-1h2c.552 0 1 .448 1 1v.586l.854-.853A.5.5 0 0 1 6.5 4h3a.5.5 0 0 1 .354.146l.854.853V4c0-.552.448-1 1-1h2c.552 0 1 .448 1 1v.586l.854-.853A.5.5 0 0 1 14.5 4h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.354-.146l-.854-.853V11c0 .552-.448 1-1 1h-2c-.552 0-1-.448-1-1v-.586l-.854.853A.5.5 0 0 1 9.5 12h-3a.5.5 0 0 1-.354-.146l-.854-.853V11c0 .552-.448 1-1 1H2c-.552 0-1-.448-1-1v-.586l-.854.853A.5.5 0 0 1 .5 11h-1a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5h1zm2 1.5V4h-1v2.086l1-.586zm4-1.5h-1v2.086l1-.586V4.586zm4 0h-1v2.086l1-.586V4.586zm3 0h-1v2.086l1-.586V4.586z" />
+                                    </svg>
+                                    <select name="clearance_filter"
+                                        class="form-select rounded-0 form-select-sm small text-muted"
+                                        aria-label="Filter by security clearance status">
+                                        <option value="" selected>All Clearances</option>
+                                        <option value="root">Root Executive</option>
+                                        <option value="standard">Standard Access</option>
+                                        <option value="guest">Pending Verify</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-1 d-grid">
+                                <button type="submit"
+                                    class="btn btn-charcoal btn-sm rounded-0 fw-semibold">Filter</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0 small admin-matrix-hover-row">
+                            <thead class="table-light text-uppercase table-uppercase-header">
+                                <tr>
+                                    <th scope="col" class="ps-4 py-3 text-charcoal">Account Name</th>
+                                    <th scope="col" class="py-3 text-charcoal">Email Address</th>
+                                    <th scope="col" class="py-3 text-charcoal">Group Unit</th>
+                                    <th scope="col" class="py-3 text-charcoal">Clearance Status</th>
+                                    <th scope="col" class="pe-4 py-3 text-charcoal text-end">Operational Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-muted">
+                                <tr>
+                                    <td class="fw-semibold text-dark ps-4">Secretariat Admin</td>
+                                    <td>admin@seventhdaytheocraticworld.org</td>
+                                    <td>Executive Central Board</td>
+                                    <td><span
+                                            class="badge badge-clearance-root px-2 py-1 fw-semibold text-uppercase admin-metric-label">Root
+                                            Executive</span></td>
+                                    <td class="pe-4 text-end">
+                                        <a href="/admin/user-profile/"
+                                            class="link-dark fw-bold text-decoration-none border-bottom pb-0.5 me-2">Manage</a>
+                                        <button type="button"
+                                            class="btn btn-link link-danger p-0 border-0 align-baseline small fw-bold text-decoration-none border-bottom pb-0.5"
+                                            data-bs-toggle="modal" data-bs-target="#deleteMemberModal">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-semibold text-dark ps-4">Medical Director</td>
+                                    <td>hospital@seventhdaytheocraticworld.org</td>
+                                    <td>Healing Directorate</td>
+                                    <td><span
+                                            class="badge badge-clearance-standard px-2 py-1 fw-medium text-uppercase admin-metric-label">Standard
+                                            Access</span></td>
+                                    <td class="pe-4 text-end">
+                                        <a href="/admin/user-profile/"
+                                            class="link-dark fw-bold text-decoration-none border-bottom pb-0.5 me-2">Manage</a>
+                                        <button type="button"
+                                            class="btn btn-link link-danger p-0 border-0 align-baseline small fw-bold text-decoration-none border-bottom pb-0.5"
+                                            data-bs-toggle="modal" data-bs-target="#deleteMemberModal">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
 
     </div>
 </div>
