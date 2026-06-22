@@ -6,18 +6,55 @@ description: "Stay updated with official declarations, institutional logs, and r
 Secretariat."
 ---
 
+<!-- Public Announcements View Grid -->
 <section class="py-5 bg-white">
     <div class="container py-4">
-        <span class="text-uppercase tracking-wider fw-bold text-gold small d-block mb-2">Institutional Updates</span>
-        <h1 class="fw-bold text-charcoal display-5 mb-3">News &amp; Announcements</h1>
-        <p class="lead text-muted">Official chronological briefings dispatched directly from the central headquarters
-            board complex.</p>
+        <div class="row g-5">
 
-        <hr class="my-4">
+            <!-- Main Content Column -->
+            <div class="col-lg-8">
+                <a href="/global-mission/" class="btn btn-outline-charcoal btn-sm mb-4 fw-semibold">&larr; Back to
+                    Mission Overview</a>
 
-        <!-- Your text blocks go here -->
-        <div class="p-4 bg-light border border-dashed text-center text-muted">
-            No active general announcements logged for the current cycle phase.
+                <span class="text-uppercase tracking-wider fw-bold text-gold small d-block mb-2">Secretariat
+                    Dispatches</span>
+                <h1 class="fw-bold text-charcoal display-5 mb-2">News &amp; Announcements</h1>
+                <p class="lead text-muted mb-4">Official chronological briefings managed directly from the centralized
+                    administration control console panels.</p>
+
+                <hr class="my-4">
+
+                <!-- DYNAMIC LOOP: Generates cards automatically from your JSON data file -->
+                {%- for item in announcements %}
+                <div class="card border rounded-0 bg-light p-4 shadow-sm mb-4 border-start border-3 border-dark">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="text-muted font-monospace small">{{ item.date }}</span>
+                        <span class="badge bg-charcoal text-white text-uppercase admin-metric-label fw-bold">{{
+                            item.badge }}</span>
+                    </div>
+                    <h4 class="fw-bold h5 text-charcoal mb-2">{{ item.title }}</h4>
+                    <p class="text-muted small mb-0">{{ item.body }}</p>
+                </div>
+                {%- else %}
+                <div class="p-4 bg-light border text-center text-muted rounded-0">
+                    No active general announcements logged for the current cycle phase.
+                </div>
+                {%- endfor %}
+
+            </div>
+
+            <!-- Right Sidebar Column -->
+            <div class="col-lg-4">
+                <div class="p-4 bg-light border rounded-0 shadow-sm sticky-md-top sticky-sidebar-offset">
+                    <span class="text-gold fw-bold small text-uppercase tracking-wider d-block mb-2">Media Link</span>
+                    <h4 class="fw-bold h5 text-charcoal mb-3">Broadcast Stream</h4>
+                    <p class="small text-muted mb-4">All live streaming liturgical scripts are verified weekly through
+                        the secure central administration dashboard desk.</p>
+                    <a href="/global-mission/liturgy/" class="btn btn-charcoal w-100 rounded-0 py-2 fw-semibold">View
+                        Sabbath Liturgy</a>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
