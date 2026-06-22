@@ -1,45 +1,13 @@
 /* ==========================================================================
-   1. GLOBAL SYSTEM DESIGN COLOR TOKENS
+   1. GLOBAL SYSTEM VARIABLES & COLOR CONFIGURATION
    ========================================================================== */
 :root {
-    /* Core Palette Variables - Change these hex codes to adjust site styling instantly */
-    --color-charcoal: #212529;
-    /* Primary body text and dark button base colors */
-    --color-gold: #d4af37;
-    /* Accent borders, highlights, and secondary text labels */
-    --color-gold-hover: #aa8c2c;
-    /* Deep gold hue for link hover transition states */
-    --color-light-bg: #f8f9fa;
-    /* Default background shade for light layout modules */
-    --color-card-border: #e2e8f0;
-    /* Light gray separation lines for data matrix panels */
-    --color-success: #198754;
-    /* Secure clearance state badge indicator fill colors */
-}
-
-/* Bind theme tokens directly to your custom layout utility helper classes */
-.text-charcoal {
-    color: var(--color-charcoal) !important;
-}
-
-.text-gold {
-    color: var(--color-gold) !important;
-}
-
-.bg-charcoal {
-    background-color: var(--color-charcoal) !important;
-}
-
-/* Centralized template hover state interactions utilizing your new variables */
-.console-menu-item:hover {
-    background-color: rgba(33, 37, 41, 0.04) !important;
-    color: var(--color-charcoal) !important;
-}
-
-.console-menu-item.active-console-node {
-    background-color: var(--color-charcoal) !important;
-    color: #ffffff !important;
-    font-weight: 600;
+    --sdtwc-charcoal: #1F2421;
+    --sdtwc-gold: #D4AF37;
+    --sdtwc-gold-hover: #AA8C2C;
+    --sdtwc-light-gray: #F8F9FA;
+    --sdtwc-border-subtle: #E9ECEF;
+    --sdtwc-white: #FFFFFF;
 }
 
 /* ==========================================================================
