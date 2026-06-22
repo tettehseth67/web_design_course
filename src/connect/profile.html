@@ -1,75 +1,146 @@
 ---
 layout: "base.html"
-title: "Member Account Profile"
+title: "Account Profile Ledger"
 permalink: "/connect/profile/"
-description: "Review and verify your registered congregational profiling data and demographic framework alignments."
+description: "Review individual identity records, verified clearance mappings, and regional assembly tracking data
+inside the SDTWC member directory."
 ---
 
-<!-- Account Profile Workspace Section -->
-<section class="py-5 bg-white">
-    <div class="container py-4">
-        <div class="row g-5 justify-content-center">
+<!-- Core Member Profile Ledger Grid Layout Section -->
+<section class="py-5 bg-white flex-grow-1 error-viewport-height">
+    <div class="container py-2">
+        <div class="row g-4">
 
-            <!-- Main Profile Metrics Sheet Column -->
-            <div class="col-lg-8">
-                <a href="/connect/dashboard/" class="btn btn-outline-charcoal btn-sm mb-4 fw-semibold">&larr; Return to
-                    Dashboard</a>
+            <!-- 1. LEFT COLUMN: Expanded Member Navigation Sidebar Index -->
+            <aside class="col-lg-4 col-xl-3">
+                <div class="card p-4 rounded-0 bg-light shadow-sm sticky-md-top sticky-sidebar-offset">
 
-                <span class="text-uppercase tracking-wider fw-bold text-gold small d-block mb-2">Registry Profile</span>
-                <h1 class="fw-bold text-charcoal display-5 mb-3">Account Profile</h1>
-                <p class="lead text-muted mb-4">Review your certified institutional registration records and active
-                    demographic wing alignments below.</p>
+                    <!-- Congregant Profile Summary Head -->
+                    <div class="text-center mb-4 pb-3 border-bottom">
+                        <div class="d-inline-block p-3 bg-charcoal text-white rounded-circle mb-2" aria-hidden="true">
+                            <svg xmlns="http://w3.org" width="32" height="32" fill="currentColor"
+                                class="bi bi-person-badge" viewBox="0 0 16 16">
+                                <path d="M6.5 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                <path
+                                    d="M4.5 0A2.5 2.5 0 0 0 2 2.5V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2.5A2.5 2.5 0 0 0 11.5 0zM3 2.5A1.5 1.5 0 0 1 4.5 1h7A1.5 1.5 0 0 1 13 2.5V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z" />
+                            </svg>
+                        </div>
+                        <h4 class="fw-bold text-charcoal h5 mb-1">Covenant Member Portal</h4>
+                        <span
+                            class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1 fw-bold text-uppercase admin-metric-label">Active
+                            Status</span>
+                    </div>
 
-                <hr class="my-4">
+                    <!-- Semantic Navigation Directory Anchor List -->
+                    <div class="list-group list-group-flush small mb-3" role="navigation"
+                        aria-label="Member Subpage Directory">
+                        <a href="/connect/dashboard/"
+                            class="list-group-item list-group-item-action border-0 px-2 py-2.5 text-muted console-menu-item">
+                            📊 Portal Overview Dashboard
+                        </a>
+                        <a href="/connect/profile/"
+                            class="list-group-item list-group-item-action border-0 px-2 py-2.5 bg-charcoal text-white fw-bold">
+                            👤 Account Profile Ledger
+                        </a>
+                        <a href="/global-mission/announcements/"
+                            class="list-group-item list-group-item-action border-0 px-2 py-2.5 text-muted console-menu-item">
+                            📢 News &amp; Secretariat Dispatches
+                        </a>
+                        <a href="/connect/history-archive/"
+                            class="list-group-item list-group-item-action border-0 px-2 py-2.5 text-muted console-menu-item">
+                            📜 Church History &amp; Archives
+                        </a>
+                    </div>
 
-                <!-- Member Information Sheet Matrix -->
-                <h3 class="fw-bold text-charcoal h4 mb-3">Registry Details</h3>
-                <div class="table-responsive border mb-5">
-                    <table class="table align-middle mb-0 bg-white small">
-                        <tbody class="text-muted">
-                            <tr>
-                                <td class="fw-semibold text-dark ps-4 py-3 bg-light" style="width: 30%;">Profile Status
-                                </td>
-                                <td class="pe-4"><span
-                                        class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1 fw-semibold">Active
-                                        Member</span></td>
-                            </tr>
-                            <tr>
-                                <td class="fw-semibold text-dark ps-4 py-3 bg-light">Full Legal Name</td>
-                                <td class="text-dark pe-4">Registered Congregant</td>
-                            </tr>
-                            <tr>
-                                <td class="fw-semibold text-dark ps-4 py-3 bg-light">Email Reference</td>
-                                <td class="pe-4">member@seventhdaytheocraticworld.org</td>
-                            </tr>
-                            <tr>
-                                <td class="fw-semibold text-dark ps-4 py-3 bg-light">Primary Alignment</td>
-                                <td class="pe-4">Worship Center / Global Diaspora</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="pt-3 border-top text-center">
+                        <a href="/connect/login/"
+                            class="btn btn-outline-danger btn-sm w-100 rounded-0 fw-semibold py-2">Sign Out of
+                            Session</a>
+                    </div>
+
+                </div>
+            </aside>
+
+            <!-- 2. RIGHT COLUMN: Core Profile Registration Matrix Sheets -->
+            <main class="col-lg-8 col-xl-9">
+
+
+                <div
+                    class="card border rounded-0 p-4 shadow-sm bg-dark text-white mb-4 border-start border-4 border-warning">
+                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                        <div>
+                            <span
+                                class="text-uppercase fw-bold text-warning small d-block mb-1 aria-hidden-true">Identity
+                                Account Node</span>
+                            <h1 class="fw-bold h3 mb-1 text-white">Biographical Record Ledger</h1>
+                            <p class="text-white-50 small mb-0">Review verified physical registration parameters,
+                                lineage tracking markers, and assembly coordination data points.</p>
+                        </div>
+                        <div class="text-md-end text-nowrap">
+                            <a href="/connect/dashboard/"
+                                class="btn btn-outline-light btn-sm rounded-0 fw-semibold px-3 py-2">
+                                &larr; Back to Dashboard
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <h3 class="fw-bold text-charcoal h4 mb-3">Security & Access Tokens</h3>
-                <p class="text-muted small">To change your password or update your localized physical address
-                    coordinates, please submit a formalized revision dispatch form through the central messaging desk.
-                </p>
-            </div>
+                <!-- Comprehensive Account Record Matrix Information Tables -->
+                <div class="card border rounded-0 shadow-sm bg-white mb-4">
+                    <div class="card-header bg-white py-3 border-bottom">
+                        <h2 class="fw-bold text-charcoal h5 mb-1">Verified Registry Parameters</h2>
+                        <p class="text-muted small mb-0">Immutable tracking coordinates logged inside the central
+                            Otiakrom database repository.</p>
+                    </div>
 
-            <!-- Right Action Sidebar Column -->
-            <div class="col-lg-4">
-                <div class="p-4 bg-light border rounded-0 shadow-sm sticky-md-top sticky-sidebar-offset">
-                    <span class="text-gold fw-bold small text-uppercase tracking-wider d-block mb-2">Secretariat
-                        Notice</span>
-                    <h4 class="fw-bold h5 text-charcoal mb-3">Profile Updates</h4>
-                    <p class="small text-muted mb-4">Need to modify your registered family foundation profiles or update
-                        your vocational guild records?</p>
-                    <a href="/connect/#contact" class="btn btn-charcoal w-100 rounded-0 py-2 fw-semibold mb-2">Contact
-                        Secretariat</a>
-                    <a href="/connect/login/" class="btn btn-outline-charcoal w-100 rounded-0 py-2 fw-semibold">Exit
-                        Portal Session</a>
+                    <div class="table-responsive">
+                        <table class="table align-middle mb-0 small">
+                            <tbody class="text-muted">
+                                <tr>
+                                    <td class="fw-semibold text-dark ps-4 py-3 bg-light" style="width: 30%;">Full Legal
+                                        Profile Identity</td>
+                                    <td class="text-dark fw-medium">Samuel Osei Kojo</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-semibold text-dark ps-4 py-3 bg-light">Unique User ID Token</td>
+                                    <td class="font-monospace text-dark">usr_mem_4099x22</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-semibold text-dark ps-4 py-3 bg-light">Communication Mapping</td>
+                                    <td class="text-nowrap text-truncate matrix-email-col">samuel.osei@example.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-semibold text-dark ps-4 py-3 bg-light">Territorial Cell Assignment
+                                    </td>
+                                    <td class="text-dark">Accra Metropolitan Assembly &bull; Southern Zone</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-semibold text-dark ps-4 py-3 bg-light">Corporate Directorate Wing</td>
+                                    <td>Vocational Skill Guilds Cohort Track (Digital Systems Division)</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-semibold text-dark ps-4 py-3 bg-light">System Clearance Mapping</td>
+                                    <td><span
+                                            class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1 fw-bold text-uppercase admin-metric-label">Standard
+                                            Access Granted</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
+
+                <!-- Secondary Security Guidance Warning Box Container -->
+                <div class="p-4 bg-light border border-start border-3 border-dark mb-2">
+                    <h3 class="fw-bold text-charcoal h6 mb-2 text-uppercase tracking-wider">Credential Rectification
+                        Notice</h3>
+                    <p class="text-muted small mb-0">To ensure absolute identity encryption, all record
+                        modifications—including email re-mapping, branch reassignment adjustments, or password
+                        credential overrides—must be filed manually through the secure on-duty <a href="/connect/"
+                            class="text-charcoal fw-bold text-decoration-none border-bottom pb-0.5">Communications
+                            Registry</a> desk layout panel.</p>
+                </div>
+
+            </main>
 
         </div>
     </div>
