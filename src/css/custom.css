@@ -500,7 +500,25 @@ body {
     border-left-color: var(--color-gold) !important;
 }
 
+/* ==========================================================================
+   24. FIXED STACKING OVERRIDES FOR INTERACTIVE DROPDOWNS
+   ========================================================================== */
 
+/* Elevates the main global dropdown container layers above all sticky nodes */
+.navbar-nav .dropdown-menu {
+    z-index: 2000 !important;
+    /* Forces menu panels to stay on top of sidebars */
+}
+
+/* Fixes stacking limits on the sticky card container on desktop screens */
+@media (min-width: 992px) {
+
+    /* Targets your sticky layout wrapper block */
+    .sticky-md-top {
+        z-index: 100 !important;
+        /* Lowers its default depth layer slightly */
+    }
+}
 
 
 
