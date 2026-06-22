@@ -6,4 +6,4 @@ compatibility_date = "2026-06-20"
 [assets]
 directory = "docs"
 # FIXED: Forces edge routers to catch broken links and serve your 404 file natively
-not_found_handling = "custom-page"
+not_found_handling = "404-page"
