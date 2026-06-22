@@ -463,5 +463,43 @@ body {
     max-width: 180px !important;
 }
 
+/* ==========================================================================
+   21. PREMIUM GLOBAL HEADER HOVER INTERACTIONS (INLINE-FREE)
+   ========================================================================== */
+
+/* 1. Main Navbar Header Folder Links */
+.navbar-nav .nav-link {
+    transition: color 0.2s ease-in-out !important;
+}
+
+/* Enhances unselected links to shift elegantly into gold when hovered */
+.navbar-nav .nav-link.text-muted:hover {
+    color: var(--color-gold) !important;
+}
+
+/* 2. Inside Dropdown Submenu Item Links */
+.dropdown-menu .dropdown-item {
+    border-left: 3px solid transparent;
+    transition: all 0.15s ease-in-out !important;
+}
+
+/* Strips default Bootstrap blue highlight and forces an elegant gold accent */
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+    background-color: var(--color-light-bg) !important;
+    color: var(--color-charcoal) !important;
+    border-left-color: var(--color-gold) !important;
+    padding-left: 1.5rem !important;
+    /* Gentle right-glide effect on hover */
+}
+
+/* Ensures active/current page dropdown item cannot be overridden visually */
+.dropdown-menu .dropdown-item.active {
+    background-color: var(--color-light-bg) !important;
+    color: var(--color-charcoal) !important;
+    border-left-color: var(--color-gold) !important;
+}
+
+
 
 
