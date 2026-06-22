@@ -1,49 +1,79 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3 border-bottom">
+<!-- Premium Left-Aligned Navigation Layout (Zero Inline CSS) -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3 border-bottom" role="navigation"
+    aria-label="Primary Congregational Directory">
     <div class="container">
+
+        <!-- Left Branding Anchor Block -->
         <a class="navbar-brand fw-bold text-uppercase tracking-wider border-start border-3 border-warning ps-3 text-charcoal"
-            href="/">
-            SDTWC <span class="d-block small fw-normal brand-subtext">World Congregation</span>
+            href="/" aria-label="SDTWC Homepage Gateway">
+            SDTWC <span class="d-block small fw-normal brand-subtext" aria-hidden="true">World Congregation</span>
         </a>
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainChurchNav">
+
+        <!-- Responsive Mobile Drawer Toggle -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainChurchNav"
+            aria-controls="mainChurchNav" aria-expanded="false" aria-label="Toggle Primary Navigation Menu">
             <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- Collapsible Menu Matrix Wrapper -->
         <div class="collapse navbar-collapse" id="mainChurchNav">
+
+            <!-- 1. LEFT LIST: Directory folders pull left tightly next to logo branding -->
             <ul class="navbar-nav me-auto fw-semibold align-items-center">
 
-                <!-- Worship Center Dropdown -->
+                <!-- Worship Center Dropdown Section -->
                 <li class="nav-item dropdown px-2">
-                    <a class="nav-link dropdown-toggle {% if page.url == '/' or '/lunar-registry/' in page.url %}text-gold fw-bold{% else %}text-muted{% endif %}"
-                        href="/" role="button" data-bs-toggle="dropdown">Worship Center</a>
-                    <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                    <a class="nav-link dropdown-toggle {% if page.url == '/' or '/lunar-registry/' in page.url or '/solar-matrix/' in page.url or '/liturgy/' in page.url %}text-gold fw-bold{% else %}text-muted{% endif %}"
+                        href="/" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        aria-label="Worship Center Department Menu Options">Worship Center</a>
+                    <ul class="dropdown-menu dropdown-menu-start shadow border-0"
+                        aria-label="Worship Submenu Subsections">
                         <li><a class="dropdown-item {% if page.url == '/' %}active bg-light text-charcoal fw-bold{% endif %}"
                                 href="/">Overview</a></li>
                         <li><a class="dropdown-item" href="/#sermons">Sermons &amp; Broadcasts</a></li>
                         <li><a class="dropdown-item" href="/#calendar">Sacred Calendar</a></li>
                         <li><a class="dropdown-item {% if page.url == '/global-mission/lunar-registry/' %}active bg-light text-charcoal fw-bold{% endif %}"
                                 href="/global-mission/lunar-registry/">Calculated New Moons</a></li>
+                        <li><a class="dropdown-item {% if page.url == '/global-mission/solar-matrix/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/global-mission/solar-matrix/">Solar Transition Matrix</a></li>
                         <li><a class="dropdown-item {% if page.url == '/global-mission/liturgy/' %}active bg-light text-charcoal fw-bold{% endif %}"
                                 href="/global-mission/liturgy/">Sabbath Liturgy Outlines</a></li>
                         <li>
-                            <hr class="dropdown-divider">
+                            <hr class="dropdown-divider" role="separator">
                         </li>
                         <li>
-                            <h6 class="dropdown-header text-uppercase text-muted dropdown-header-uppercase">Biblical Festivals</h6>
+                            <h6 class="dropdown-header text-uppercase text-muted dropdown-header-uppercase"
+                                role="heading">Biblical Festivals</h6>
                         </li>
                         <li><a class="dropdown-item" href="/#feasts">Commanded Feasts</a></li>
                         <li><a class="dropdown-item" href="/#new-month">New Month Markings</a></li>
                     </ul>
                 </li>
 
-                <!-- Global Mission Dropdown -->
+                <!-- Global Mission Dropdown Section -->
                 <li class="nav-item dropdown px-2">
                     <a class="nav-link dropdown-toggle {% if '/global-mission/' in page.url %}text-gold fw-bold{% else %}text-muted{% endif %}"
-                        href="/global-mission/" role="button" data-bs-toggle="dropdown">Global Mission</a>
-                    <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                        href="/global-mission/" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" aria-label="Global Mission Sub-Directorates Submenu">Global Mission</a>
+                    <ul class="dropdown-menu dropdown-menu-start shadow border-0"
+                        aria-label="Missions Submenu Subsections">
                         <li><a class="dropdown-item {% if page.url == '/global-mission/' %}active bg-light text-charcoal fw-bold{% endif %}"
                                 href="/global-mission/">Mission Overview</a></li>
                         <li><a class="dropdown-item" href="/global-mission/doctrine/">Articles &amp; Doctrine</a></li>
+                        <li><a class="dropdown-item {% if page.url == '/global-mission/announcements/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/global-mission/announcements/">News &amp; Announcements</a></li>
+                        <li>
+                            <hr class="dropdown-divider" role="separator">
+                        </li>
+                        <li>
+                            <h6 class="dropdown-header text-uppercase text-muted dropdown-header-uppercase"
+                                role="heading">Localized Branch Assemblies</h6>
+                        </li>
                         <li><a class="dropdown-item {% if page.url == '/global-mission/kumasi/' %}active bg-light text-charcoal fw-bold{% endif %}"
                                 href="/global-mission/kumasi/">Kumasi Metropolitan Cell</a></li>
+                        <li>
+                            <hr class="dropdown-divider" role="separator">
+                        </li>
                         <li><a class="dropdown-item {% if page.url == '/global-mission/hospital/' %}active bg-light text-charcoal fw-bold{% endif %}"
                                 href="/global-mission/hospital/">Sufficient Grace Hospital</a></li>
                         <li><a class="dropdown-item {% if page.url == '/global-mission/hospital-intake/' %}active bg-light text-charcoal fw-bold{% endif %}"
@@ -53,15 +83,17 @@
                         <li><a class="dropdown-item {% if page.url == '/global-mission/youth-women/' %}active bg-light text-charcoal fw-bold{% endif %}"
                                 href="/global-mission/youth-women/">Youth &amp; Women's Wings</a></li>
                         <li><a class="dropdown-item {% if page.url == '/global-mission/vocational-guilds/' %}active bg-light text-charcoal fw-bold{% endif %}"
-                                href="/global-mission/vocational-guides/">Vocational Skill Guilds</a></li>
-                        <li><a class="dropdown-item" href="/global-mission/announcements/">News &amp; Announcements</a></li>
+                                href="/global-mission/vocational-guilds/">Vocational Skill Guilds</a></li>
                     </ul>
                 </li>
-                <!-- Education Complex Dropdown -->
+
+                <!-- Education Complex Dropdown Section -->
                 <li class="nav-item dropdown px-2">
                     <a class="nav-link dropdown-toggle {% if '/education/' in page.url %}text-gold fw-bold{% else %}text-muted{% endif %}"
-                        href="/education/" role="button" data-bs-toggle="dropdown">Education Complex</a>
-                    <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                        href="/education/" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" aria-label="Educational Complex Directorate Submenu">Education Complex</a>
+                    <ul class="dropdown-menu dropdown-menu-start shadow border-0"
+                        aria-label="Education Submenu Subsections">
                         <li><a class="dropdown-item {% if page.url == '/education/' %}active bg-light text-charcoal fw-bold{% endif %}"
                                 href="/education/">Overview</a></li>
                         <li><a class="dropdown-item {% if page.url == '/education/basic-school/' %}active bg-light text-charcoal fw-bold{% endif %}"
@@ -75,43 +107,44 @@
                     </ul>
                 </li>
 
-                <!-- Connect & Support Dropdown Link Structure (Pure Static Server-Rendered Layout) -->
+                <!-- Connect & Support Dropdown Section -->
                 <li class="nav-item dropdown px-2">
                     <a class="nav-link dropdown-toggle {% if '/connect/' in page.url %}text-gold fw-bold{% else %}text-muted{% endif %}"
-                        href="/connect/" role="button" data-bs-toggle="dropdown">Connect &amp; Support</a>
-                    <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                        href="/connect/" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" aria-label="Connect &amp; Support Interface Portal Submenu">Connect &amp;
+                        Support</a>
+                    <ul class="dropdown-menu dropdown-menu-start shadow border-0"
+                        aria-label="Connectivity Submenu Subsections">
                         <li><a class="dropdown-item {% if page.url == '/connect/' %}active bg-light text-charcoal fw-bold{% endif %}"
                                 href="/connect/">Overview</a></li>
-                        <!-- Portal Authentication Gateway Paths -->
-                        <li><a class="dropdown-item {% if page.url == '/connect/login/' %}active bg-light text-charcoal fw-bold{% endif %}"
-                                href="/connect/login/">Member Login</a></li>
-                        <li><a class="dropdown-item {% if page.url == '/connect/dashboard/' %}active bg-light text-charcoal fw-bold{% endif %}"
-                                href="/connect/dashboard/">Member Dashboard</a></li>
-                        <!-- New: Static Profile and Exit Nodes -->
+                        <li><a class="dropdown-item" href="/connect/login/">Member Login</a></li>
+                        <li><a class="dropdown-item" href="/connect/dashboard/">Member Dashboard</a></li>
                         <li>
-                            <hr class="dropdown-divider">
+                            <hr class="dropdown-divider" role="separator">
                         </li>
                         <li>
-                            <h6 class="dropdown-header text-uppercase text-muted dropdown-header-uppercase">Account
-                                Actions</h6>
+                            <h6 class="dropdown-header text-uppercase text-muted dropdown-header-uppercase"
+                                role="heading">Account Actions</h6>
                         </li>
                         <li><a class="dropdown-item {% if page.url == '/connect/profile/' %}active bg-light text-charcoal fw-bold{% endif %}"
                                 href="/connect/profile/">Account Profile</a></li>
                         <li><a class="dropdown-item" href="/connect/login/">Sign Out</a></li>
                         <li>
-                            <hr class="dropdown-divider">
+                            <hr class="dropdown-divider" role="separator">
                         </li>
                         <li><a class="dropdown-item {% if page.url == '/connect/history-archive/' %}active bg-light text-charcoal fw-bold{% endif %}"
                                 href="/connect/history-archive/">Church History</a></li>
                     </ul>
                 </li>
+
             </ul>
-            <!-- Locate this button container element near the bottom of src/_includes/navigation.html -->
+
+            <!-- 2. RIGHT LIST: Administrative button securely anchored to the far right -->
             <ul class="navbar-nav ms-auto align-items-center">
                 <li class="nav-item px-2 py-2 py-lg-0">
-                    <!-- FIXED PERMALINK PATH: Routes visitors safely to your admin login wall -->
-                    <a class="btn btn-outline-charcoal btn-sm px-3 fw-bold tracking-wider rounded-pill {% if page.url == '/admin/login/' %}active{% endif %}"
-                        href="/admin/login/" aria-label="Open Secure Isolated System Admin Console Gate">ADMIN CONSOLE</a>
+                    <a class="btn btn-outline-charcoal btn-sm px-3 fw-bold tracking-wider rounded-0 {% if page.url == '/admin/login/' or '/admin/' in page.url %}active{% endif %}"
+                        href="/admin/login/" aria-label="Open Secure Isolated System Admin Console Gate">ADMIN
+                        CONSOLE</a>
                 </li>
             </ul>
 
