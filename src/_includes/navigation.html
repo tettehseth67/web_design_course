@@ -27,8 +27,7 @@
                             <hr class="dropdown-divider">
                         </li>
                         <li>
-                            <h6 class="dropdown-header text-uppercase text-muted dropdown-header-uppercase">Biblical
-                                Festivals</h6>
+                            <h6 class="dropdown-header text-uppercase text-muted dropdown-header-uppercase">Biblical Festivals</h6>
                         </li>
                         <li><a class="dropdown-item" href="/#feasts">Commanded Feasts</a></li>
                         <li><a class="dropdown-item" href="/#new-month">New Month Markings</a></li>
@@ -39,28 +38,23 @@
                 <li class="nav-item dropdown px-2">
                     <a class="nav-link dropdown-toggle {% if '/global-mission/' in page.url %}text-gold fw-bold{% else %}text-muted{% endif %}"
                         href="/global-mission/" role="button" data-bs-toggle="dropdown">Global Mission</a>
-                    <ul class="dropdown-menu dropdown-menu-start shadow border-0"
-                        aria-label="Worship Submenu Subsections">
-                        <li><a class="dropdown-item {% if page.url == '/' %}active bg-light text-charcoal fw-bold{% endif %}"
-                                href="/">Overview</a></li>
-                        <li><a class="dropdown-item" href="/#sermons">Sermons &amp; Broadcasts</a></li>
-                        <li><a class="dropdown-item" href="/#calendar">Sacred Calendar</a></li>
-                        <li><a class="dropdown-item" href="/global-mission/lunar-registry/">Calculated New Moons</a>
-                        </li>
-                        <!-- ADDED: Clean path connection to your brand new solar boundary tracking page -->
-                        <li><a class="dropdown-item {% if page.url == '/global-mission/solar-matrix/' %}active bg-light text-charcoal fw-bold{% endif %}"
-                                href="/global-mission/solar-matrix/">Solar Transition Matrix</a></li>
-                        <li><a class="dropdown-item" href="/global-mission/liturgy/">Sabbath Liturgy Outlines</a></li>
-                        <li>
-                            <hr class="dropdown-divider" role="separator">
-                        </li>
-                        <li>
-                            <h6 class="dropdown-header text-uppercase text-muted dropdown-header-uppercase"
-                                role="heading">Biblical
-                                Festivals</h6>
-                        </li>
-                        <li><a class="dropdown-item" href="/#feasts">Commanded Feasts</a></li>
-                        <li><a class="dropdown-item" href="/#new-month">New Month Markings</a></li>
+                    <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                        <li><a class="dropdown-item {% if page.url == '/global-mission/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/global-mission/">Mission Overview</a></li>
+                        <li><a class="dropdown-item" href="/global-mission/doctrine/">Articles &amp; Doctrine</a></li>
+                        <li><a class="dropdown-item {% if page.url == '/global-mission/kumasi/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/global-mission/kumasi/">Kumasi Metropolitan Cell</a></li>
+                        <li><a class="dropdown-item {% if page.url == '/global-mission/hospital/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/global-mission/hospital/">Sufficient Grace Hospital</a></li>
+                        <li><a class="dropdown-item {% if page.url == '/global-mission/hospital-intake/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/global-mission/hospital-intake/">Patient Intake Guidelines</a></li>
+                        <li><a class="dropdown-item {% if page.url == '/global-mission/outreach/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/global-mission/outreach/">Community Health Outreach</a></li>
+                        <li><a class="dropdown-item {% if page.url == '/global-mission/youth-women/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/global-mission/youth-women/">Youth &amp; Women's Wings</a></li>
+                        <li><a class="dropdown-item {% if page.url == '/global-mission/vocational-guilds/' %}active bg-light text-charcoal fw-bold{% endif %}"
+                                href="/global-mission/vocational-guides/">Vocational Skill Guilds</a></li>
+                        <li><a class="dropdown-item" href="/global-mission/announcements/">News &amp; Announcements</a></li>
                     </ul>
                 </li>
 
@@ -119,8 +113,7 @@
                 <li class="nav-item px-2 py-2 py-lg-0">
                     <!-- FIXED PERMALINK PATH: Routes visitors safely to your admin login wall -->
                     <a class="btn btn-outline-charcoal btn-sm px-3 fw-bold tracking-wider rounded-pill {% if page.url == '/admin/login/' %}active{% endif %}"
-                        href="/admin/login/" aria-label="Open Secure Isolated System Admin Console Gate">ADMIN
-                        CONSOLE</a>
+                        href="/admin/login/" aria-label="Open Secure Isolated System Admin Console Gate">ADMIN CONSOLE</a>
                 </li>
             </ul>
 
