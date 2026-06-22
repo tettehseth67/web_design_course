@@ -525,6 +525,18 @@ body {
     color: rgba(255, 255, 255, 0.75) !important;
 }
 
+/* ==========================================================================
+   23. PRIVACY OVERLAY ANIMATED HOVER TRANSITIONS (INLINE-FREE)
+   ========================================================================== */
+
+/* Elevate the container layout organically when hovered by a user */
+.global-privacy-banner:hover {
+    /* Combines your existing horizontal centering translate with a gentle hover lift */
+    transform: translateX(-50%) translateY(-4px) !important;
+    /* Deepens the depth profile using a smooth, expanded ambient drop shadow */
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4) !important;
+}
+
 
 
 
