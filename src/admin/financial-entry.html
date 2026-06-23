@@ -7,10 +7,10 @@ financial ledger data."
 ---
 
 <!-- Financial Entry Workspace Component -->
-<section class="py-5 bg-white error-viewport-height">
+<section class="py-5 bg-white error-viewport-height flex-grow-1">
     <div class="container py-4">
         <div class="row justify-content-center">
-            <div class="col-md-10 col-lg-7">
+            <div class="col-md-10 col-lg-8">
 
                 <!-- Section Header Segment -->
                 <div class="text-center mb-4">
@@ -20,26 +20,26 @@ financial ledger data."
                         Provisioning Node</span>
                     <h1 class="fw-bold text-charcoal h3 mb-2">Log Contribution Receipt</h1>
                     <p class="text-muted small max-w-md mx-auto">Manually record incoming tithes or special covenants to
-                        initialize a new verified transaction record under the corporate treasury framework.</p>
+                        initialize a new verified transaction record under the corporate treasury framework [INDEX].</p>
                 </div>
 
-                <!-- Static Input Entry Block Wrapper (Completely Inline-CSS Free) -->
-                <div class="p-4 border shadow-sm bg-light">
+                <!-- Static Input Entry Block Wrapper (Completely Inline-CSS Free and Restructured Grid) -->
+                <div class="p-4 border shadow-sm bg-white">
                     <form action="/admin/financial-registry/" method="GET">
 
                         <!-- Contributor Name Field -->
                         <div class="mb-3">
-                            <label class="form-label small fw-semibold text-muted">Contributor Reference / Member
-                                ID</label>
-                            <input type="text" class="form-control rounded-0"
-                                placeholder="e.g., Diaspora Account Member" autofocus required>
+                            <label for="contributor" class="form-label small fw-semibold text-muted">Contributor
+                                Reference / Member ID</label>
+                            <input type="text" id="contributor" name="contributor" class="form-control rounded-0"
+                                placeholder="e.g., Diaspora Account Member" autofocus required pattern="[A-Za-z0-9 ]+">
                         </div>
 
-                        <!-- Source Location and Allocation Fields -->
+                        <!-- Grid Section 1: Source Location and Allocation Fields (CLEAN ROW BOUNDARIES) -->
                         <div class="row g-3 mb-3">
                             <div class="col-sm-6">
                                 <label class="form-label small fw-semibold text-muted">Regional Assembly Source</label>
-                                <select class="form-select rounded-0" required>
+                                <select name="assembly_source" class="form-select rounded-0" required>
                                     <option value="" disabled selected>Choose location...</option>
                                     <option value="hq">Shalom Otiakrom Headquarters</option>
                                     <option value="accra">Accra Metropolitan Assembly</option>
@@ -48,7 +48,7 @@ financial ledger data."
                             </div>
                             <div class="col-sm-6">
                                 <label class="form-label small fw-semibold text-muted">Allocation Category</label>
-                                <select class="form-select rounded-0" required>
+                                <select name="fund_category" class="form-select rounded-0" required>
                                     <option value="" disabled selected>Choose fund track...</option>
                                     <option value="tithe">Annual Festival Tithe Allocation</option>
                                     <option value="building">Headquarters Infrastructure Fund</option>
@@ -57,12 +57,13 @@ financial ledger data."
                             </div>
                         </div>
 
-                        <!-- Amount and Custom Currency Reference -->
+                        <!-- Grid Section 2: Amount and Custom Currency Reference (CLEAN ROW BOUNDARIES) -->
                         <div class="row g-3 mb-4">
                             <div class="col-sm-6">
-                                <label class="form-label small fw-semibold text-muted">Transaction Amount</label>
-                                <input type="number" class="form-control rounded-0" placeholder="0.00" step="0.01"
-                                    min="0.01" required>
+                                <label for="amount" class="form-label small fw-semibold text-muted">Transaction Receipt
+                                    Amount</label>
+                                <input type="number" id="amount" name="amount" class="form-control rounded-0"
+                                    placeholder="0.00" step="0.01" min="0.01" max="999999.99" required>
                             </div>
                             <div class="col-sm-6">
                                 <label class="form-label small fw-semibold text-muted">Assigned Ledger Code

@@ -1,46 +1,75 @@
 ---
 layout: "admin-base.html"
-title: "Group Management Matrix"
+title: "Group Matrix Board"
 permalink: "/admin/groups/"
-description: "Review structural fellowship subdivisions, vocational guilds, and authorized clearance groups inside the
-SDTWC administration framework."
+description: "Centralized institutional dashboard for creating, auditing, and managing functional subdivisions and
+structural congregational wings."
 ---
 
-<!-- Global Admin Groups Container Wrapper -->
+<!-- Global Admin Workspace Container Wrapper -->
 <div class="container-fluid py-4 px-md-4 flex-grow-1 error-viewport-height">
     <div class="row g-4">
 
         <!-- 1. LEFT SIDEBAR COMPONENT: Injects Centralized Include Module -->
         {% include "admin-sidebar.html" %}
 
-        <!-- 2. RIGHT MAIN CONTENT COMPONENT: Groups Data List Matrix -->
+        <!-- 2. RIGHT MAIN CONTENT COMPONENT: Group Overview Grid -->
         <main class="col-lg-8 col-xl-9">
 
-            <div class="card border rounded-0 shadow-sm bg-white mb-4">
-                <div class="card border rounded-0 shadow-sm bg-white mb-4">
-                    <div
-                        class="card-header bg-white py-3 border-bottom d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
-                        <div>
-                            <h2 class="fw-bold text-charcoal h5 mb-1">Functional Subdivisions Matrix</h2>
-                            <p class="text-muted small mb-0">Systematic inventory of active working groups under the
-                                corporate charter.
-                            </p>
-                        </div>
-                        <button type="button" class="btn btn-charcoal btn-sm fw-semibold rounded-0 px-3"
+            <!-- Polished Header Callout Banner Module using pure Bootstrap 5 dark rules -->
+            <div class="card border rounded-0 p-4 shadow-sm bg-dark text-white mb-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                    <div>
+                        <span class="text-uppercase fw-bold text-warning small d-block mb-1">
+                            Subdivision Management Node
+                        </span>
+                        <h1 class="fw-bold h3 mb-1 text-white">Functional Subdivisions Matrix</h1>
+                        <p class="text-white-50 small mb-0">
+                            Systematic inventory of active working groups, operational seat capacities, and oversight
+                            allocations under the corporate charter.
+                        </p>
+                    </div>
+                    <div class="text-md-end text-nowrap">
+                        <button type="button" class="btn btn-outline-light btn-sm rounded-0 fw-semibold px-3 py-2"
                             data-bs-toggle="modal" data-bs-target="#createGroupModal">
                             Create New Group
                         </button>
                     </div>
-                    <!-- DUPLICATED: Pure HTML Toolbar for Group Grid Filtering -->
-                    <div class="card-body bg-light border-bottom p-3">
-                        <form action="/admin/groups/" method="GET" class="row g-2">
-                            <div class="col-md-6">
+                </div>
+            </div>
+
+            <!-- Main Table Card Container Section -->
+            <div class="card border rounded-0 shadow-sm bg-white mb-4">
+                <div class="card-header bg-white py-3 border-bottom">
+                    <h2 class="fw-bold text-charcoal h5 mb-1">Active Congregational Wings</h2>
+                    <p class="text-muted small mb-0">Review operational seat caps and parent directorate board
+                        structures across units.</p>
+                </div>
+
+                <!-- Pure HTML Toolbar for Group Grid Filtering -->
+                <div class="card-body bg-light border-bottom p-3">
+                    <form action="/admin/groups/" method="GET" class="row g-2">
+                        <div class="col-md-6">
+                            <div class="console-icon-input-group">
+                                <svg xmlns="http://w3.org" width="14" height="14" fill="currentColor"
+                                    class="bi bi-search console-field-vector-icon" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg>
                                 <input type="text" name="search"
                                     class="form-control rounded-0 form-control-sm console-filter-input"
-                                    placeholder="🔍 Search group unit name, seats description, or parent board..."
-                                    aria-label="Search group records">
+                                    placeholder="Search group unit name, seats description, or parent board..."
+                                    maxlength="100" pattern="[A-Za-z0-9 ]+"
+                                    title="Alphanumeric characters and spaces only." aria-label="Search group records">
                             </div>
-                            <div class="col-md-5">
+                        </div>
+                        <div class="col-md-5">
+                            <div class="console-icon-input-group">
+                                <svg xmlns="http://w3.org" width="14" height="14" fill="currentColor"
+                                    class="bi bi-grid console-field-vector-icon" viewBox="0 0 16 16">
+                                    <path
+                                        d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z" />
+                                </svg>
                                 <select name="parent_directorate"
                                     class="form-select rounded-0 form-select-sm small text-muted"
                                     aria-label="Filter by parent directorate board branch">
@@ -48,176 +77,100 @@ SDTWC administration framework."
                                     <option value="admin">Administrative Central Board</option>
                                     <option value="medical">Medical Directorate</option>
                                     <option value="demographic">Demographic Frameworks Branch</option>
-                                    <option value="enterprise">Enterprise Development Wing</option>
                                 </select>
                             </div>
-                            <div class="col-md-1 d-grid">
-                                <button type="submit"
-                                    class="btn btn-charcoal btn-sm rounded-0 fw-semibold">Filter</button>
-                            </div>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="col-md-1 d-grid">
+                            <button type="submit" class="btn btn-charcoal btn-sm rounded-0 fw-semibold">Filter</button>
+                        </div>
+                    </form>
+                </div>
 
-                    <div class="table-responsive">
-                        <table class="table table-hover align-middle mb-0 small admin-matrix-hover-row">
-                            <thead class="table-light text-uppercase table-uppercase-header">
-                                <tr>
-                                    <th scope="col" class="ps-4 py-3 text-charcoal">Group Division Unit</th>
-                                    <th scope="col" class="py-3 text-charcoal">Parent Directorate</th>
-                                    <th scope="col" class="py-3 text-charcoal">Registered Seats</th>
-                                    <th scope="col" class="py-3 text-charcoal">System Control Token</th>
-                                    <th scope="col" class="pe-4 py-3 text-charcoal text-end">Operational Actions</th>
-                                </tr>
-                            </thead>
-                            <!-- Inside the group directory data row matrix of src/admin/groups.html -->
-                            <tbody class="text-muted">
-                                <tr>
-                                    <td class="fw-semibold text-dark ps-4">Global Executive Secretariat</td>
-                                    <td>Administrative Central Board</td>
-                                    <td>12 Accounts</td>
-                                    <td><span
-                                            class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-2 py-1 fw-semibold">Root
-                                            Clearance</span></td>
-                                    <td class="pe-4 text-end">
-                                        <a href="/admin/groups-detail/"
-                                            class="link-dark fw-bold text-decoration-none border-bottom pb-0.5 me-2">View
-                                            Group</a>
-                                        <!-- FIXED: Added pure HTML target trigger button to launch the group purge warning modal -->
-                                        <button type="button"
-                                            class="btn btn-link link-danger p-0 border-0 align-baseline small fw-bold text-decoration-none border-bottom pb-0.5"
-                                            data-bs-toggle="modal" data-bs-target="#deleteGroupModal">Delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="fw-semibold text-dark ps-4">Sufficient Grace Hospital Unit</td>
-                                    <td>Medical Directorate</td>
-                                    <td>45 Accounts</td>
-                                    <td><span
-                                            class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1 fw-semibold">Standard
-                                            Access</span></td>
-                                    <td class="pe-4 text-end">
-                                        <a href="/admin/groups-detail/"
-                                            class="link-dark fw-bold text-decoration-none border-bottom pb-0.5 me-2">View
-                                            Group</a>
-                                        <button type="button"
-                                            class="btn btn-link link-danger p-0 border-0 align-baseline small fw-bold text-decoration-none border-bottom pb-0.5"
-                                            data-bs-toggle="modal" data-bs-target="#deleteGroupModal">Delete</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-
-                        </table>
-                    </div>
+                <!-- Group Data Matrix Table -->
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0 small admin-matrix-hover-row">
+                        <thead class="table-light text-uppercase table-uppercase-header">
+                            <tr>
+                                <th scope="col" class="ps-4 py-3 text-charcoal">Subdivision Name</th>
+                                <th scope="col" class="py-3 text-charcoal">Parent Directorate</th>
+                                <th scope="col" class="py-3 text-charcoal">Active Seats</th>
+                                <th scope="col" class="pe-4 py-3 text-charcoal text-end">Operational Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-muted">
+                            <tr>
+                                <td class="fw-semibold text-dark ps-4">Healing Directorate</td>
+                                <td>Sufficient Grace Hospital Board</td>
+                                <td>12 / 50 Seats Allocated</td>
+                                <td class="pe-4 text-end"><a href="/admin/groups-detail/"
+                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5">Manage
+                                        Group</a></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-semibold text-dark ps-4">Vocational Skill Guilds</td>
+                                <td>Enterprise Development Wing</td>
+                                <td>45 / 100 Seats Allocated</td>
+                                <td class="pe-4 text-end"><a href="/admin/groups-detail/"
+                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5">Manage
+                                        Group</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </main>
+
     </div>
 </div>
 
-<!-- Native Bootstrap 5 Pure HTML Group Creation Modal Node -->
+<!-- Native Bootstrap 5 Pure HTML Group Creation Modal (FIXED GRID CODES) -->
 <div class="modal fade" id="createGroupModal" tabindex="-1" aria-labelledby="createGroupModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content rounded-0 border">
-
-            <!-- Modal Header -->
             <div class="modal-header bg-dark text-white rounded-0 py-3">
                 <div class="tracking-wide">
-                    <span class="text-uppercase fw-bold text-warning small d-block mb-1 admin-metric-label">Console
-                        Provisioning Node</span>
-                    <h5 class="modal-title fw-bold h6" id="createGroupModalLabel">Create Functional Group</h5>
+                    <span class="text-uppercase fw-bold text-warning small d-block mb-1 admin-metric-label">Provisioning
+                        Node</span>
+                    <h5 class="modal-title fw-bold h6" id="createGroupModalLabel">Create Functional Subdivision</h5>
                 </div>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                     aria-label="Close"></button>
             </div>
-
-            <!-- Modal Input Entry Body Wrapper -->
             <div class="modal-body p-4 bg-light">
                 <form action="/admin/groups/" method="GET">
-
                     <div class="mb-3">
-                        <label class="form-label small fw-semibold text-muted">Group Division Unit Name</label>
-                        <input type="text" class="form-control rounded-0"
-                            placeholder="e.g., Sufficient Grace Hospital Unit" required>
+                        <label for="group_name" class="form-label small fw-semibold text-muted">Subdivision Name
+                            Designation</label>
+                        <input type="text" id="group_name" name="group_name" class="form-control rounded-0"
+                            placeholder="e.g., Sacred Choir Directorate" required maxlength="60"
+                            pattern="[A-Za-z0-9 ]+">
                     </div>
-
                     <div class="mb-3">
-                        <label class="form-label small fw-semibold text-muted">Parent Directorate Assignment</label>
-                        <select class="form-select rounded-0" required>
-                            <option value="" disabled selected>Choose parent directorate branch...</option>
+                        <label for="parent_dir" class="form-label small fw-semibold text-muted">Parent Directorate
+                            Assignment</label>
+                        <select id="parent_dir" name="parent_dir" class="form-select rounded-0" required>
+                            <option value="" disabled selected>Choose parent board...</option>
                             <option value="admin">Administrative Central Board</option>
-                            <option value="medical">Medical Directorate</option>
-                            <option value="demographic">Demographic Frameworks Branch</option>
+                            <option value="medical">Medical Directorate Board</option>
                             <option value="enterprise">Enterprise Development Wing</option>
                         </select>
                     </div>
-
                     <div class="row g-3 mb-4">
-                        <div class="col-sm-6">
-                            <label class="form-label small fw-semibold text-muted">Initial Seat Limit</label>
-                            <input type="number" class="form-control rounded-0" placeholder="e.g., 50" min="1" required>
-                        </div>
-                        <div class="col-sm-6">
-                            <label class="form-label small fw-semibold text-muted">Access Token Framework</label>
-                            <select class="form-select rounded-0" required>
-                                <option value="" disabled selected>Choose access...</option>
-                                <option value="standard">Standard Access Protocol</option>
-                                <option value="root">Root Clearance Level</option>
-                            </select>
+                        <div class="col-12">
+                            <label for="seat_capacity" class="form-label small fw-semibold text-muted">Allocated Seat
+                                Threshold Capacity</label>
+                            <input type="number" id="seat_capacity" name="seat_capacity" class="form-control rounded-0"
+                                placeholder="e.g., 25" min="1" max="150" step="1" required>
                         </div>
                     </div>
-
                     <div class="d-flex gap-2">
                         <button type="button" class="btn btn-outline-charcoal w-50 rounded-0 fw-semibold"
                             data-bs-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn btn-charcoal w-50 rounded-0 fw-semibold">Provision
+                        <button type="submit" class="btn btn-charcoal w-50 rounded-0 fw-semibold">Establish
                             Group</button>
                     </div>
-
                 </form>
             </div>
-
-        </div>
-    </div>
-</div>
-
-<!-- Native Bootstrap 5 Pure HTML Group Purge Validation Modal Node -->
-<div class="modal fade" id="deleteGroupModal" tabindex="-1" aria-labelledby="deleteGroupModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content rounded-0 border">
-
-            <!-- Modal Header WARNING Overlay (Inline-CSS Free) -->
-            <div class="modal-header bg-danger text-white rounded-0 py-3">
-                <div class="tracking-wide">
-                    <span class="text-uppercase fw-bold text-white-50 small d-block mb-1 admin-metric-label">System
-                        De-provisioning Node</span>
-                    <h5 class="modal-title fw-bold h6" id="deleteGroupModalLabel">Confirm Group Purge</h5>
-                </div>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-            </div>
-
-            <!-- Modal Verification Warning Content Body -->
-            <div class="modal-body p-4 bg-light">
-                <form action="/admin/groups/" method="GET">
-
-                    <div class="mb-4 text-center text-md-start">
-                        <h5 class="fw-bold text-charcoal h6 mb-2">Are you absolutely certain?</h5>
-                        <p class="text-muted small mb-0">This layout routing execution will completely collapse the
-                            chosen functional subdivision node and detach all underlying member group associations from
-                            the structural charter. This action is immutable.</p>
-                    </div>
-
-                    <div class="d-flex gap-2">
-                        <button type="button" class="btn btn-outline-charcoal w-50 rounded-0 fw-semibold"
-                            data-bs-dismiss="modal">Cancel Purge</button>
-                        <!-- Form submit processes the traditional static server request link -->
-                        <button type="submit" class="btn btn-danger w-50 rounded-0 fw-semibold text-white">Execute
-                            Purge</button>
-                    </div>
-
-                </form>
-            </div>
-
         </div>
     </div>
 </div>
