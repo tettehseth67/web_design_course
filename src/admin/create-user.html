@@ -6,99 +6,99 @@ description: "Administrative interface portal for creating new membership record
 groups."
 ---
 
-<!-- Global Admin Workspace Container Wrapper -->
 <div class="container-fluid py-4 px-md-4 flex-grow-1 error-viewport-height">
+
+    <!-- PURE CSS SELECTION SYSTEM STATE WIZARD CONTROLLERS -->
+    <input type="radio" name="wizard_steps" id="step1" class="wizard-step-input" checked>
+    <input type="radio" name="wizard_steps" id="step2" class="wizard-step-input">
+
     <div class="row g-4">
 
-        <!-- 1. LEFT SIDEBAR COMPONENT: Injects Centralized Include Module -->
         {% include "admin-sidebar.html" %}
 
-        <!-- 2. RIGHT MAIN CONTENT COMPONENT: User Provisioning Form -->
         <main class="col-lg-8 col-xl-9">
 
-            <!-- Polished Header Callout Banner Module using pure Bootstrap 5 dark rules -->
+            <!-- Dark Top Callout Banner -->
             <div class="card border rounded-0 p-4 shadow-sm bg-dark text-white mb-4">
-                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
-                    <div>
-                        <span class="text-uppercase fw-bold text-warning small d-block mb-1">
-                            System Provisioning Node
-                        </span>
-                        <h1 class="fw-bold h3 mb-1 text-white">Create Congregant Record</h1>
-                        <p class="text-white-50 small mb-0">
-                            Manually input profile metrics to initialize a new verified account under the corporate
-                            theocratic charter.
-                        </p>
-                    </div>
-                    <div class="text-md-end text-nowrap">
-                        <a href="/admin/" class="btn btn-outline-light btn-sm rounded-0 fw-semibold px-3 py-2">
-                            &larr; Back to User Directory
-                        </a>
-                    </div>
-                </div>
+                <h1 class="fw-bold h3 mb-1 text-white">Create Congregant Record</h1>
+                <p class="text-white-50 small mb-0">Multi-step static ingestion wizard for allocating active records
+                    cleanly under the corporate charter [INDEX].</p>
             </div>
 
-            <!-- Static Input Entry Block Wrapper (Completely Inline-CSS Free) -->
+            <!-- Pure-CSS Progress Indicator Bar Rows -->
+            <div class="wizard-progress-bar d-flex gap-3 mb-4 text-center justify-content-center">
+                <label for="step1" class="cursor-pointer">
+                    <span class="badge rounded-circle p-2 px-3 bg-light text-muted wizard-step-indicator">1</span>
+                    <span class="d-block small fw-bold text-muted mt-1">Profile Identity</span>
+                </label>
+                <div class="border-top mt-3 flex-grow-1 border-dashed style-max-width-xs" aria-hidden="true"></div>
+                <label for="step2" class="cursor-pointer">
+                    <span class="badge rounded-circle p-2 px-3 bg-light text-muted wizard-step-indicator">2</span>
+                    <span class="d-block small fw-bold text-muted mt-1">Clearance Mapping</span>
+                </label>
+            </div>
+
             <div class="p-4 border shadow-sm bg-white">
                 <form action="/admin/" method="GET">
 
-                    <!-- Full Legal Name Input -->
-                    <div class="mb-3">
-                        <label for="fname" class="form-label small fw-semibold text-muted">Full Legal Fullname</label>
-                        <input type="text" id="fname" name="fname" class="form-control rounded-0"
-                            placeholder="e.g., Elder Samuel Boateng" autofocus required pattern="[A-Za-z ]+"
-                            title="Alphabetical letters and spaces only.">
+                    <!-- STEP CARD 1: Core Personal Metrics -->
+                    <div class="wizard-step-card wizard-step-card-1">
+                        <h3 class="fw-bold h5 text-charcoal mb-3">Step 1: Personal Identification</h3>
+                        <div class="mb-3">
+                            <label for="fname" class="form-label small fw-semibold text-muted">Full Legal
+                                Fullname</label>
+                            <input type="text" id="fname" name="fname" class="form-control rounded-0"
+                                placeholder="e.g., Elder Samuel Boateng" required pattern="[A-Za-z ]+">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="form-label small fw-semibold text-muted">Official Correspondence
+                                Email</label>
+                            <input type="email" id="email" name="email" class="form-control rounded-0"
+                                placeholder="name@seventhdaytheocraticworld.org" required>
+                        </div>
+                        <div class="text-end border-top pt-3">
+                            <label for="step2" class="btn btn-charcoal btn-sm rounded-0 fw-semibold px-4 py-2">Continue
+                                to Step 2 &rarr;</label>
+                        </div>
                     </div>
 
-                    <!-- Correspondence Email Input -->
-                    <div class="mb-3">
-                        <label for="email" class="form-label small fw-semibold text-muted">Official Correspondence
-                            Email</label>
-                        <input type="email" id="email" name="email" class="form-control rounded-0"
-                            placeholder="name@seventhdaytheocraticworld.org" required>
-                    </div>
-
-                    <!-- Grid Section 1: Working Group Assignment -->
-                    <div class="row g-3 mb-3">
-                        <div class="col-12">
+                    <!-- STEP CARD 2: Classifications & Approvals Submission -->
+                    <div class="wizard-step-card wizard-step-card-2">
+                        <h3 class="fw-bold h5 text-charcoal mb-3">Step 2: Security &amp; Clearance Group Mapping</h3>
+                        <div class="mb-3">
                             <label for="group" class="form-label small fw-semibold text-muted">Group Unit
                                 Assignment</label>
                             <select id="group" name="group" class="form-select rounded-0" required>
-                                <option value="" disabled selected>Choose group...</option>
-                                <option value="exec">Executive Central Board</option>
+                                <option value="exec" selected>Executive Central Board</option>
                                 <option value="hospital">Healing Directorate</option>
-                                <option value="youth">Theocratic Youth Council</option>
-                                <option value="women">Virtuous Women Fellowship</option>
-                                <option value="guilds">Vocational Skill Guilds</option>
                             </select>
                         </div>
-                    </div>
-
-                    <!-- Grid Section 2: Security Clearance and Email Token Switches (FIXED NESTING) -->
-                    <div class="row g-3 mb-4">
-                        <div class="col-sm-6">
-                            <label for="clearance" class="form-label small fw-semibold text-muted">Assigned Security
-                                Clearance</label>
-                            <select id="clearance" name="clearance" class="form-select rounded-0" required>
-                                <option value="standard" selected>Standard Access</option>
-                                <option value="moderator">Regional Moderator</option>
-                            </select>
-                        </div>
-                        <div class="col-sm-6 d-flex align-items-end pb-1">
-                            <!-- Pure HTML/Bootstrap Custom Switch Configuration Block -->
-                            <div class="form-check form-switch text-start">
-                                <input class="form-check-input" type="checkbox" role="switch" id="notifyProvision"
-                                    name="notify_provision" checked>
-                                <label class="form-check-label small fw-medium text-muted user-select-none"
-                                    for="notifyProvision">
-                                    Dispatch encrypted session token via email
-                                </label>
+                        <div class="row g-3 mb-4 align-items-end">
+                            <div class="col-sm-6">
+                                <label for="clearance" class="form-label small fw-semibold text-muted">Assigned Security
+                                    Clearance</label>
+                                <select id="clearance" name="clearance" class="form-select rounded-0" required>
+                                    <option value="standard" selected>Standard Access</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6 pb-1">
+                                <div class="form-check form-switch text-start">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="notifyProvision"
+                                        name="notify_provision" checked>
+                                    <label class="form-check-label small fw-medium text-muted user-select-none"
+                                        for="notifyProvision">Dispatch encrypted session token via email</label>
+                                </div>
                             </div>
                         </div>
+                        <div class="d-flex justify-content-between border-top pt-3">
+                            <label for="step1"
+                                class="btn btn-outline-charcoal btn-sm rounded-0 fw-semibold px-4 py-2">&larr; Back to
+                                Step 1</label>
+                            <button type="submit"
+                                class="btn btn-success btn-sm rounded-0 fw-semibold px-4 py-2 text-white">Provision
+                                Account &amp; Save</button>
+                        </div>
                     </div>
-
-                    <!-- Execution Submission Button -->
-                    <button type="submit" class="btn btn-charcoal w-100 fw-semibold rounded-0 py-2.5">Provision Account
-                        &amp; Save</button>
 
                 </form>
             </div>

@@ -572,6 +572,61 @@ body {
     /* Smooth micro-glide indentation effect */
 }
 
+/* ==========================================================================
+   27. PURE-CSS MATRIX MULTI-TAB & WIZARD MECHANICS (INLINE-FREE)
+   ========================================================================== */
+
+/* 1. Radio Content Toggle Hooks */
+.matrix-tab-input,
+.wizard-step-input {
+    display: none !important;
+    /* Conceal utility radio triggers safely */
+}
+
+.matrix-tab-content,
+.wizard-step-card {
+    display: none !important;
+    /* Initial collapsed visibility states */
+}
+
+/* Sibling activation rules for Tab 1, 2, and 3 */
+#tab1:checked~.matrix-tab-content-1,
+#tab2:checked~.matrix-tab-content-2,
+#tab3:checked~.matrix-tab-content-3,
+#step1:checked~.wizard-step-card-1,
+#step2:checked~.wizard-step-card-2 {
+    display: block !important;
+    /* Expose selected layer cleanly */
+}
+
+/* 2. Interactive Navigation Indicator States */
+.matrix-tab-label {
+    cursor: pointer;
+    padding: 0.5rem 1.25rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease-in-out;
+    font-weight: 600;
+    color: #64748b;
+}
+
+#tab1:checked~.matrix-tab-nav label[for="tab1"],
+#tab2:checked~.matrix-tab-nav label[for="tab2"],
+#tab3:checked~.matrix-tab-nav label[for="tab3"] {
+    border-bottom-color: var(--color-gold) !important;
+    color: var(--color-charcoal) !important;
+}
+
+/* 3. Wizard Step Indicator Progress Badges */
+.wizard-step-indicator {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#step1:checked~.wizard-progress-bar label[for="step1"] .wizard-step-indicator,
+#step2:checked~.wizard-progress-bar label[for="step2"] .wizard-step-indicator {
+    background-color: var(--color-charcoal) !important;
+    color: #ffffff !important;
+}
+
 
 
 
