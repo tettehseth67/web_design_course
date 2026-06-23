@@ -8,22 +8,22 @@ for the SDTWC Basic School."
 
 <section class="py-5 bg-white flex-grow-1 error-viewport-height">
     <div class="container py-2">
-
-        <!-- PURE CSS SELECTION SYSTEM STATE CONTROLLERS -->
-        <input type="radio" name="school_tabs" id="tab1" class="matrix-tab-input" checked>
-        <input type="radio" name="school_tabs" id="tab2" class="matrix-tab-input">
-        <input type="radio" name="school_tabs" id="tab3" class="matrix-tab-input">
-
         <div class="row g-4">
 
             <!-- Left Content Workspace Frame -->
-            <main class="col-lg-8 col-xl-9">
+            <main class="col-lg-8 col-xl-9" role="main">
+
+                <!-- FIXED: Hidden state radio inputs placed inside the relative main block directly above tab layers -->
+                <input type="radio" name="school_tabs" id="tab1" class="matrix-tab-input" checked>
+                <input type="radio" name="school_tabs" id="tab2" class="matrix-tab-input">
+                <input type="radio" name="school_tabs" id="tab3" class="matrix-tab-input">
+
                 <a href="/education/" class="btn btn-outline-charcoal btn-sm mb-4 fw-semibold">&larr; Education
                     Overview</a>
                 <span class="text-uppercase tracking-wider fw-bold text-gold small d-block mb-2">Academic Complex</span>
                 <h1 class="fw-bold text-charcoal display-5 mb-2">Primary Basic School</h1>
                 <p class="lead text-muted mb-4">Comprehensive institutional overview tracking core baseline scholarship
-                    tracks and weekly operational timetables [INDEX].</p>
+                    tracks and weekly operational timetables.</p>
 
                 <!-- Dynamic Pure-CSS Tab Menu Row -->
                 <div class="matrix-tab-nav d-flex border-bottom mb-4">
@@ -32,33 +32,68 @@ for the SDTWC Basic School."
                     <label for="tab3" class="matrix-tab-label">📊 Cohort Stats</label>
                 </div>
 
-                <!-- PANEL 1: Academic Curriculum Matrix -->
+                <!-- 1. CURRICULUM TAB LAYER -->
                 <div class="matrix-tab-content matrix-tab-content-1">
-                    <div class="card border rounded-0 p-4 bg-light shadow-sm">
-                        <h4 class="fw-bold text-charcoal h5 mb-3">Foundational Primary Curriculum</h4>
-                        <p class="small text-muted mb-0">Instructional frameworks focus on critical logic literacy,
-                            linguistic rhetoric processing, agronomic survival mechanics, and historical covenant law
-                            codes [INDEX].</p>
+                    <h4 class="fw-bold text-charcoal h5 mb-3">Foundational Primary Curriculum Courses</h4>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded-0 bg-light">
+                                <h5 class="fw-bold h6 text-charcoal mb-1">Logic &amp; Mathematics</h5>
+                                <p class="small text-muted mb-0">Structural calculations, numeric logic matrix analysis,
+                                    and baseline processing tokens.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded-0 bg-light">
+                                <h5 class="fw-bold h6 text-charcoal mb-1">Linguistic Rhetoric</h5>
+                                <p class="small text-muted mb-0">Classical parsing grammar, scriptural manuscript
+                                    transcription, and presentation speech values.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded-0 bg-light">
+                                <h5 class="fw-bold h6 text-charcoal mb-1">Agronomic Science</h5>
+                                <p class="small text-muted mb-0">Calculated crop cultivation, seasonal planting
+                                    calendars, and raw resource storage preservation.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded-0 bg-light">
+                                <h5 class="fw-bold h6 text-charcoal mb-1">Covenant Jurisprudence</h5>
+                                <p class="small text-muted mb-0">Reviewing historical constitutional statutes, community
+                                    order ethics, and text recording.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- PANEL 2: Standard Class Timetable Table -->
+                <!-- 2. TIMETABLE TAB LAYER -->
                 <div class="matrix-tab-content matrix-tab-content-2">
+                    <h4 class="fw-bold text-charcoal h5 mb-3">Weekly Instructional Timetable</h4>
                     <div class="card border rounded-0 shadow-sm bg-white">
                         <div class="table-responsive">
-                            <table class="table table-hover align-middle mb-0 small text-center admin-matrix-hover-row">
+                            <table
+                                class="table table-bordered table-hover align-middle mb-0 small text-center admin-matrix-hover-row">
                                 <thead class="table-light text-uppercase table-uppercase-header">
                                     <tr>
-                                        <th scope="col" class="py-2.5 text-charcoal text-start ps-3">Daily Shift</th>
-                                        <th scope="col" class="py-2.5 text-charcoal">08:30 - 10:30</th>
-                                        <th scope="col" class="py-2.5 text-charcoal">11:00 - 13:00</th>
+                                        <th scope="col" class="py-3 text-charcoal text-start ps-3" style="width: 25%;">
+                                            Instructional Cycle</th>
+                                        <th scope="col" class="py-3 text-charcoal">08:30 - 10:30</th>
+                                        <th scope="col" class="py-3 text-charcoal">11:00 - 13:00</th>
                                     </tr>
                                 </thead>
                                 <tbody class="text-muted">
                                     <tr>
-                                        <td class="fw-semibold text-dark text-start ps-3 bg-light">Mon / Wed</td>
-                                        <td>Mathematics &amp; Logic</td>
-                                        <td>Scriptural History</td>
+                                        <td class="fw-semibold text-dark text-start ps-3 bg-light">Mondays / Wednesdays
+                                        </td>
+                                        <td>Logic &amp; Mathematics</td>
+                                        <td>Covenant Jurisprudence</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold text-dark text-start ps-3 bg-light">Tuesdays / Thursdays
+                                        </td>
+                                        <td>Linguistic Rhetoric</td>
+                                        <td>Agronomic Science</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -66,10 +101,33 @@ for the SDTWC Basic School."
                     </div>
                 </div>
 
-                <!-- PANEL 3: Cohort Enrollment Stats Sheet -->
+                <!-- 3. COHORT STATS TAB LAYER -->
                 <div class="matrix-tab-content matrix-tab-content-3">
-                    <div class="p-4 border bg-light text-center text-muted">
-                        Static session enrollment records are currently locked under active terminal verification.
+                    <h4 class="fw-bold text-charcoal h5 mb-3">Academic Demographics &amp; Inventory Metrics</h4>
+                    <div class="row g-3">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="p-3 border rounded-0 bg-white shadow-sm text-center">
+                                <span
+                                    class="text-muted text-uppercase tracking-wider small d-block mb-1 admin-metric-label">Enrolled
+                                    Scholars</span>
+                                <h5 class="fw-bold text-charcoal mb-0">184 Active</h5>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="p-3 border rounded-0 bg-white shadow-sm text-center">
+                                <span
+                                    class="text-muted text-uppercase tracking-wider small d-block mb-1 admin-metric-label">Assigned
+                                    Faculty</span>
+                                <h5 class="fw-bold text-charcoal mb-0">12 Instructors</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3 border rounded-0 bg-white shadow-sm text-center">
+                                <span
+                                    class="text-muted text-uppercase tracking-wider small d-block mb-1 admin-metric-label">Classrooms</span>
+                                <h5 class="fw-bold text-success mb-0 fw-bold">8 Operational</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -80,7 +138,7 @@ for the SDTWC Basic School."
                 <div class="p-4 bg-light border rounded-0 shadow-sm sticky-md-top sticky-sidebar-offset">
                     <h4 class="fw-bold h5 text-charcoal mb-3">Intake Processing</h4>
                     <p class="small text-muted mb-3">Admissions checklists open quarterly under central education
-                        directorate supervision protocols [INDEX].</p>
+                        directorate supervision protocols.</p>
                     <a href="/education/admissions-policy/"
                         class="btn btn-charcoal w-100 rounded-0 py-2 fw-semibold small">Open Admissions Portal</a>
                 </div>
