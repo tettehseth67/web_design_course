@@ -546,6 +546,32 @@ body {
     transition: width 0.4s ease-in-out !important;
 }
 
+/* ==========================================================================
+   26. SYSTEM DOCUMENT VAULT HOVER HIGHLIGHTS (INLINE-FREE)
+   ========================================================================== */
+
+/* Target table rows specifically inside your document ledger matrix */
+.vault-matrix-row tbody tr {
+    transition: background-color 0.2s ease-in-out, transform 0.15s ease-in-out;
+}
+
+/* Elegant background tint and micro-shift translation upon cursor hover */
+.vault-matrix-row tbody tr:hover {
+    background-color: rgba(33, 37, 41, 0.015) !important;
+}
+
+/* Explicit left-border accent matching your signature theocratic gold token */
+.vault-matrix-row tbody tr td {
+    border-left: 3px solid transparent;
+    transition: border-color 0.2s ease-in-out, padding-left 0.2s ease-in-out;
+}
+
+.vault-matrix-row tbody tr:hover td:first-child {
+    border-left-color: var(--color-gold) !important;
+    padding-left: 1.25rem !important;
+    /* Smooth micro-glide indentation effect */
+}
+
 
 
 
