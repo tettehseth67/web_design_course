@@ -520,6 +520,32 @@ body {
     }
 }
 
+/* ==========================================================================
+   25. VARIABLE-DRIVEN PROGRESS BARS & CAPACITY METERS (INLINE-FREE)
+   ========================================================================== */
+
+/* Overrides the structural background trace area of progress elements */
+.progress {
+    background-color: rgba(33, 37, 41, 0.08) !important;
+    border-radius: 0 !important;
+}
+
+/* Forces progress bars to dynamically consume your active theme variables */
+.progress-bar-charcoal {
+    background-color: var(--color-charcoal) !important;
+    transition: width 0.4s ease-in-out !important;
+}
+
+.progress-bar-gold {
+    background-color: var(--color-gold) !important;
+    transition: width 0.4s ease-in-out !important;
+}
+
+.progress-bar-success-token {
+    background-color: var(--color-success) !important;
+    transition: width 0.4s ease-in-out !important;
+}
+
 
 
 
