@@ -686,6 +686,42 @@ body {
     color: #ffffff !important;
 }
 
+/* ==========================================================================
+   29. ADVANCED INTERFACE RESPONSIVENESS AND TABLE TOUCH SCROLLING
+   ========================================================================== */
+
+/* Optimization for horizontal overflow clipping on small touchscreen devices */
+.table-responsive {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    /* Smooth inertia momentum on iOS/Android */
+    border-color: var(--color-card-border) !important;
+}
+
+/* Enforce fluid column structural parameters for dashboard stats cards */
+@media (max-width: 767.98px) {
+
+    /* Prevent word clipping and force healthy grid stack margins on mobile */
+    .admin-metric-label {
+        font-size: 0.7rem !important;
+        letter-spacing: 0.05em !important;
+    }
+
+    .display-5 {
+        font-size: 2.25rem !important;
+        /* Scale typography dynamically */
+    }
+
+    /* Force sticky sidebars to safely collapse back into normal block flows on mobile */
+    .sticky-md-top {
+        position: relative !important;
+        top: 0 !important;
+        margin-bottom: 1.5rem;
+    }
+}
+
 
 
 
