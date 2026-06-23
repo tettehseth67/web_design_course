@@ -1,0 +1,99 @@
+---
+layout: "admin-base.html"
+title: "Administrative Shift Scheduler"
+permalink: "/admin/shift-scheduler/"
+description: "Internal directorate interface for allocating active service anchors and scheduling operational
+assignments."
+---
+
+<div class="container-fluid py-4 px-md-4 flex-grow-1 error-viewport-height">
+    <div class="row g-4">
+
+        {% include "admin-sidebar.html" %}
+
+        <main class="col-lg-8 col-xl-9">
+            <div class="card border rounded-0 p-4 shadow-sm bg-dark text-white mb-4">
+                <span class="text-uppercase fw-bold text-warning small d-block mb-1">Logistics Directorate Node</span>
+                <h1 class="fw-bold h3 mb-1 text-white">Service Assignment Scheduler</h1>
+                <p class="text-white-50 small mb-0">Coordinate weekly corporate allocations across regional branches and
+                    working wings [INDEX].</p>
+            </div>
+
+            <div class="card border rounded-0 shadow-sm bg-white mb-4">
+                <div class="card-header bg-white py-3 border-bottom d-flex justify-content-between align-items-center">
+                    <h2 class="fw-bold text-charcoal h5 mb-0">Weekly Shift Allocation Spreadsheet</h2>
+                    <button type="button" class="btn btn-charcoal btn-sm rounded-0 px-3" data-bs-toggle="modal"
+                        data-bs-target="#assignShiftModal">Assign Shift</button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered align-middle mb-0 small text-center admin-matrix-hover-row">
+                        <thead class="table-light text-uppercase table-uppercase-header">
+                            <tr>
+                                <th scope="col" class="py-3 text-charcoal" style="width: 20%;">Operational Hub</th>
+                                <th scope="col" class="py-3 text-charcoal">Sabbath Shift</th>
+                                <th scope="col" class="py-3 text-charcoal">Mid-Week Focus</th>
+                                <th scope="col" class="py-3 text-charcoal">Special Assembly</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-muted">
+                            <tr>
+                                <td class="fw-semibold text-dark bg-light text-start ps-3">Shalom Otiakrom HQ</td>
+                                <td><span class="badge bg-charcoal text-white p-2 w-100 rounded-0">Elder Emmanuel
+                                        Tetteh</span></td>
+                                <td><span class="badge bg-light text-dark border p-2 w-100 rounded-0">Sis. Abigail
+                                        Mensah</span></td>
+                                <td><span class="badge bg-light text-dark border p-2 w-100 rounded-0">Bro. Caleb
+                                        Osei</span></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-semibold text-dark bg-light text-start ps-3">Accra Metropolitan</td>
+                                <td><span class="badge bg-charcoal text-white p-2 w-100 rounded-0">Elder John
+                                        Boateng</span></td>
+                                <td><span class="badge bg-light text-dark border p-2 w-100 rounded-0">Sis. Grace
+                                        Addo</span></td>
+                                <td><span class="badge bg-light text-dark border p-2 w-100 rounded-0">Unassigned</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+    </div>
+</div>
+
+<!-- Scriptless Shift Modal Wrapper -->
+<div class="modal fade" id="assignShiftModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-0 border">
+            <div class="modal-header bg-dark text-white rounded-0 py-3">
+                <h5 class="modal-title fw-bold h6">Provision Shift Schedule</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4 bg-light">
+                <form action="/admin/shift-scheduler/" method="GET">
+                    <div class="mb-3">
+                        <label class="form-label small fw-semibold text-muted">Select Target Assembly</label>
+                        <select class="form-select rounded-0" required>
+                            <option value="hq">Shalom Otiakrom HQ</option>
+                            <option value="accra">Accra Metropolitan</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label small fw-semibold text-muted">Assigned Anchor Officer</label>
+                        <input type="text" class="form-control rounded-0" placeholder="e.g., Elder John Boateng"
+                            required>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-outline-charcoal w-50 rounded-0 fw-semibold"
+                            data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-charcoal w-50 rounded-0 fw-semibold">Commit Shift</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

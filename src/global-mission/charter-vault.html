@@ -1,0 +1,68 @@
+---
+layout: "base.html"
+title: "Charter & Document Vault"
+permalink: "/global-mission/charter-vault/"
+description: "Centralized repository for downloading official theological manuscripts, calculated calendar sheets, and
+educational intake files."
+---
+
+<section class="py-5 bg-white flex-grow-1 error-viewport-height">
+    <div class="container py-2">
+        <div class="row g-4">
+
+            <main class="col-lg-8 col-xl-9">
+                <a href="/global-mission/" class="btn btn-outline-charcoal btn-sm mb-4 fw-semibold">&larr; Back to
+                    Mission Overview</a>
+                <span class="text-uppercase tracking-wider fw-bold text-gold small d-block mb-2">Central
+                    Repository</span>
+                <h1 class="fw-bold text-charcoal display-5 mb-2">Charter &amp; Document Vault</h1>
+                <p class="lead text-muted mb-4">Access verified theological literature, administrative charters, and
+                    registry documentation forms [INDEX].</p>
+
+                <hr class="my-4">
+
+                <div class="card border rounded-0 shadow-sm bg-white">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0 small admin-matrix-hover-row">
+                            <thead class="table-light text-uppercase table-uppercase-header">
+                                <tr>
+                                    <th scope="col" class="ps-4 py-3 text-charcoal">Document Title</th>
+                                    <th scope="col" class="py-3 text-charcoal">Format / Size</th>
+                                    <th scope="col" class="py-3 text-charcoal">Version</th>
+                                    <th scope="col" class="pe-4 py-3 text-charcoal text-end">Download Track</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-muted">
+                                {%- for doc in vault %}
+                                <tr>
+                                    <td class="fw-semibold text-dark ps-4">
+                                        <span class="d-block text-charcoal mb-0.5">{{ doc.title }}</span>
+                                        <span class="font-monospace small text-muted">{{ doc.filename }}</span>
+                                    </td>
+                                    <td><span class="badge bg-secondary text-white admin-metric-label">{{ doc.category
+                                            }}</span> / {{ doc.size }}</td>
+                                    <td class="font-monospace">{{ doc.version }}</td>
+                                    <td class="pe-4 text-end">
+                                        <a href="/assets/docs/{{ doc.filename }}"
+                                            class="btn btn-charcoal btn-sm rounded-0 fw-semibold px-3 py-1.5"
+                                            download>Download PDF</a>
+                                    </td>
+                                </tr>
+                                {%- endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+
+            <aside class="col-lg-4 col-xl-3">
+                <div class="p-4 bg-light border rounded-0 shadow-sm sticky-md-top sticky-sidebar-offset">
+                    <h4 class="fw-bold h5 text-charcoal mb-3">Verification Integrity</h4>
+                    <p class="small text-muted mb-0">All manuscripts hosted inside the central vault carry cryptographic
+                        authentication signatures from the Secretariat General office at Otiakrom HQ [INDEX].</p>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+</section>
