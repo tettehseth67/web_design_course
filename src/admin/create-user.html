@@ -72,14 +72,26 @@ groups."
                                 <option value="guilds">Vocational Skill Guilds</option>
                             </select>
                         </div>
-                        <div class="col-sm-6">
-                            <label class="form-label small fw-semibold text-muted">System Security Clearance</label>
-                            <select class="form-select rounded-0" required>
-                                <option value="" disabled selected>Choose clearance...</option>
-                                <option value="standard">Standard Member Access</option>
-                                <option value="root">Root Executive Controls</option>
-                            </select>
+                        <!-- Inside the form container layout track of src/admin/create-user.html -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-sm-6">
+                                <label class="form-label small fw-semibold text-muted">Assigned Security Clearance</label>
+                                <select class="form-select rounded-0" required>
+                                    <option value="standard" selected>Standard Access</option>
+                                    <option value="moderator">Regional Moderator</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6 d-flex align-items-end pb-1">
+                                <!-- FIXED: Pure HTML/Bootstrap Custom Switch Configuration Block -->
+                                <div class="form-check form-switch text-start">
+                                    <input class="form-check-input" type="checkbox" role="switch" aria-checked="true" id="notifyProvision" checked>
+                                    <label class="form-check-label small fw-medium text-muted user-select-none" for="notifyProvision">
+                                        Dispatch encrypted session token via email
+                                    </label>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
 
                     <!-- Execution Submission Button -->
