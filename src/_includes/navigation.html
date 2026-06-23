@@ -40,6 +40,15 @@
                         </li>
                         <li><a class="dropdown-item" href="/#feasts">Commanded Feasts</a></li>
                         <li><a class="dropdown-item" href="/#new-month">New Month Markings</a></li>
+                        <li><a href="/admin/shift-scheduler/"
+                                class="list-group-item list-group-item-action console-menu-item {% if page.url == '/admin/shift-scheduler/' %}active-console-node text-white{% endif %} d-flex justify-content-between align-items-center px-2 py-2.5">
+                                <span>📅 Shift Scheduler</span>
+                            </a></li>
+                        <li><a href="/admin/triage-feed/"
+                                class="list-group-item list-group-item-action console-menu-item {% if page.url == '/admin/triage-feed/' %}active-console-node text-white{% endif %} d-flex justify-content-between align-items-center px-2 py-2.5">
+                                <span>📊 Triage Feed</span>
+                            </a></li>
+
                     </ul>
                 </li>
                 <!-- 2. GLOBAL MISSION DROPDOWN: Groups all global-mission file subpaths uniformly -->
@@ -91,15 +100,6 @@
                         <li><a class="dropdown-item {% if page.url == '/global-mission/vocational-guilds/' %}active bg-light text-charcoal fw-bold{% endif %}"
                                 href="/global-mission/vocational-guides/">Vocational Skill Guilds</a></li>
                         <li><a class="dropdown-item" href="/global-mission/charter-vault/">Charter &amp; Document Vault</a></li>
-                        <li><a href="/admin/shift-scheduler/"
-                            class="list-group-item list-group-item-action console-menu-item {% if page.url == '/admin/shift-scheduler/' %}active-console-node text-white{% endif %} d-flex justify-content-between align-items-center px-2 py-2.5">
-                            <span>📅 Shift Scheduler</span>
-                        </a></li>
-                        <li><a href="/admin/triage-feed/"
-                            class="list-group-item list-group-item-action console-menu-item {% if page.url == '/admin/triage-feed/' %}active-console-node text-white{% endif %} d-flex justify-content-between align-items-center px-2 py-2.5">
-                            <span>📊 Triage Feed</span>
-                        </a></li>
-
                     </ul>
                 </li>
 
