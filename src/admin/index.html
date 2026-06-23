@@ -123,123 +123,72 @@ demographic allocations."
 
             <!-- Active User Registry Management Table Section -->
             <div class="card border rounded-0 shadow-sm bg-white mb-4">
-                <!-- Active User Registry Management Table Section -->
-                <div class="card border rounded-0 shadow-sm bg-white mb-4">
-                    <div class="card-header bg-white py-3 border-bottom">
-                        <h2 class="fw-bold text-charcoal h5 mb-1">Active User Authorization Matrix</h2>
-                        <p class="text-muted small mb-0">Review system clearance parameters and group status assignments
-                            across
-                            accounts.</p>
-                    </div>
+                <div class="card-header bg-white py-3 border-bottom">
+                    <h2 class="fw-bold text-charcoal h5 mb-1">Active User Authorization Matrix</h2>
+                    <p class="text-muted small mb-0">Review system clearance parameters and group status assignments
+                        across
+                        accounts.</p>
+                </div>
+                <!-- PURE-CSS HIDDEN SELECTION INPUT HOOKS (MUST SIT DIRECTLY ABOVE COMPONENT ELEMENTS) -->
+                <input type="radio" name="clearance_matrix_filter" id="filterAll" class="matrix-filter-trigger" checked>
+                <input type="radio" name="clearance_matrix_filter" id="filterRoot" class="matrix-filter-trigger">
+                <input type="radio" name="clearance_matrix_filter" id="filterStandard" class="matrix-filter-trigger">
+                <!-- Visual Toolbar: Pure HTML/CSS Segment Button Group -->
+                <div class="matrix-filter-toolbar bg-light p-3 border-bottom d-flex gap-2 flex-wrap">
+                    <span class="small fw-semibold text-muted align-self-center me-2">Fast Filter Layer:</span>
+                    <label for="filterAll" class="matrix-filter-label rounded-0">📋 Show All Records</label>
+                    <label for="filterRoot" class="matrix-filter-label rounded-0">🔑 Root Executives</label>
+                    <label for="filterStandard" class="matrix-filter-label rounded-0">👤 Standard Access</label>
+                </div>
 
-                    <!-- NEW COMPONENT: Pure HTML Search and Filtering Toolbar Grid with Integrated Vectors -->
-                    <div class="card-body bg-light border-bottom p-3">
-                        <form action="/admin/" method="GET" class="row g-2">
-                            <!-- Search Text Field with Vector Icon -->
-                            <div class="col-md-5">
-                                <div class="console-icon-input-group">
-                                    <svg xmlns="http://w3.org" width="14" height="14" fill="currentColor"
-                                        class="bi bi-search console-field-vector-icon" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                    </svg>
-                                    <!-- FIXED: Appended HTML pattern validations and maximum character length constraints safely -->
-                                    <input type="text" name="search" class="form-control rounded-0 form-control-sm console-filter-input"
-                                        placeholder="Search full legal name, ID hash, or email reference..." maxlength="100"
-                                        pattern="[A-Za-z0-9@. ]+" title="Alphanumeric characters, spaces, periods, and @ symbols only."
-                                        aria-label="Search directory records">
-                                </div>
-                            </div>
-
-                            <!-- Group Select with Vector Icon -->
-                            <div class="col-sm-6 col-md-3">
-                                <div class="console-icon-input-group">
-                                    <svg xmlns="http://w3.org" width="14" height="14" fill="currentColor"
-                                        class="bi bi-grid console-field-vector-icon" viewBox="0 0 16 16">
-                                        <path
-                                            d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z" />
-                                    </svg>
-                                    <select name="group_filter"
-                                        class="form-select rounded-0 form-select-sm small text-muted"
-                                        aria-label="Filter by organizational group unit">
-                                        <option value="" selected>All Working Groups</option>
-                                        <option value="exec">Executive Central Board</option>
-                                        <option value="hospital">Healing Directorate</option>
-                                        <option value="youth">Theocratic Youth Council</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <!-- Security Select with Vector Icon -->
-                            <div class="col-sm-6 col-md-3">
-                                <div class="console-icon-input-group">
-                                    <svg xmlns="http://w3.org" width="14" height="14" fill="currentColor"
-                                        class="bi bi-shield-lock console-field-vector-icon" viewBox="0 0 16 16">
-                                        <path
-                                            d="M5.338 1.59a61 61 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.117.738 7.508 2.63 9.87 1.157 1.446 2.32 2.108 3.188 2.108.867 0 2.031-.662 3.188-2.108 1.892-2.362 3.184-5.753 2.63-9.87a.48.48 0 0 0-.329-.39c-.743-.246-1.7-.512-2.834-.855a.6.6 0 0 0-.4-.022L8 1.946l-.666-.378a.6.6 0 0 0-.396-.022zM7.001 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM1 4.586V4c0-.552.448-1 1-1h2c.552 0 1 .448 1 1v.586l.854-.853A.5.5 0 0 1 6.5 4h3a.5.5 0 0 1 .354.146l.854.853V4c0-.552.448-1 1-1h2c.552 0 1 .448 1 1v.586l.854-.853A.5.5 0 0 1 14.5 4h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.354-.146l-.854-.853V11c0 .552-.448 1-1 1h-2c-.552 0-1-.448-1-1v-.586l-.854.853A.5.5 0 0 1 9.5 12h-3a.5.5 0 0 1-.354-.146l-.854-.853V11c0 .552-.448 1-1 1H2c-.552 0-1-.448-1-1v-.586l-.854.853A.5.5 0 0 1 .5 11h-1a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5h1zm2 1.5V4h-1v2.086l1-.586zm4-1.5h-1v2.086l1-.586V4.586zm4 0h-1v2.086l1-.586V4.586zm3 0h-1v2.086l1-.586V4.586z" />
-                                    </svg>
-                                    <select name="clearance_filter"
-                                        class="form-select rounded-0 form-select-sm small text-muted"
-                                        aria-label="Filter by security clearance status">
-                                        <option value="" selected>All Clearances</option>
-                                        <option value="root">Root Executive</option>
-                                        <option value="standard">Standard Access</option>
-                                        <option value="guest">Pending Verify</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-12 col-md-1 d-grid">
-                                <button type="submit"
-                                    class="btn btn-charcoal btn-sm rounded-0 fw-semibold">Filter</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table table-hover align-middle mb-0 small admin-matrix-hover-row">
-                            <thead class="table-light text-uppercase table-uppercase-header">
-                                <tr>
-                                    <th scope="col" class="ps-4 py-3 text-charcoal">Account Name</th>
-                                    <th scope="col" class="py-3 text-charcoal">Email Address</th>
-                                    <th scope="col" class="py-3 text-charcoal">Group Unit</th>
-                                    <th scope="col" class="py-3 text-charcoal">Clearance Status</th>
-                                    <th scope="col" class="pe-4 py-3 text-charcoal text-end">Operational Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-muted">
-                                <tr>
-                                    <td class="fw-semibold text-dark ps-4">Secretariat Admin</td>
-                                    <td class="text-nowrap text-truncate matrix-email-col">admin@seventhdaytheocraticworld.org</td>
-                                    <td class="text-nowrap text-truncate matrix-desc-col">Executive Central Board</td>
-                                    <td><span
-                                            class="badge badge-clearance-root px-2 py-1 fw-semibold text-uppercase admin-metric-label">Root
-                                            Executive</span></td>
-                                    <td class="pe-4 text-end">
-                                        <a href="/admin/user-profile/"
-                                            class="link-dark fw-bold text-decoration-none border-bottom pb-0.5 me-2">Manage</a>
-                                        <button type="button"
-                                            class="btn btn-link link-danger p-0 border-0 align-baseline small fw-bold text-decoration-none border-bottom pb-0.5"
-                                            data-bs-toggle="modal" data-bs-target="#deleteMemberModal">Delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="fw-semibold text-dark ps-4">Medical Director</td>
-                                    <td>hospital@seventhdaytheocraticworld.org</td>
-                                    <td>Healing Directorate</td>
-                                    <td><span
-                                            class="badge badge-clearance-standard px-2 py-1 fw-medium text-uppercase admin-metric-label">Standard
-                                            Access</span></td>
-                                    <td class="pe-4 text-end">
-                                        <a href="/admin/user-profile/"
-                                            class="link-dark fw-bold text-decoration-none border-bottom pb-0.5 me-2">Manage</a>
-                                        <button type="button"
-                                            class="btn btn-link link-danger p-0 border-0 align-baseline small fw-bold text-decoration-none border-bottom pb-0.5"
-                                            data-bs-toggle="modal" data-bs-target="#deleteMemberModal">Delete</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0 small admin-matrix-hover-row">
+                        <thead class="table-light text-uppercase table-uppercase-header">
+                            <tr>
+                                <th scope="col" class="ps-4 py-3 text-charcoal">Account Name</th>
+                                <th scope="col" class="py-3 text-charcoal">Email Address</th>
+                                <th scope="col" class="py-3 text-charcoal">Group Unit</th>
+                                <th scope="col" class="py-3 text-charcoal">Clearance Status</th>
+                                <th scope="col" class="pe-4 py-3 text-charcoal text-end">Operational Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-muted">
+                            <!-- FIXED: Added explicit row-clearance utility selector classes straight to row tags -->
+                            <tr class="row-clearance-root">
+                                <td class="fw-semibold text-dark ps-4">Secretariat Admin</td>
+                                <td class="text-nowrap text-truncate matrix-email-col">
+                                    admin@seventhdaytheocraticworld.org</td>
+                                <td class="text-nowrap text-truncate matrix-desc-col">Executive Central Board</td>
+                                <td><span
+                                        class="badge badge-clearance-root px-2 py-1 fw-semibold text-uppercase admin-metric-label">Root
+                                        Executive</span></td>
+                                <td class="pe-4 text-end">
+                                    <a href="/admin/user-profile/"
+                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5 me-2">Manage</a>
+                                    <button type="button"
+                                        class="btn btn-link link-danger p-0 border-0 align-baseline small fw-bold text-decoration-none border-bottom pb-0.5"
+                                        data-bs-toggle="modal" data-bs-target="#deleteMemberModal">Delete</button>
+                                </td>
+                            </tr>
+                            <!-- FIXED: Added explicit row-clearance utility selector classes straight to row tags -->
+                            <tr class="row-clearance-standard">
+                                <td class="fw-semibold text-dark ps-4">Medical Director</td>
+                                <td class="text-nowrap text-truncate matrix-email-col">
+                                    hospital@seventhdaytheocraticworld.org</td>
+                                <td class="text-nowrap text-truncate matrix-desc-col">Healing Directorate</td>
+                                <td><span
+                                        class="badge badge-clearance-standard px-2 py-1 fw-medium text-uppercase admin-metric-label">Standard
+                                        Access</span></td>
+                                <td class="pe-4 text-end">
+                                    <a href="/admin/user-profile/"
+                                        class="link-dark fw-bold text-decoration-none border-bottom pb-0.5 me-2">Manage</a>
+                                    <button type="button"
+                                        class="btn btn-link link-danger p-0 border-0 align-baseline small fw-bold text-decoration-none border-bottom pb-0.5"
+                                        data-bs-toggle="modal" data-bs-target="#deleteMemberModal">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </main>
