@@ -2,10 +2,10 @@
 permalink: /robots.txt
 eleventyExcludeFromCollections: true
 ---
-# Global Security Crawl Exclusions for SDTWC
+# Global Security Crawl Exclusions for SDTWC System Footprint
 User-agent: *
 
-# Block public search engine indexing on all secure panel paths
+# Strictly block public index scraping on all hidden console paths
 Disallow: /admin/
 Disallow: /admin/login/
 Disallow: /admin/access-denied/
@@ -15,15 +15,17 @@ Disallow: /admin/ward-registry/
 Disallow: /admin/student-ledger/
 Disallow: /admin/school-inventory/
 Disallow: /admin/announcements-manager/
-Disallow: /admin/assembly-onboarding/
+Disallow: /admin/shift-scheduler/
+Disallow: /admin/triage-feed/
 Disallow: /admin/panoramic-metrics/
+Disallow: /admin/assembly-onboarding/
 Disallow: /connect/login/
 Disallow: /connect/dashboard/
 Disallow: /connect/profile/
 
-# Explicitly index public content folders
+# Explicitly permit indexing of theological and structural resources
 Allow: /global-mission/
 Allow: /education/
 
-# Dynamically direct crawlers to your sitemap asset footprint
+# Dynamically direct crawlers to your global build footprint sitemap
 Sitemap: https://seventhdaytheocraticworld.org

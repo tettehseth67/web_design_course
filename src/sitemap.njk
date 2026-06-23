@@ -4,12 +4,12 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://sitemaps.org">
-  <!-- Automated compilation loop tracking all public-facing permalinks error-free -->
+  <!-- Dynamic Nunjucks Collection Loop mapping all public paths error-free -->
   {%- for page in collections.all %}
-    {%- if not "/admin/" in page.url and not "/connect/" in page.url %}
+    {%- if not "/admin/" in page.url and not "/connect/" in page.url and page.url %}
     <url>
       <loc>https://seventhdaytheocraticworld.org{{ page.url }}</loc>
-      <lastmod>2026-06-22</lastmod>
+      <lastmod>2026-06-23</lastmod>
       <changefreq>weekly</changefreq>
       <priority>{% if page.url == "/" %}1.0{% else %}0.8{% endif %}</priority>
     </url>
