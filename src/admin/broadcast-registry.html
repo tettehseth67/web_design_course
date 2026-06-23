@@ -1,92 +1,79 @@
 ---
 layout: "admin-base.html"
-title: "Digital Broadcast & Script Registry"
+title: "Media Broadcast Configuration Engine"
 permalink: "/admin/broadcast-registry/"
-description: "Review and manage live streaming URLs, liturgical script paths, and sermon metadata logs for the SDTWC
-media branch."
+description: "Administrative configuration terminal for routing Sabbath livestream parameters, liturgical media streams,
+and manuscript video nodes."
 ---
 
+<!-- Global Admin Workspace Container Wrapper -->
 <div class="container-fluid py-4 px-md-4 flex-grow-1 error-viewport-height">
     <div class="row g-4">
 
         <!-- 1. LEFT SIDEBAR COMPONENT: Injects Centralized Include Module -->
         {% include "admin-sidebar.html" %}
 
-        <!-- Main Content Area with Media Grid Logs -->
+        <!-- 2. RIGHT MAIN CONTENT COMPONENT: Broadcast Management Terminal -->
         <main class="col-lg-8 col-xl-9">
 
-            <!-- Dark Bootstrap Header Card Banner -->
+            <!-- Dark Top Callout Banner -->
             <div class="card border rounded-0 p-4 shadow-sm bg-dark text-white mb-4">
                 <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
                     <div>
-                        <span class="text-uppercase fw-bold text-warning small d-block mb-1">
-                            Media Directorate Node
-                        </span>
-                        <h1 class="fw-bold h3 mb-1 text-white">Broadcast Script Management</h1>
-                        <p class="text-white-50 small mb-0">
-                            Manage live stream interaction keys, server parameters, and script text pathways.
-                        </p>
+                        <span class="text-uppercase fw-bold text-warning small d-block mb-1">Media Directorate
+                            Node</span>
+                        <h1 class="fw-bold h3 mb-1 text-white">Broadcast &amp; Stream Configuration Engine</h1>
+                        <p class="text-white-50 small mb-0">Manage edge live streaming video routing IDs, verify
+                            liturgical metadata bindings, and deploy active media logs.</p>
                     </div>
                     <div class="text-md-end text-nowrap">
-                        <a href="/admin/" class="btn btn-outline-light btn-sm rounded-0 fw-semibold px-3 py-2">
-                            &larr; Back to Console
-                        </a>
+                        <button type="button" class="btn btn-outline-light btn-sm rounded-0 fw-semibold px-3 py-2"
+                            data-bs-toggle="modal" data-bs-target="#logStreamModal">
+                            Provision Stream Link
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Historical & Pending Stream Entry Matrix -->
+            <!-- Live Stream Routing Matrix Sheet -->
             <div class="card border rounded-0 shadow-sm bg-white mb-4">
-                <div
-                    class="card-header bg-white py-3 border-bottom d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
-                    <div>
-                        <h2 class="fw-bold text-charcoal h5 mb-1">Logged Convocation Audio &amp; Video Feeds</h2>
-                        <p class="text-muted small mb-0">System reference repository tracking all global network audio
-                            scripts.</p>
-                    </div>
-                    <!-- Inside src/admin/broadcast-registry.html card header tracking area -->
-                    <div
-                        class="card-header bg-white py-3 border-bottom d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
-                        <div>
-                            <h2 class="fw-bold text-charcoal h5 mb-1">Logged Convocation Audio &amp; Video Feeds</h2>
-                            <p class="text-muted small mb-0">System reference repository tracking all global network audio scripts.</p>
-                        </div>
-                        <!-- FIXED: Data targets launch the stream modal block cleanly -->
-                        <button type="button" class="btn btn-charcoal btn-sm fw-semibold rounded-0 px-3" data-bs-toggle="modal"
-                            data-bs-target="#createStreamModal">
-                            Log New Stream Node
-                        </button>
-                    </div>
-
+                <div class="card-header bg-white py-3 border-bottom">
+                    <h2 class="fw-bold text-charcoal h5 mb-1">Active Video Stream Registers</h2>
+                    <p class="text-muted small mb-0">Review operational streaming hashes pushed directly out to edge
+                        media frames.</p>
                 </div>
 
                 <div class="table-responsive">
                     <table class="table table-hover align-middle mb-0 small admin-matrix-hover-row">
                         <thead class="table-light text-uppercase table-uppercase-header">
                             <tr>
-                                <th scope="col" class="ps-4 py-3 text-charcoal">Assembly Event</th>
-                                <th scope="col" class="py-3 text-charcoal">Calculated Schedule Target</th>
-                                <th scope="col" class="py-3 text-charcoal">Liturgical Script URL Path</th>
-                                <th scope="col" class="pe-4 py-3 text-charcoal text-end">Broadcast Status</th>
+                                <th scope="col" class="ps-4 py-3 text-charcoal">Sabbath Target Date</th>
+                                <th scope="col" class="py-3 text-charcoal">Liturgy Convocation Title</th>
+                                <th scope="col" class="py-3 text-charcoal">Video Stream Routing Hash</th>
+                                <th scope="col" class="py-3 text-charcoal">Manuscript ID</th>
+                                <th scope="col" class="pe-4 py-3 text-charcoal text-end">Operational Status</th>
                             </tr>
                         </thead>
                         <tbody class="text-muted">
+                            {%- for stream in broadcasts %}
                             <tr>
-                                <td class="fw-semibold text-dark ps-4">Sabbath Morning Convocation</td>
-                                <td>Weekly Sabbath Morning (09:00 UTC)</td>
-                                <td><span class="font-monospace text-dark">/live/sab-current</span></td>
-                                <td class="pe-4 text-end"><span
-                                        class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1 fw-bold text-uppercase admin-metric-label">Ready</span>
+                                <td class="ps-4 font-monospace text-dark fw-semibold">{{ stream.sabbath_date }}</td>
+                                <td class="text-dark fw-medium text-nowrap text-truncate matrix-desc-col">{{
+                                    stream.liturgy_title }}</td>
+                                <td class="font-monospace text-warning">{{ stream.stream_id }}</td>
+                                <td class="font-monospace">{{ stream.manuscript_ref }}</td>
+                                <td class="pe-4 text-end">
+                                    {% if stream.status == "Verified Stream" %}
+                                    <span
+                                        class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1 admin-metric-label text-uppercase">Live
+                                        Active</span>
+                                    {% else %}
+                                    <span
+                                        class="badge bg-warning bg-opacity-10 text-dark border border-warning border-opacity-25 px-2 py-1 admin-metric-label text-uppercase">Scheduled</span>
+                                    {% endif %}
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="fw-semibold text-dark ps-4">New Month Marking Feast</td>
-                                <td>Calculated Sunset Transition Cycle</td>
-                                <td><span class="font-monospace text-dark">/archive/lunar-cycle-0626</span></td>
-                                <td class="pe-4 text-end"><span
-                                        class="badge bg-light text-dark border px-2 py-1 fw-medium text-uppercase admin-metric-label">Archived</span>
-                                </td>
-                            </tr>
+                            {%- endfor %}
                         </tbody>
                     </table>
                 </div>
@@ -96,68 +83,58 @@ media branch."
     </div>
 </div>
 
-<!-- Native Bootstrap 5 Pure HTML Broadcast Stream Matrix Modal Node -->
-<div class="modal fade" id="createStreamModal" tabindex="-1" aria-labelledby="createStreamModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
+<!-- Pure HTML/Bootstrap Scriptless Stream Configuration Modal -->
+<div class="modal fade" id="logStreamModal" tabindex="-1" aria-labelledby="logStreamModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content rounded-0 border">
-
-            <!-- Modal Header Overlay -->
             <div class="modal-header bg-dark text-white rounded-0 py-3">
                 <div class="tracking-wide">
-                    <span class="text-uppercase fw-bold text-warning small d-block mb-1 admin-metric-label">Media
-                        Directorate Entry</span>
-                    <h5 class="modal-title fw-bold h6" id="createStreamModalLabel">Log Convocation Media Feed</h5>
+                    <span
+                        class="text-uppercase fw-bold text-warning small d-block mb-1 admin-metric-label">Configuration
+                        Intake</span>
+                    <h5 class="modal-title fw-bold h6" id="logStreamModalLabel">Configure Livestream Route</h5>
                 </div>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                     aria-label="Close"></button>
             </div>
-
-            <!-- Modal Form Body Container -->
             <div class="modal-body p-4 bg-light">
                 <form action="/admin/broadcast-registry/" method="GET">
-
-                    <div class="row g-3 mb-3">
-                        <div class="col-md-6">
-                            <label class="form-label small fw-semibold text-muted">Assembly Event Designation</label>
-                            <input type="text" class="form-control rounded-0"
-                                placeholder="e.g., Weekly Sabbath morning convocation" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label small fw-semibold text-muted">Calculated Schedule Target
-                                Frame</label>
-                            <input type="text" class="form-control rounded-0"
-                                placeholder="e.g., Saturday Morning precisely at 09:00 UTC" required>
-                        </div>
-                    </div>
-
                     <div class="mb-3">
-                        <label class="form-label small fw-semibold text-muted">Liturgical Script URL Target
-                            Pathway</label>
-                        <input type="text" class="form-control rounded-0 font-monospace"
-                            placeholder="/live/sabbath-stream-endpoint" required>
+                        <label for="sabbath_date" class="form-label small fw-semibold text-muted">Sabbath Target Date
+                            String</label>
+                        <input type="text" id="sabbath_date" name="sabbath_date" class="form-control rounded-0"
+                            placeholder="e.g., June 27, 2026" required pattern="[A-Za-z0-9, ]+">
                     </div>
-
-                    <div class="mb-4">
-                        <label class="form-label small fw-semibold text-muted">Initial Broadcast Status Target</label>
-                        <select class="form-select rounded-0" required>
-                            <option value="" disabled selected>Select starting status feed...</option>
-                            <option value="ready">Ready to Broadcast (Active Window)</option>
-                            <option value="pending">Pending Configuration Check</option>
-                            <option value="archived">Archived / Concluded Document</option>
-                        </select>
+                    <div class="mb-3">
+                        <label for="liturgy_title" class="form-label small fw-semibold text-muted">Liturgy Title
+                            Assignment</label>
+                        <input type="text" id="liturgy_title" name="liturgy_title" class="form-control rounded-0"
+                            placeholder="e.g., The Feast of the Fourth Month Assembly" required pattern="[A-Za-z0-9 ]+">
                     </div>
-
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <label for="stream_id" class="form-label small fw-semibold text-muted">Video Stream Key
+                                ID</label>
+                            <input type="text" id="stream_id" name="stream_id"
+                                class="form-control rounded-0 font-monospace" placeholder="e.g., dQw4w9WgXcQ" required
+                                pattern="[A-Za-z0-9_-]+">
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="manuscript_ref" class="form-label small fw-semibold text-muted">Manuscript
+                                Reference Code</label>
+                            <input type="text" id="manuscript_ref" name="manuscript_ref"
+                                class="form-control rounded-0 font-monospace" placeholder="e.g., mss_lit_2026_04a"
+                                required pattern="[A-Za-z0-9_]+">
+                        </div>
+                    </div>
                     <div class="d-flex gap-2">
                         <button type="button" class="btn btn-outline-charcoal w-50 rounded-0 fw-semibold"
-                            data-bs-dismiss="modal">Cancel Entry</button>
-                        <button type="submit" class="btn btn-charcoal w-50 rounded-0 fw-semibold">Save Stream
-                            Node</button>
+                            data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-charcoal w-50 rounded-0 fw-semibold">Deploy Stream
+                            Route</button>
                     </div>
-
                 </form>
             </div>
-
         </div>
     </div>
 </div>
