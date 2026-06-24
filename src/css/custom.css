@@ -722,6 +722,37 @@ body {
     }
 }
 
+/* ==========================================================================
+   30. ADMINISTRATIVE SIDEBAR ACCORDION DROP DETAILS (INLINE-FREE)
+   ========================================================================== */
+
+/* Remove standard markers from native HTML details markers */
+.admin-sidebar-folder summary {
+    list-style: none !important;
+    outline: none !important;
+}
+
+.admin-sidebar-folder summary::-webkit-details-marker {
+    display: none !important;
+}
+
+/* Custom font scaling helper token for nested dropdown links */
+.fs-7 {
+    font-size: 0.8rem !important;
+}
+
+/* Animate folder arrow indicators smoothly when details panel pops open */
+.folder-arrow-indicator {
+    transition: transform 0.2s ease-in-out;
+    display: inline-block;
+    font-family: monospace;
+}
+
+.admin-sidebar-folder[open] .folder-arrow-indicator {
+    transform: rotate(180deg);
+    color: var(--color-gold) !important;
+}
+
 
 
 

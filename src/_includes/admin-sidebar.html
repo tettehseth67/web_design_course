@@ -1,114 +1,115 @@
-<!-- Reusable Administrative Navigation Sidebar Component -->
-<aside class="col-lg-4 col-xl-3">
+<!-- Reusable Administrative Navigation Sidebar Component (STANDALONE & ACCORDION MIX) -->
+<aside class="col-lg-4 col-xl-3" role="navigation" aria-label="Admin Console Navigation">
     <div class="card p-3 console-sidebar-card shadow-sm sticky-md-top sticky-sidebar-offset">
 
-        <!-- Category Segment Header -->
         <div class="mb-3 px-2">
             <span class="text-uppercase fw-bold console-sidebar-heading d-block">System Control</span>
         </div>
 
         <!-- Centralized Admin Navigation Directory Links -->
-        <div class="list-group list-group-flush small mb-4" role="navigation" aria-label="Admin Console Navigation">
+        <div class="list-group list-group-flush small mb-4">
 
+            <!-- STANDALONE LINK 1: Core User Directory Dashboard -->
             <a href="/admin/"
-                class="list-group-item list-group-item-action console-menu-item {% if page.url == '/admin/' %}active-console-node text-dark{% endif %} d-flex justify-content-between align-items-center px-2 py-2.5">
+                class="list-group-item list-group-item-action console-menu-item {% if page.url == '/admin/' %}active-console-node text-white{% endif %} d-flex justify-content-between align-items-center px-2 py-2.5">
                 <span>👤 User Directory</span>
                 <span
                     class="badge {% if page.url == '/admin/' %}bg-white text-dark{% else %}bg-light text-muted{% endif %} rounded-pill border">4</span>
             </a>
 
+            <!-- STANDALONE LINK 2: Group Matrix Board -->
             <a href="/admin/groups/"
-                class="list-group-item list-group-item-action console-menu-item {% if page.url == '/admin/groups/' or page.url == '/admin/groups-detail/' %}active-console-node text-dark{% endif %} d-flex justify-content-between align-items-center px-2 py-2.5">
+                class="list-group-item list-group-item-action console-menu-item {% if page.url == '/admin/groups/' or page.url == '/admin/groups-detail/' %}active-console-node text-white{% endif %} d-flex justify-content-between align-items-center px-2 py-2.5">
                 <span>📦 Group Matrix</span>
                 <span
                     class="badge {% if page.url == '/admin/groups/' or page.url == '/admin/groups-detail/' %}bg-white text-dark{% else %}bg-light text-muted{% endif %} rounded-pill">5</span>
             </a>
 
-            <a href="/admin/medical-inventory/"
-                class="list-group-item list-group-item-action console-menu-item {% if page.url == '/admin/medical-inventory/' %}active-console-node text-dark{% endif %} d-flex justify-content-between align-items-center px-2 py-2.5">
-                <span>🏥 Medical Supply</span>
-                <span
-                    class="badge {% if page.url == '/admin/medical-inventory/' %}bg-white text-dark{% else %}bg-light text-muted{% endif %} rounded-pill">Logs</span>
-            </a>
+            <!-- PURE HTML DROPDOWN FOLDER 1: Hospital & Clinical Operations -->
+            <details class="admin-sidebar-folder" {% if '/medical-inventory/' in page.url or '/ward-registry/' in
+                page.url or '/triage-feed/' in page.url %}open{% endif %}>
+                <summary
+                    class="list-group-item list-group-item-action console-menu-item d-flex justify-content-between align-items-center px-2 py-2.5 fw-semibold text-muted">
+                    <span>🏥 Hospital Management</span>
+                    <span class="folder-arrow-indicator">▾</span>
+                </summary>
+                <div class="bg-light border-start border-2 border-warning ps-2 my-1 fs-7">
+                    <a href="/admin/medical-inventory/"
+                        class="list-group-item list-group-item-action border-0 py-2 {% if page.url == '/admin/medical-inventory/' %}fw-bold text-dark{% endif %}">🏥
+                        Medical Supply Logs</a>
+                    <a href="/admin/ward-registry/"
+                        class="list-group-item list-group-item-action border-0 py-2 {% if page.url == '/admin/ward-registry/' %}fw-bold text-dark{% endif %}">🛏️
+                        Ward Bed Registry</a>
+                    <a href="/admin/triage-feed/"
+                        class="list-group-item list-group-item-action border-0 py-2 {% if page.url == '/admin/triage-feed/' %}fw-bold text-dark{% endif %}">📊
+                        Capacity Triage Feed</a>
+                </div>
+            </details>
 
-            <a href="/admin/ward-registry/"
-                class="list-group-item list-group-item-action console-menu-item {% if page.url == '/admin/ward-registry/' %}active-console-node text-dark{% endif %} d-flex justify-content-between align-items-center px-2 py-2.5">
-                <span>🛏️ Ward Registry</span>
-                <span
-                    class="badge {% if page.url == '/admin/ward-registry/' %}bg-white text-dark{% else %}bg-light text-muted{% endif %} rounded-pill">Beds</span>
-            </a>
+            <!-- PURE HTML DROPDOWN FOLDER 2: Educational Complex & Campus Inventory -->
+            <details class="admin-sidebar-folder" {% if '/student-ledger/' in page.url or '/school-inventory/' in
+                page.url %}open{% endif %}>
+                <summary
+                    class="list-group-item list-group-item-action console-menu-item d-flex justify-content-between align-items-center px-2 py-2.5 fw-semibold text-muted">
+                    <span>📚 Education Logistics</span>
+                    <span class="folder-arrow-indicator">▾</span>
+                </summary>
+                <div class="bg-light border-start border-2 border-warning ps-2 my-1 fs-7">
+                    <a href="/admin/student-ledger/"
+                        class="list-group-item list-group-item-action border-0 py-2 {% if page.url == '/admin/student-ledger/' %}fw-bold text-dark{% endif %}">🎒
+                        Student Grade Ledger</a>
+                    <a href="/admin/school-inventory/"
+                        class="list-group-item list-group-item-action border-0 py-2 {% if page.url == '/admin/school-inventory/' %}fw-bold text-dark{% endif %}">📚
+                        School Stock Registry</a>
+                </div>
+            </details>
 
-            <a href="/admin/student-ledger/"
-                class="list-group-item list-group-item-action console-menu-item {% if page.url == '/admin/student-ledger/' %}active-console-node text-dark{% endif %} d-flex justify-content-between align-items-center px-2 py-2.5">
-                <span>🎒 Student Ledger</span>
-                <span
-                    class="badge {% if page.url == '/admin/student-ledger/' %}bg-white text-dark{% else %}bg-light text-muted{% endif %} rounded-pill">Grades</span>
-            </a>
-
-            <a href="/admin/school-inventory/"
-                class="list-group-item list-group-item-action console-menu-item {% if page.url == '/admin/school-inventory/' %}active-console-node text-dark{% endif %} d-flex justify-content-between align-items-center px-2 py-2.5">
-                <span>📚 School Inventory</span>
-                <span
-                    class="badge {% if page.url == '/admin/school-inventory/' %}bg-white text-dark{% else %}bg-light text-muted{% endif %} rounded-pill">Stock</span>
-            </a>
-
-            <a href="/admin/assembly-onboarding/"
-                class="list-group-item list-group-item-action console-menu-item {% if page.url == '/admin/assembly-onboarding/' %}active-console-node text-dark{% endif %} d-flex justify-content-between align-items-center px-2 py-2.5">
-                <span>🌍 Branch Onboarding</span>
-                <span
-                    class="badge {% if page.url == '/admin/assembly-onboarding/' %}bg-white text-dark{% else %}bg-light text-muted{% endif %} rounded-pill">Cells</span>
-            </a>
-
-            <a href="/admin/panoramic-metrics/"
-                class="list-group-item list-group-item-action console-menu-item {% if page.url == '/admin/panoramic-metrics/' %}active-console-node text-dark{% endif %} d-flex justify-content-between align-items-center px-2 py-2.5">
-                <span>📊 Panoramic Analytics</span>
-                <span
-                    class="badge {% if page.url == '/admin/panoramic-metrics/' %}bg-white text-dark{% else %}bg-light text-muted{% endif %} rounded-pill">Wide</span>
-            </a>
-
+            <!-- STANDALONE LINK 3: Public Announcements & Media Logs -->
             <a href="/admin/announcements-manager/"
-                class="list-group-item list-group-item-action console-menu-item {% if page.url == '/admin/announcements-manager/' %}active-console-node text-dark{% endif %} d-flex justify-content-between align-items-center px-2 py-2.5">
-                <span>📢 Announcements</span>
+                class="list-group-item list-group-item-action console-menu-item {% if page.url == '/admin/announcements-manager/' %}active-console-node text-white{% endif %} d-flex justify-content-between align-items-center px-2 py-2.5">
+                <span>📢 Announcements Manager</span>
                 <span
                     class="badge {% if page.url == '/admin/announcements-manager/' %}bg-white text-dark{% else %}bg-light text-muted{% endif %} rounded-pill">Logs</span>
             </a>
 
-            <a href="/admin/broadcast-registry/"
-                class="list-group-item list-group-item-action console-menu-item {% if page.url == '/admin/broadcast-registry/' %}active-console-node text-dark{% endif %} d-flex justify-content-between align-items-center px-2 py-2.5">
-                <span>📻 Broadcasts</span>
-                <span
-                    class="badge {% if page.url == '/admin/broadcast-registry/' %}bg-white text-dark{% else %}bg-light text-muted{% endif %} rounded-pill">Feeds</span>
-            </a>
-
-            <a href="/admin/financial-registry/"
-                class="list-group-item list-group-item-action console-menu-item {% if page.url == '/admin/financial-registry/' or page.url == '/admin/financial-entry/' %}active-console-node text-dark{% endif %} d-flex justify-content-between align-items-center px-2 py-2.5">
-                <span>💰 Treasury Ledger</span>
-                <span
-                    class="badge {% if page.url == '/admin/financial-registry/' or page.url == '/admin/financial-entry/' %}bg-white text-dark{% else %}bg-light text-muted{% endif %} rounded-pill">Tithe</span>
-            </a>
-
-            <a href="/admin/activity-logs/"
-                class="list-group-item list-group-item-action console-menu-item {% if page.url == '/admin/activity-logs/' %}active-console-node text-dark{% endif %} d-flex justify-content-between align-items-center px-2 py-2.5">
-                <span>📋 Activity Logs</span>
-                <span
-                    class="badge {% if page.url == '/admin/activity-logs/' %}bg-white text-dark{% else %}bg-light text-muted{% endif %} rounded-pill border">Audit</span>
-            </a>
-
-            <a href="/admin/shift-scheduler/"
-                class="list-group-item list-group-item-action console-menu-item {% if page.url == '/admin/shift-scheduler/' %}active-console-node text-dark{% endif %} d-flex justify-content-between align-items-center px-2 py-2.5">
-                <span>📅 Shift Scheduler</span>
-            </a>
-            <a href="/admin/triage-feed/"
-                class="list-group-item list-group-item-action console-menu-item {% if page.url == '/admin/triage-feed/' %}active-console-node text-dark{% endif %} d-flex justify-content-between align-items-center px-2 py-2.5">
-                <span>📊 Triage Feed</span>
-            </a>
+            <!-- PURE HTML DROPDOWN FOLDER 3: Institutional Expansion Records -->
+            <details class="admin-sidebar-folder" {% if '/broadcast-registry/' in page.url or '/financial-registry/' in
+                page.url or '/financial-entry/' in page.url or '/assembly-onboarding/' in page.url
+                or '/shift-scheduler/' in page.url or '/panoramic-metrics/' in page.url or '/activity-logs/' in page.url
+                %}open{% endif %}>
+                <summary
+                    class="list-group-item list-group-item-action console-menu-item d-flex justify-content-between align-items-center px-2 py-2.5 fw-semibold text-muted">
+                    <span>⚙️ Secretariat Systems</span>
+                    <span class="folder-arrow-indicator">▾</span>
+                </summary>
+                <div class="bg-light border-start border-2 border-warning ps-2 my-1 fs-7">
+                    <a href="/admin/broadcast-registry/"
+                        class="list-group-item list-group-item-action border-0 py-2 {% if page.url == '/admin/broadcast-registry/' %}fw-bold text-dark{% endif %}">📻
+                        Broadcast Feeds</a>
+                    <a href="/admin/financial-registry/"
+                        class="list-group-item list-group-item-action border-0 py-2 {% if page.url == '/admin/financial-registry/' or page.url == '/admin/financial-entry/' %}fw-bold text-dark{% endif %}">💰
+                        Treasury Tithe Ledger</a>
+                    <a href="/admin/assembly-onboarding/"
+                        class="list-group-item list-group-item-action border-0 py-2 {% if page.url == '/admin/assembly-onboarding/' %}fw-bold text-dark{% endif %}">🌍
+                        Branch Cell Onboarding</a>
+                    <a href="/admin/shift-scheduler/"
+                        class="list-group-item list-group-item-action border-0 py-2 {% if page.url == '/admin/shift-scheduler/' %}fw-bold text-dark{% endif %}">📅
+                        Duty Shift Scheduler</a>
+                    <a href="/admin/panoramic-metrics/"
+                        class="list-group-item list-group-item-action border-0 py-2 {% if page.url == '/admin/panoramic-metrics/' %}fw-bold text-dark{% endif %}">📊
+                        Panoramic Diagnostics</a>
+                    <a href="/admin/activity-logs/"
+                        class="list-group-item list-group-item-action border-0 py-2 {% if page.url == '/admin/activity-logs/' %}fw-bold text-dark{% endif %}">📋
+                        System Audit Trails</a>
+                </div>
+            </details>
 
         </div>
 
         <!-- Operational Action Button Area -->
         <div class="pt-3 border-top border-light">
             <a href="/admin/create-user/"
-                class="btn btn-charcoal btn-sm w-100 fw-semibold text-center py-2 d-block text-white text-decoration-none rounded-pill">
+                class="btn btn-charcoal btn-sm w-100 fw-semibold text-center py-2 d-block text-white text-decoration-none rounded-0">
                 Invite New User
             </a>
         </div>
